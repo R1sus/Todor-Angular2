@@ -1,0 +1,118 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,700i");
+@font-face {
+  font-family: Agilis;
+  /* ╨Ш╨╝╤П ╤И╤А╨╕╤Д╤В╨░ */
+  src: url(../fonts/agilis.ttf);
+  /* ╨Я╤Г╤В╤М ╨║ ╤Д╨░╨╣╨╗╤Г ╤Б╨╛ ╤И╤А╨╕╤Д╤В╨╛╨╝ */
+}
+/* line 2, ../sass/forms.scss */
+a, a:visited, a:focus, a:active, a:hover {
+  outline: 0 none;
+}
+
+/* line 5, ../sass/forms.scss */
+.container {
+  width: 40%;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  background-color: rgba(127, 135, 138, 0.6);
+  opacity: 0.9;
+  border-radius: 7px;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+/* line 17, ../sass/forms.scss */
+.ng-valid[required], .ng-valid.required {
+  border-right: 5px solid #42A948;
+  /* green */
+}
+
+/* line 21, ../sass/forms.scss */
+.ng-invalid:not(form) {
+  border-right: 5px solid #e0494a;
+  /* red */
+}
+
+/* line 24, ../sass/forms.scss */
+h2 {
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  font-size: 30px;
+  line-height: 3;
+  font-weight: 300;
+}
+
+/* line 32, ../sass/forms.scss */
+form .form-control {
+  border-radius: 25px;
+  height: 45px;
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+  color: #7f878a;
+}
+/* line 40, ../sass/forms.scss */
+form .btn {
+  width: 100%;
+  background-color: #e0494a;
+  border-radius: 20px;
+  border: none;
+  height: 45px;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  outline: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+/* line 52, ../sass/forms.scss */
+form .btn:hover, form .btn:focus {
+  outline: none;
+  background-color: #d28586;
+  border: 0;
+}
+
+/* line 62, ../sass/forms.scss */
+input[name="name"] {
+  outline: none;
+  background: url("../img/user.png") no-repeat;
+  background-color: #fff;
+  padding-left: 53px;
+  background-position: 12px;
+  background-size: 8%;
+}
+
+/* line 70, ../sass/forms.scss */
+input[type="password"] {
+  outline: none;
+  background: url("../img/pass.png") no-repeat;
+  background-color: #fff;
+  padding-left: 53px;
+  background-position: 15px;
+  background-size: 7%;
+}
+
+/* line 78, ../sass/forms.scss */
+input[type="email"] {
+  outline: none;
+  background: url("../img/mail.png") no-repeat;
+  background-color: #fff;
+  padding-left: 53px;
+  background-position: 10px;
+  background-size: 12%;
+}
+
+/* line 86, ../sass/forms.scss */
+.form-link {
+  color: #bfc1c3;
+  line-height: 2.3;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+/* line 91, ../sass/forms.scss */
+.form-link:hover {
+  color: #fff;
+}

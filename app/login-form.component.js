@@ -18,7 +18,6 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            // import { User }    from './user';
             AuthorizationFormComponent = (function () {
                 function AuthorizationFormComponent() {
                     this.submitted = false;
@@ -30,8 +29,8 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                 AuthorizationFormComponent = __decorate([
                     core_1.Component({
                         moduleId: module.id,
-                        selector: 'authorization-form',
-                        templateUrl: 'authorization-form.component.html'
+                        selector: 'login-form',
+                        templateUrl: 'login-form.component.html'
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AuthorizationFormComponent);
@@ -42,6 +41,6 @@ System.register(['@angular/core'], function(exports_1, context_1) {
     }
 });
 /**
- * Created by D on 17.01.2017.
- */
-//# sourceMappingURL=authorization-form.component.js.map
+ * Created by D on 18.01.2017.
+ */ 
+//# sourceMappingURL=login-form.component.js.map

@@ -1,0 +1,95 @@
+@import "modules/variables";
+a, a:visited, a:focus, a:active, a:hover{
+  outline:0 none;
+}
+.container {
+  width:40%;
+  margin:0 auto;
+  position:relative;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  background-color:rgba(127,135,138, 0.6);
+  opacity:0.9;
+  border-radius:7px;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+.ng-valid[required], .ng-valid.required  {
+  border-right: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-right: 5px solid #e0494a; /* red */
+}
+h2 {
+  font-family: $general-font;
+  color:#fff;
+  font-size:30px;
+  line-height:3;
+  font-weight: 300;
+}
+form {
+  .form-control {
+    border-radius:25px;
+    height: 45px;
+    font-size:15px;
+    font-family: $general-font;
+    color:#7f878a;
+
+  }
+  .btn{
+    width:100%;
+    background-color: #e0494a;
+    border-radius:20px;
+    border:none;
+    height: 45px;
+    text-align: center;
+    font-family: $general-font;
+    color:#fff;
+    outline:none;
+    text-transform: uppercase;
+    font-size:16px;
+    &:hover, &:focus {
+      outline: none;
+      background-color: #d28586;
+      border:0;
+    }
+
+  }
+
+}
+
+input[name="name"]{
+  outline: none;
+  background: url("../img/user.png") no-repeat;
+  background-color: #fff;
+  padding-left: 53px;
+  background-position: 12px;
+  background-size: 8%;
+}
+input[type="password"]{
+  outline: none;
+  background: url("../img/pass.png") no-repeat;
+  background-color: #fff;
+  padding-left: 53px;
+  background-position: 15px;
+  background-size: 7%;
+}
+input[type="email"] {
+  outline: none;
+  background: url("../img/mail.png") no-repeat;
+  background-color: #fff;
+  padding-left: 53px;
+  background-position: 10px;
+  background-size: 12%;
+}
+.form-link {
+  color:#bfc1c3;
+  line-height: 2.3;
+  text-transform: uppercase;
+  font-size:11px;
+  &:hover{
+    color:#fff;
+
+  }
+}

@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,700i');
+@font-face {
+    font-family: Agilis;
+    /* Имя шрифта */
+    src: url(../fonts/agilis.ttf);
+    /* Путь к файлу со шрифтом */
+}
+
+$text-color:#4ad583;
+$text-size:21px;
+$general-width:100%;
+$general-font:'Lato', sans-serif;
+$link-active:#dee7d5;
+$title-size:58px;
+$decor-text:capitalize;
+$secondary-color:#212121;
