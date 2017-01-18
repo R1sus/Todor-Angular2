@@ -71,11 +71,21 @@ form .btn {
 /* line 52, ../sass/forms.scss */
 form .btn:hover, form .btn:focus {
   outline: none;
-  background-color: #d28586;
+  background-color: #872a2a;
   border: 0;
+  color: #fff;
 }
 
-/* line 62, ../sass/forms.scss */
+/* line 63, ../sass/forms.scss */
+form .btn-green {
+  background-color: #abd154;
+}
+/* line 65, ../sass/forms.scss */
+form .btn-green:hover {
+  background-color: #667D32;
+}
+
+/* line 71, ../sass/forms.scss */
 input[name="name"] {
   outline: none;
   background: url("../img/user.png") no-repeat;
@@ -85,7 +95,7 @@ input[name="name"] {
   background-size: 8%;
 }
 
-/* line 70, ../sass/forms.scss */
+/* line 79, ../sass/forms.scss */
 input[type="password"] {
   outline: none;
   background: url("../img/pass.png") no-repeat;
@@ -95,7 +105,7 @@ input[type="password"] {
   background-size: 7%;
 }
 
-/* line 78, ../sass/forms.scss */
+/* line 87, ../sass/forms.scss */
 input[type="email"] {
   outline: none;
   background: url("../img/mail.png") no-repeat;
@@ -105,14 +115,34 @@ input[type="email"] {
   background-size: 12%;
 }
 
-/* line 86, ../sass/forms.scss */
+/* line 95, ../sass/forms.scss */
 .form-link {
   color: #bfc1c3;
   line-height: 2.3;
   text-transform: uppercase;
   font-size: 11px;
 }
-/* line 91, ../sass/forms.scss */
+/* line 100, ../sass/forms.scss */
 .form-link:hover {
   color: #fff;
+}
+
+/* line 105, ../sass/forms.scss */
+input[name="login-name"] {
+  outline: none;
+  background: url("../img/user-green.png") no-repeat;
+  background-color: #fff;
+  padding-left: 53px;
+  background-position: 12px;
+  background-size: 8%;
+}
+
+/* line 113, ../sass/forms.scss */
+input[name="login-password"] {
+  outline: none;
+  background: url("../img/pass-green.png") no-repeat;
+  background-color: #fff;
+  padding-left: 53px;
+  background-position: 15px;
+  background-size: 7%;
 }

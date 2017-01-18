@@ -82,4 +82,47 @@ footer {
   padding-left: 10px;
 }
 
+/* line 70, ../sass/modules/_all.scss */
+.search-page {
+  width: 50%;
+  margin: 0 auto;
+}
+/* line 73, ../sass/modules/_all.scss */
+.search-page h2 {
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+/* line 80, ../sass/modules/_all.scss */
+.search-page h2 b {
+  color: #abd154;
+}
+/* line 84, ../sass/modules/_all.scss */
+.search-page h5 {
+  color: #b6babc;
+}
+
+/* line 88, ../sass/modules/_all.scss */
+.categories {
+  padding-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row nowrap;
+}
+
+/* line 95, ../sass/modules/_all.scss */
+.item {
+  text-align: center;
+}
+
+/* line 98, ../sass/modules/_all.scss */
+input[type="search"] {
+  width: 100%;
+  outline: none;
+}
+
 /*general styles*/

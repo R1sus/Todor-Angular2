@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
     selector: 'login-form',
     templateUrl: 'login-form.component.html'
 })
-export class  AuthorizationFormComponent {
+export class  LoginFormComponent {
 
     submitted = false;
 

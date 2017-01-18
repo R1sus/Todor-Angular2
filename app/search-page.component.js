@@ -11,30 +11,32 @@ System.register(['@angular/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var AppComponent;
+    var SearchPageComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
+            // import { User }    from './user';
+            SearchPageComponent = (function () {
+                function SearchPageComponent() {
                 }
-                AppComponent = __decorate([
+                SearchPageComponent = __decorate([
                     core_1.Component({
-                        selector: 'my-app',
-                        template: 
-                        // '<search-page></search-page>'
-                        // '<login-form></login-form>'
-                        '<authorization-form></authorization-form>'
+                        moduleId: module.id,
+                        selector: 'search-page',
+                        templateUrl: 'search-page.component.html'
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], SearchPageComponent);
+                return SearchPageComponent;
             }());
-            exports_1("AppComponent", AppComponent);
+            exports_1("SearchPageComponent", SearchPageComponent);
         }
     }
 });
-//# sourceMappingURL=app.component.js.map
+/**
+ * Created by D on 18.01.2017.
+ */
+//# sourceMappingURL=search-page.component.js.map

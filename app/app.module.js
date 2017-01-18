@@ -1,4 +1,4 @@
-System.register(['@angular/core', '@angular/platform-browser', '@angular/forms', './app.component', './authorization-form.component'], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/platform-browser', '@angular/forms', './app.component', './authorization-form.component', './login-form.component', './search-page.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['@angular/core', '@angular/platform-browser', '@angular/forms',
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, platform_browser_1, forms_1, app_component_1, authorization_form_component_1;
+    var core_1, platform_browser_1, forms_1, app_component_1, authorization_form_component_1, login_form_component_1, search_page_component_1;
     var AppModule;
     return {
         setters:[
@@ -28,6 +28,12 @@ System.register(['@angular/core', '@angular/platform-browser', '@angular/forms',
             },
             function (authorization_form_component_1_1) {
                 authorization_form_component_1 = authorization_form_component_1_1;
+            },
+            function (login_form_component_1_1) {
+                login_form_component_1 = login_form_component_1_1;
+            },
+            function (search_page_component_1_1) {
+                search_page_component_1 = search_page_component_1_1;
             }],
         execute: function() {
             // import { EmailValidator } from './email.validator';
@@ -42,8 +48,9 @@ System.register(['@angular/core', '@angular/platform-browser', '@angular/forms',
                         ],
                         declarations: [
                             app_component_1.AppComponent,
-                            // EmailValidator,
-                            authorization_form_component_1.AuthorizationFormComponent
+                            login_form_component_1.LoginFormComponent,
+                            authorization_form_component_1.AuthorizationFormComponent,
+                            search_page_component_1.SearchPageComponent
                         ],
                         bootstrap: [app_component_1.AppComponent]
                     }), 

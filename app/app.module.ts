@@ -4,6 +4,8 @@ import { FormsModule }   from '@angular/forms';
 
 import { AppComponent }  from './app.component';
 import { AuthorizationFormComponent } from './authorization-form.component';
+import { LoginFormComponent } from './login-form.component';
+import { SearchPageComponent } from './search-page.component';
 // import { EmailValidator } from './email.validator';
 
 @NgModule({
@@ -13,8 +15,9 @@ import { AuthorizationFormComponent } from './authorization-form.component';
   ],
   declarations: [
     AppComponent,
-    // EmailValidator,
-    AuthorizationFormComponent
+    LoginFormComponent,
+    AuthorizationFormComponent,
+    SearchPageComponent
   ],
   bootstrap: [ AppComponent ]
 })

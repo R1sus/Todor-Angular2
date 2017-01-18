@@ -66,3 +66,36 @@ footer {
     padding-left: 10px;
   }
 }
+//////////Search page//////////////
+.search-page {
+  width:50%;
+  margin:0 auto;
+  h2 {
+    text-align: center;
+    font-family: $general-font;
+    color:#fff;
+    font-size:30px;
+    font-weight: 300;
+    line-height:1.5;
+    b{
+      color:#abd154;
+    }
+  }
+  h5{
+    color:#b6babc;
+  }
+}
+.categories {
+  padding-top:30px;
+  width:100%;
+  display:flex;
+  justify-content: space-around;
+  flex-flow: row nowrap;
+}
+.item {
+  text-align: center;
+}
+input[type="search"] {
+  width:100%;
+  outline:none;
+}

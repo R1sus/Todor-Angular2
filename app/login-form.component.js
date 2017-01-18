@@ -11,32 +11,32 @@ System.register(['@angular/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var AuthorizationFormComponent;
+    var LoginFormComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            AuthorizationFormComponent = (function () {
-                function AuthorizationFormComponent() {
+            LoginFormComponent = (function () {
+                function LoginFormComponent() {
                     this.submitted = false;
                 }
-                AuthorizationFormComponent.prototype.onSubmit = function () { this.submitted = true; };
-                AuthorizationFormComponent.prototype.submit = function (form) {
+                LoginFormComponent.prototype.onSubmit = function () { this.submitted = true; };
+                LoginFormComponent.prototype.submit = function (form) {
                     this.value = form;
                 };
-                AuthorizationFormComponent = __decorate([
+                LoginFormComponent = __decorate([
                     core_1.Component({
                         moduleId: module.id,
                         selector: 'login-form',
                         templateUrl: 'login-form.component.html'
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AuthorizationFormComponent);
-                return AuthorizationFormComponent;
+                ], LoginFormComponent);
+                return LoginFormComponent;
             }());
-            exports_1("AuthorizationFormComponent", AuthorizationFormComponent);
+            exports_1("LoginFormComponent", LoginFormComponent);
         }
     }
 });

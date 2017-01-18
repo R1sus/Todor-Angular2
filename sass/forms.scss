@@ -51,12 +51,21 @@ form {
     font-size:16px;
     &:hover, &:focus {
       outline: none;
-      background-color: #d28586;
+      background-color: #872a2a;
       border:0;
+      color:#fff;
     }
 
   }
 
+}
+form {
+  .btn-green {
+    background-color: #abd154;
+    &:hover {
+      background-color: #667D32;
+    }
+  }
 }
 
 input[name="name"]{
@@ -92,4 +101,20 @@ input[type="email"] {
     color:#fff;
 
   }
+}
+input[name="login-name"]{
+  outline: none;
+  background: url("../img/user-green.png") no-repeat;
+  background-color: #fff;
+  padding-left: 53px;
+  background-position: 12px;
+  background-size: 8%;
+}
+input[name="login-password"]{
+  outline: none;
+  background: url("../img/pass-green.png") no-repeat;
+  background-color: #fff;
+  padding-left: 53px;
+  background-position: 15px;
+  background-size: 7%;
 }
