@@ -11,27 +11,30 @@ System.register(['@angular/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var AppComponent;
+    var NotFoundComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
+            NotFoundComponent = (function () {
+                function NotFoundComponent() {
                 }
-                AppComponent = __decorate([
+                NotFoundComponent = __decorate([
                     core_1.Component({
-                        selector: 'my-app',
-                        template: '<router-outlet></router-outlet> <h1>TEST</h1>'
+                        selector: 'not-found-app',
+                        template: "<h3>404 : \u0421\u0442\u0440\u0430\u043D\u0438\u0446\u0430 \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D\u0430</h3>"
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], NotFoundComponent);
+                return NotFoundComponent;
             }());
-            exports_1("AppComponent", AppComponent);
+            exports_1("NotFoundComponent", NotFoundComponent);
         }
     }
 });
-//# sourceMappingURL=app.component.js.map
+/**
+ * Created by D on 18.01.2017.
+ */
+//# sourceMappingURL=not-found.component.js.map

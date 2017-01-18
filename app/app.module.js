@@ -1,4 +1,4 @@
-System.register(['@angular/core', '@angular/platform-browser', '@angular/forms', './app.component', './authorization-form.component', './login-form.component', './search-page.component'], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/platform-browser', '@angular/forms', '@angular/router', './app.component', './authorization-form.component', './login-form.component', './search-page.component', './not-found.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,8 +10,8 @@ System.register(['@angular/core', '@angular/platform-browser', '@angular/forms',
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, platform_browser_1, forms_1, app_component_1, authorization_form_component_1, login_form_component_1, search_page_component_1;
-    var AppModule;
+    var core_1, platform_browser_1, forms_1, router_1, app_component_1, authorization_form_component_1, login_form_component_1, search_page_component_1, not_found_component_1;
+    var appRoutes, AppModule;
     return {
         setters:[
             function (core_1_1) {
@@ -22,6 +22,9 @@ System.register(['@angular/core', '@angular/platform-browser', '@angular/forms',
             },
             function (forms_1_1) {
                 forms_1 = forms_1_1;
+            },
+            function (router_1_1) {
+                router_1 = router_1_1;
             },
             function (app_component_1_1) {
                 app_component_1 = app_component_1_1;
@@ -34,9 +37,24 @@ System.register(['@angular/core', '@angular/platform-browser', '@angular/forms',
             },
             function (search_page_component_1_1) {
                 search_page_component_1 = search_page_component_1_1;
+            },
+            function (not_found_component_1_1) {
+                not_found_component_1 = not_found_component_1_1;
             }],
         execute: function() {
             // import { EmailValidator } from './email.validator';
+            appRoutes = [
+                { path: '', component: authorization_form_component_1.AuthorizationFormComponent },
+                { path: 'login', component: login_form_component_1.LoginFormComponent },
+                { path: 'search', component: search_page_component_1.SearchPageComponent },
+                { path: '**', component: not_found_component_1.NotFoundComponent }
+            ];
+            // RouterModule.forRoot([
+            //   {
+            //     path: 'login',
+            //     component:  LoginFormComponent
+            //   }
+            // ])
             AppModule = (function () {
                 function AppModule() {
                 }
@@ -44,13 +62,15 @@ System.register(['@angular/core', '@angular/platform-browser', '@angular/forms',
                     core_1.NgModule({
                         imports: [
                             platform_browser_1.BrowserModule,
-                            forms_1.FormsModule
+                            forms_1.FormsModule,
+                            router_1.RouterModule.forRoot(appRoutes)
                         ],
                         declarations: [
                             app_component_1.AppComponent,
                             login_form_component_1.LoginFormComponent,
                             authorization_form_component_1.AuthorizationFormComponent,
-                            search_page_component_1.SearchPageComponent
+                            search_page_component_1.SearchPageComponent,
+                            not_found_component_1.NotFoundComponent
                         ],
                         bootstrap: [app_component_1.AppComponent]
                     }), 

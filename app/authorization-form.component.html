@@ -1,21 +1,20 @@
 <div class="container">
   <h2>Sign Up to <b>Locify</b></h2>
-  <form novalidate #form="ngForm" (ngSubmit)="submit(form.value)">
+  <form #form="ngForm" (ngSubmit)="submit(form.value)"> <!-- 'name': ['',Validators.required]-->
     <div class="form-group">
-      <!--<label for="name">Full Name</label>-->
       <input type="text" class="form-control"id="name"  name="name"  placeholder = "Full Name" ngModel maxlength="25"  required >
+      <!--[formControl]="name"-->
     </div>
     <div class="form-group">
-      <!--<label for="email">Email</label>-->
       <input type="email" class="form-control" id="email"  name="email" placeholder = "Email" ngModel validateEmail maxlength="25"required >
     </div>
     <div class="form-group">
-      <!--<label for="password">Password</label>-->
       <input type="password" class="form-control password" name="password" placeholder = "Password" ngModel required>
     </div>
     <div class="form-group">
     <input type="password" class="form-control password" name="confirm-password" placeholder = "Confirm Password" maxlength="25"  ngModel required>
     </div>
+    <!--<div *ngIf="!signinForm.valid" class="err_message">Form is invalid</div>-->
     <button type="submit" class="btn btn-default">sign up</button>
     <a class = "form-link" href="#">You already have an account?</a>
   </form>

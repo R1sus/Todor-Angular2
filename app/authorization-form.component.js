@@ -21,9 +21,11 @@ System.register(['@angular/core'], function(exports_1, context_1) {
             // import { User }    from './user';
             AuthorizationFormComponent = (function () {
                 function AuthorizationFormComponent() {
-                    this.submitted = false;
                 }
-                AuthorizationFormComponent.prototype.onSubmit = function () { this.submitted = true; };
+                // submitted = false;
+                //
+                // onSubmit() { this.submitted = true; }
+                // value: any;
                 AuthorizationFormComponent.prototype.submit = function (form) {
                     this.value = form;
                 };
@@ -44,4 +46,17 @@ System.register(['@angular/core'], function(exports_1, context_1) {
 /**
  * Created by D on 17.01.2017.
  */
+//
+// signinForm:FormGroup;
+// name:AbstractControl;
+//
+// constructor(form:FormBuilder) {
+//   this.signinForm = form.group({
+//     'name': ['', Validators.required]
+//   });
+//   this.name = this.signinForm.controls['name'];
+// }
+// onSubmit(value:string):void {
+//   console.log('your name:', value);
+// } 
 //# sourceMappingURL=authorization-form.component.js.map
