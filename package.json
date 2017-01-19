@@ -9,6 +9,7 @@
   },
   "license": "ISC",
   "dependencies": {
+    "@angular/forms": "^2.1.2",
     "@angular/router": "~3.1.1",
     "angular2": "2.0.0-beta.0",
     "bootstrap": "^3.3.7",

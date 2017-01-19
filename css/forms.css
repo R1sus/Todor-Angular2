@@ -6,12 +6,7 @@
   src: url(../fonts/agilis.ttf);
   /* ╨Я╤Г╤В╤М ╨║ ╤Д╨░╨╣╨╗╤Г ╤Б╨╛ ╤И╤А╨╕╤Д╤В╨╛╨╝ */
 }
-/* line 2, ../sass/forms.scss */
-a, a:visited, a:focus, a:active, a:hover {
-  outline: 0 none;
-}
-
-/* line 5, ../sass/forms.scss */
+/* line 3, ../sass/forms.scss */
 .container {
   width: 40%;
   margin: 0 auto;
@@ -25,19 +20,16 @@ a, a:visited, a:focus, a:active, a:hover {
   padding-bottom: 2rem;
 }
 
-/* line 17, ../sass/forms.scss */
+/* line 15, ../sass/forms.scss */
 .ng-valid[required], .ng-valid.required {
-  border-right: 5px solid #42A948;
+  border: 2px solid #42A948;
   /* green */
 }
 
-/* line 21, ../sass/forms.scss */
-.ng-invalid:not(form) {
-  border-right: 5px solid #e0494a;
-  /* red */
-}
-
-/* line 24, ../sass/forms.scss */
+/*.ng-invalid:not(form)  {*/
+/*  border: 2px solid #e0494a; /* red */
+/*}*/
+/* line 22, ../sass/forms.scss */
 h2 {
   font-family: "Lato", sans-serif;
   color: #fff;
@@ -46,7 +38,7 @@ h2 {
   font-weight: 300;
 }
 
-/* line 32, ../sass/forms.scss */
+/* line 30, ../sass/forms.scss */
 form .form-control {
   border-radius: 25px;
   height: 45px;
@@ -54,7 +46,7 @@ form .form-control {
   font-family: "Lato", sans-serif;
   color: #7f878a;
 }
-/* line 40, ../sass/forms.scss */
+/* line 38, ../sass/forms.scss */
 form .btn {
   width: 100%;
   background-color: #e0494a;
@@ -65,10 +57,11 @@ form .btn {
   font-family: "Lato", sans-serif;
   color: #fff;
   outline: none;
+  cursor: pointer;
   text-transform: uppercase;
   font-size: 16px;
 }
-/* line 52, ../sass/forms.scss */
+/* line 51, ../sass/forms.scss */
 form .btn:hover, form .btn:focus {
   outline: none;
   background-color: #872a2a;
@@ -76,17 +69,17 @@ form .btn:hover, form .btn:focus {
   color: #fff;
 }
 
-/* line 63, ../sass/forms.scss */
+/* line 62, ../sass/forms.scss */
 form .btn-green {
   background-color: #abd154;
 }
-/* line 65, ../sass/forms.scss */
+/* line 64, ../sass/forms.scss */
 form .btn-green:hover {
   background-color: #667D32;
 }
 
-/* line 71, ../sass/forms.scss */
-input[name="name"] {
+/* line 70, ../sass/forms.scss */
+input[name="username"] {
   outline: none;
   background: url("../img/user.png") no-repeat;
   background-color: #fff;
@@ -95,7 +88,7 @@ input[name="name"] {
   background-size: 8%;
 }
 
-/* line 79, ../sass/forms.scss */
+/* line 78, ../sass/forms.scss */
 input[type="password"] {
   outline: none;
   background: url("../img/pass.png") no-repeat;
@@ -105,7 +98,7 @@ input[type="password"] {
   background-size: 7%;
 }
 
-/* line 87, ../sass/forms.scss */
+/* line 86, ../sass/forms.scss */
 input[type="email"] {
   outline: none;
   background: url("../img/mail.png") no-repeat;
@@ -115,19 +108,19 @@ input[type="email"] {
   background-size: 12%;
 }
 
-/* line 95, ../sass/forms.scss */
+/* line 94, ../sass/forms.scss */
 .form-link {
   color: #bfc1c3;
   line-height: 2.3;
   text-transform: uppercase;
   font-size: 11px;
 }
-/* line 100, ../sass/forms.scss */
+/* line 99, ../sass/forms.scss */
 .form-link:hover {
   color: #fff;
 }
 
-/* line 105, ../sass/forms.scss */
+/* line 104, ../sass/forms.scss */
 input[name="login-name"] {
   outline: none;
   background: url("../img/user-green.png") no-repeat;
@@ -137,7 +130,7 @@ input[name="login-name"] {
   background-size: 8%;
 }
 
-/* line 113, ../sass/forms.scss */
+/* line 112, ../sass/forms.scss */
 input[name="login-password"] {
   outline: none;
   background: url("../img/pass-green.png") no-repeat;

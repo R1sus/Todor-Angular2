@@ -1,30 +1,47 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { User } from './user.interface';
 import {
-  FORM_DIRECTIVES,
-  REACTIVE_FROM_DIRECTIVES,
+  NgForm,
   FormBuilder,
   FormGroup,
   Validators,
   AbstractControl
-} from '@angular/forms'
+} from '@angular/forms';
 
-// import { User }    from './user';
+// export class User{
+//     name: string;
+//     email: string;
+//     password: string;
+//     confirmPassword: string;
+// }
 
 @Component({
   moduleId: module.id,
   selector: 'authorization-form',
   templateUrl: 'authorization-form.component.html'
 })
-export class  AuthorizationFormComponent {
+export class  AuthorizationFormComponent implements OnInit {
 
-  // submitted = false;
-  //
-  // onSubmit() { this.submitted = true; }
-  // value: any;
+    public user: User;
 
-  submit(form) {
-    this.value = form;
-  }
+    ngOnInit() {
+        // initialize model here
+        this.user = {
+            username: '',
+            email: '',
+            password: '',
+            confirmPassword: ''
+        }
+    }
+
+    save(model: User, isValid: boolean) {
+        // call API to save customer
+        console.log(model, isValid);
+    }
+
+  // submit(form) {
+  //   this.value = form;
+  // }
 }
 
 

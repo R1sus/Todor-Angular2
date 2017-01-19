@@ -18,16 +18,27 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            // import { User }    from './user';
+            // export class User{
+            //     name: string;
+            //     email: string;
+            //     password: string;
+            //     confirmPassword: string;
+            // }
             AuthorizationFormComponent = (function () {
                 function AuthorizationFormComponent() {
                 }
-                // submitted = false;
-                //
-                // onSubmit() { this.submitted = true; }
-                // value: any;
-                AuthorizationFormComponent.prototype.submit = function (form) {
-                    this.value = form;
+                AuthorizationFormComponent.prototype.ngOnInit = function () {
+                    // initialize model here
+                    this.user = {
+                        username: '',
+                        email: '',
+                        password: '',
+                        confirmPassword: ''
+                    };
+                };
+                AuthorizationFormComponent.prototype.save = function (model, isValid) {
+                    // call API to save customer
+                    console.log(model, isValid);
                 };
                 AuthorizationFormComponent = __decorate([
                     core_1.Component({

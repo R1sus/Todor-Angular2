@@ -11,20 +11,30 @@ System.register(['@angular/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var LoginFormComponent;
+    var User, LoginFormComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
+            User = (function () {
+                function User() {
+                }
+                return User;
+            }());
+            exports_1("User", User);
             LoginFormComponent = (function () {
                 function LoginFormComponent() {
                     this.submitted = false;
+                    this.user = new User();
                 }
                 LoginFormComponent.prototype.onSubmit = function () { this.submitted = true; };
                 LoginFormComponent.prototype.submit = function (form) {
                     this.value = form;
+                };
+                LoginFormComponent.prototype.addUser = function () {
+                    console.log(this.user);
                 };
                 LoginFormComponent = __decorate([
                     core_1.Component({
