@@ -5,6 +5,7 @@ body {
   background: url("../../img/bg.png") no-repeat;
   background-size: 100%;
   background-position: center;
+  height:100vh;
 }
 .wrapper {
   width:71%;
@@ -30,6 +31,11 @@ nav {
     li{
       padding-left:25px;
       text-align:center;
+      cursor: pointer;
+      .active {
+        color:#fff;
+        text-decoration: none;
+      }
       a {
         font-family: $general-font;
         font-size:1.2em;
@@ -37,6 +43,11 @@ nav {
         padding:10px 20px;
         border-radius: 5px;
         text-decoration: none;
+        &:visited {
+          text-decoration: none;
+          color:#bfc3c5;
+
+        }
         &:hover {
           color:#fff;
           background-color: #e0494a;
@@ -44,6 +55,9 @@ nav {
         }
       }
 
+    }
+    .active {
+      color:#fff;
     }
   }
   //width:50%;

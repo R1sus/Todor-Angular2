@@ -24,7 +24,7 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                 NotFoundComponent = __decorate([
                     core_1.Component({
                         selector: 'not-found-app',
-                        template: "<h3>404 : \u0421\u0442\u0440\u0430\u043D\u0438\u0446\u0430 \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D\u0430</h3>"
+                        template: "<h1>404: Page not found</h1>"
                     }), 
                     __metadata('design:paramtypes', [])
                 ], NotFoundComponent);

@@ -24,7 +24,7 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: '<router-outlet></router-outlet> <h1>TEST</h1>'
+                        template: " <header>\n        <div class=\"logo\">\n          <img src=\"../img/logo@2x.png\" alt=\"logo\"/>\n        </div>\n        <nav>\n          <ul>\n            <li routerLinkActive=\"active\"><a routerLink=\"/about\">About</a></li>\n            <li routerLinkActive=\"active\"><a routerLink=\"/contact_us\" >Contact us</a></li>\n            <li routerLinkActive=\"active\"><a routerLink=\"/login\" >Login</a></li>\n            <li routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\"><a routerLink=\"\" >Sign in </a></li>\n          </ul>\n        </nav>\n      </header>\n    <router-outlet></router-outlet> "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

@@ -13,9 +13,10 @@ body {
   background: url("../../img/bg.png") no-repeat;
   background-size: 100%;
   background-position: center;
+  height: 100vh;
 }
 
-/* line 9, ../sass/modules/_all.scss */
+/* line 10, ../sass/modules/_all.scss */
 .wrapper {
   width: 71%;
   margin: 0 auto;
@@ -23,7 +24,7 @@ body {
   padding-top: 30px;
 }
 
-/* line 15, ../sass/modules/_all.scss */
+/* line 16, ../sass/modules/_all.scss */
 header {
   width: 100%;
   display: flex;
@@ -33,19 +34,25 @@ header {
   padding-bottom: 7vh;
 }
 
-/* line 24, ../sass/modules/_all.scss */
+/* line 25, ../sass/modules/_all.scss */
 nav ul {
   list-style-type: none;
   display: flex;
   justify-content: flex-end;
   flex-flow: row nowrap;
 }
-/* line 30, ../sass/modules/_all.scss */
+/* line 31, ../sass/modules/_all.scss */
 nav ul li {
   padding-left: 25px;
   text-align: center;
+  cursor: pointer;
 }
-/* line 33, ../sass/modules/_all.scss */
+/* line 35, ../sass/modules/_all.scss */
+nav ul li .active {
+  color: #fff;
+  text-decoration: none;
+}
+/* line 39, ../sass/modules/_all.scss */
 nav ul li a {
   font-family: "Lato", sans-serif;
   font-size: 1.2em;
@@ -54,40 +61,49 @@ nav ul li a {
   border-radius: 5px;
   text-decoration: none;
 }
-/* line 40, ../sass/modules/_all.scss */
+/* line 46, ../sass/modules/_all.scss */
+nav ul li a:visited {
+  text-decoration: none;
+  color: #bfc3c5;
+}
+/* line 51, ../sass/modules/_all.scss */
 nav ul li a:hover {
   color: #fff;
   background-color: #e0494a;
   text-decoration: none;
 }
+/* line 59, ../sass/modules/_all.scss */
+nav ul .active {
+  color: #fff;
+}
 
-/* line 53, ../sass/modules/_all.scss */
+/* line 67, ../sass/modules/_all.scss */
 .logo img {
   width: 165px;
   height: 70px;
 }
 
-/* line 58, ../sass/modules/_all.scss */
+/* line 72, ../sass/modules/_all.scss */
 main {
   margin-bottom: 6rem;
 }
 
-/* line 61, ../sass/modules/_all.scss */
+/* line 75, ../sass/modules/_all.scss */
 footer {
   text-align: center;
 }
 
-/* line 65, ../sass/modules/_all.scss */
+/* line 79, ../sass/modules/_all.scss */
 .social a {
   padding-left: 10px;
 }
 
-/* line 70, ../sass/modules/_all.scss */
+/* line 84, ../sass/modules/_all.scss */
 .search-page {
   width: 50%;
   margin: 0 auto;
 }
-/* line 73, ../sass/modules/_all.scss */
+/* line 87, ../sass/modules/_all.scss */
 .search-page h2 {
   text-align: center;
   font-family: "Lato", sans-serif;
@@ -96,16 +112,16 @@ footer {
   font-weight: 300;
   line-height: 1.5;
 }
-/* line 80, ../sass/modules/_all.scss */
+/* line 94, ../sass/modules/_all.scss */
 .search-page h2 b {
   color: #abd154;
 }
-/* line 84, ../sass/modules/_all.scss */
+/* line 98, ../sass/modules/_all.scss */
 .search-page h5 {
   color: #b6babc;
 }
 
-/* line 88, ../sass/modules/_all.scss */
+/* line 102, ../sass/modules/_all.scss */
 .categories {
   padding-top: 30px;
   width: 100%;
@@ -114,15 +130,21 @@ footer {
   flex-flow: row nowrap;
 }
 
-/* line 95, ../sass/modules/_all.scss */
+/* line 109, ../sass/modules/_all.scss */
 .item {
   text-align: center;
 }
 
-/* line 98, ../sass/modules/_all.scss */
+/* line 112, ../sass/modules/_all.scss */
 input[type="search"] {
   width: 100%;
   outline: none;
+}
+
+/* line 117, ../sass/modules/_all.scss */
+h1 {
+  color: #fff;
+  text-align: center;
 }
 
 /*general styles*/
