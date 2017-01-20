@@ -1,4 +1,4 @@
-System.register(['@angular/core'], function(exports_1, context_1) {
+System.register(['@angular/core', './http.service'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,12 +10,15 @@ System.register(['@angular/core'], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
+    var core_1, http_service_1;
     var User, LoginFormComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (http_service_1_1) {
+                http_service_1 = http_service_1_1;
             }],
         execute: function() {
             User = (function () {
@@ -26,13 +29,15 @@ System.register(['@angular/core'], function(exports_1, context_1) {
             exports_1("User", User);
             LoginFormComponent = (function () {
                 function LoginFormComponent() {
-                    this.submitted = false;
+                    // submitted = false;
+                    //
+                    // onSubmit() { this.submitted = true; }
+                    // value: any;
+                    // submit(form) {
+                    //     this.value = form;
+                    // }
                     this.user = new User();
                 }
-                LoginFormComponent.prototype.onSubmit = function () { this.submitted = true; };
-                LoginFormComponent.prototype.submit = function (form) {
-                    this.value = form;
-                };
                 LoginFormComponent.prototype.addUser = function () {
                     console.log(this.user);
                 };
@@ -40,7 +45,8 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                     core_1.Component({
                         moduleId: module.id,
                         selector: 'login-form',
-                        templateUrl: 'login-form.component.html'
+                        templateUrl: 'login-form.component.html',
+                        providers: [http_service_1.HttpService]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], LoginFormComponent);

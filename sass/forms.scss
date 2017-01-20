@@ -14,7 +14,7 @@
   padding-bottom: 2rem;
 }
 .ng-valid[required], .ng-valid.required  {
-  border: 2px solid #42A948; /* green */
+  border: 2px solid #abd154; /* green */
 }
 /*.ng-invalid:not(form)  {*/
 /*  border: 2px solid #e0494a; /* red */
@@ -29,46 +29,57 @@ h2 {
 }
 form {
   .form-control {
-    border-radius:25px;
+    border-radius: 25px;
     height: 45px;
-    font-size:15px;
+    font-size: 15px;
     font-family: $general-font;
-    color:#7f878a;
+    color: #7f878a;
 
   }
-  .btn{
-    width:100%;
+  .btn {
+    width: 100%;
     background-color: #e0494a;
-    border-radius:20px;
-    border:none;
+    border-radius: 20px;
+    border: none;
     height: 45px;
     text-align: center;
     font-family: $general-font;
-    color:#fff;
-    outline:none;
+    color: #fff;
+    outline: none;
     cursor: pointer;
     text-transform: uppercase;
-    font-size:16px;
+    font-size: 16px;
     &:hover, &:focus {
       outline: none;
       background-color: #872a2a;
-      border:0;
-      color:#fff;
+      border: 0;
+      color: #fff;
     }
 
   }
 
-}
-//.btn[disabled]{
-//  cursor:pointer;
-//}
-form {
-  .btn-green {
-    background-color: #abd154;
+  .btn[disabled] {
+    //cursor:pointer;
+    background-color: #e0494a;
     &:hover {
+      background-color: #872a2a;
+    }
+  }
+}
+.loginform {
+  .btn,.btn[disabled]  {
+    background-color: #abd154;
+    &:hover,&:focus {
       background-color: #667D32;
     }
+
   }
+  //.btn-green {
+  //      background-color: #abd154;
+  //      &:hover {
+  //        background-color: #667D32;
+  //      }
+  //}
 }
 input {
   cursor: pointer;

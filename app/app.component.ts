@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import { Response} from '@angular/http';
+import { HttpService} from './http.service';
 @Component({
   selector: 'my-app',
   styles:[` 
@@ -20,7 +21,8 @@ import { Component } from '@angular/core';
           </ul>
         </nav>
       </header>
-    <router-outlet></router-outlet> `
+    <router-outlet></router-outlet> `,
+  providers: [HttpService]
       // '<search-page></search-page>'
       // '<login-form></login-form>'
       // '<authorization-form></authorization-form>'

@@ -1,6 +1,6 @@
 <div class="container">
     <h2>Log in to <b>Locify</b></h2>
-    <form novalidate #loginform="ngForm" (ngSubmit)="submit(form.value)">
+    <form novalidate #loginform="ngForm" (ngSubmit)="registerUser(registrationForm.value)" class="loginform">
         <div class="form-group">
             <input type="text" class="form-control" id="name" [(ngModel)]="user.name" name="login-name"  placeholder = "Full Name" maxlength="25"
                    ngModel #name="ngModel" required >
@@ -11,6 +11,12 @@
         </div>
         <button type="submit" [disabled]="name.invalid || password.invalid" class="btn btn-green">Log in</button>
         <a class = "form-link" href="/signin">You don't have an account?</a>
+        <!--<div *ngIf="done">-->
+            <!--<div>Получено от сервера:</div>-->
+            <!--<div>Имя: {{receivedUser.name}}</div>-->
+            <!--<div>Возраст: {{receivedUser.password}}</div>-->
+        <!--</div>-->
+        <pre>submitted value: <br>{{loginform.value | json}}</pre>
     </form>
     <br>
     <!--<pre>-->

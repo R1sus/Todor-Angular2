@@ -22,7 +22,7 @@
 
 /* line 16, ../sass/forms.scss */
 .ng-valid[required], .ng-valid.required {
-  border: 2px solid #42A948;
+  border: 2px solid #abd154;
   /* green */
 }
 
@@ -68,22 +68,30 @@ form .btn:hover, form .btn:focus {
   border: 0;
   color: #fff;
 }
+/* line 61, ../sass/forms.scss */
+form .btn[disabled] {
+  background-color: #e0494a;
+}
+/* line 64, ../sass/forms.scss */
+form .btn[disabled]:hover {
+  background-color: #872a2a;
+}
 
-/* line 66, ../sass/forms.scss */
-form .btn-green {
+/* line 70, ../sass/forms.scss */
+.loginform .btn, .loginform .btn[disabled] {
   background-color: #abd154;
 }
-/* line 68, ../sass/forms.scss */
-form .btn-green:hover {
+/* line 72, ../sass/forms.scss */
+.loginform .btn:hover, .loginform .btn:focus, .loginform .btn[disabled]:hover, .loginform .btn[disabled]:focus {
   background-color: #667D32;
 }
 
-/* line 73, ../sass/forms.scss */
+/* line 84, ../sass/forms.scss */
 input {
   cursor: pointer;
 }
 
-/* line 76, ../sass/forms.scss */
+/* line 87, ../sass/forms.scss */
 input[name="username"] {
   outline: none;
   background: url("../img/user.png") no-repeat;
@@ -93,7 +101,7 @@ input[name="username"] {
   background-size: 8%;
 }
 
-/* line 84, ../sass/forms.scss */
+/* line 95, ../sass/forms.scss */
 input[type="password"] {
   outline: none;
   background: url("../img/pass.png") no-repeat;
@@ -103,7 +111,7 @@ input[type="password"] {
   background-size: 7%;
 }
 
-/* line 92, ../sass/forms.scss */
+/* line 103, ../sass/forms.scss */
 input[type="email"] {
   outline: none;
   background: url("../img/mail.png") no-repeat;
@@ -113,19 +121,19 @@ input[type="email"] {
   background-size: 12%;
 }
 
-/* line 100, ../sass/forms.scss */
+/* line 111, ../sass/forms.scss */
 .form-link {
   color: #bfc1c3;
   line-height: 2.3;
   text-transform: uppercase;
   font-size: 11px;
 }
-/* line 105, ../sass/forms.scss */
+/* line 116, ../sass/forms.scss */
 .form-link:hover {
   color: #fff;
 }
 
-/* line 110, ../sass/forms.scss */
+/* line 121, ../sass/forms.scss */
 input[name="login-name"] {
   outline: none;
   background: url("../img/user-green.png") no-repeat;
@@ -135,7 +143,7 @@ input[name="login-name"] {
   background-size: 8%;
 }
 
-/* line 118, ../sass/forms.scss */
+/* line 129, ../sass/forms.scss */
 input[name="login-password"] {
   outline: none;
   background: url("../img/pass-green.png") no-repeat;
