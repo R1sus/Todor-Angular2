@@ -1,8 +1,8 @@
 @import "modules/variables";
-@import "modules/_media";
+
 
 .container {
-  width:40%;
+  width:45%;
   margin:0 auto;
   position:relative;
   padding-left: 4rem;
@@ -123,3 +123,4 @@ input[name="login-password"]{
   background-position: 15px;
   background-size: 7%;
 }
+//@import "modules/_media";

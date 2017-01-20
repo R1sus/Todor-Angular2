@@ -182,4 +182,40 @@ h1 {
 }
 
 /*general styles*/
+@media only screen and (max-width: 1024px) {
+  /* line 2, ../sass/modules/_media.scss */
+  body {
+    background-size: initial;
+  }
+
+  /* line 5, ../sass/modules/_media.scss */
+  .wrapper {
+    width: 90%;
+  }
+
+  /* line 8, ../sass/modules/_media.scss */
+  h2 {
+    line-height: 2;
+  }
+
+  /* line 11, ../sass/modules/_media.scss */
+  .container {
+    width: 60%;
+  }
+
+  /* line 14, ../sass/modules/_media.scss */
+  input[name="username"], input[name="login-name"], input[type="password"] {
+    background-size: 5%;
+  }
+
+  /* line 17, ../sass/modules/_media.scss */
+  input[type="email"] {
+    background-size: 8%;
+  }
+
+  /* line 20, ../sass/modules/_media.scss */
+  .search-page {
+    width: 70%;
+  }
+}
 /*responsive styles*/
