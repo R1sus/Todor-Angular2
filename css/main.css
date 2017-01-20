@@ -72,7 +72,7 @@ nav ul li {
 nav ul li a {
   text-transform: uppercase;
   font-family: "Lato", sans-serif;
-  font-size: 1em;
+  font-size: 13px;
   color: #bfc3c5;
   padding: 10px 20px;
   border-radius: 5px;
@@ -131,7 +131,7 @@ footer {
 /*////////Search page//////////////*/
 /* line 115, ../sass/modules/_all.scss */
 .search-page {
-  width: 50%;
+  width: 57%;
   margin: 0 auto;
 }
 /* line 118, ../sass/modules/_all.scss */
@@ -168,13 +168,13 @@ footer {
   width: 40%;
   margin: 0;
   overflow: hidden;
-  background: #fff url(/img/caret.png) no-repeat 165px;
+  background: #fff url(/img/caret.png) no-repeat 185px;
   border-right: 1px solid #f0f0f0;
   border-radius: 30px 0 0 30px;
 }
 /* line 150, ../sass/modules/_all.scss */
 #searchForm p input {
-  width: 226px;
+  width: 252px;
   height: 100%;
   padding: 0 15px;
   background: transparent;
@@ -195,13 +195,13 @@ footer {
 #searchForm .styled-select {
   width: 30%;
   overflow: hidden;
-  background: #fff url(/img/caret.png) no-repeat 115px;
+  background: #fff url(/img/caret.png) no-repeat 130px;
 }
 /* line 173, ../sass/modules/_all.scss */
 #searchForm .styled-select select {
   position: relative;
   bottom: 1px;
-  width: 162px;
+  width: 185px;
   height: 57px;
   padding: 0 15px;
   margin-left: -1px;
@@ -269,11 +269,53 @@ footer {
   text-align: center;
 }
 
+/* line 239, ../sass/modules/_all.scss */
+input[type="search"] {
+  width: 100%;
+}
+
 /*/*/
-/* line 241, ../sass/modules/_all.scss */
+/* line 243, ../sass/modules/_all.scss */
 h1 {
   color: #fff;
   text-align: center;
 }
 
 /*general styles*/
+@media only screen and (max-width: 1024px) {
+  /* line 2, ../sass/modules/_media.scss */
+  body {
+    background-size: initial;
+  }
+
+  /* line 5, ../sass/modules/_media.scss */
+  .wrapper {
+    width: 90%;
+  }
+
+  /* line 8, ../sass/modules/_media.scss */
+  h2 {
+    line-height: 2;
+  }
+
+  /* line 11, ../sass/modules/_media.scss */
+  .container {
+    width: 60%;
+  }
+
+  /* line 14, ../sass/modules/_media.scss */
+  input[name="username"], input[name="login-name"], input[type="password"] {
+    background-size: 5%;
+  }
+
+  /* line 17, ../sass/modules/_media.scss */
+  input[type="email"] {
+    background-size: 8%;
+  }
+
+  /* line 20, ../sass/modules/_media.scss */
+  .search-page {
+    width: 70%;
+  }
+}
+/*responsive styles*/
