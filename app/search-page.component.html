@@ -1,7 +1,7 @@
 <div class="search-page">
     <h2>Location services on<br>usual phones.<b>For free.</b></h2>
-    <form id="searchForm">
-        <p><input list="lookFor"/>
+    <form id="searchForm" class="clearfix">
+        <p><input list="lookFor" placeholder="I am looking for..."/>
         <datalist id="lookFor">
             <option disabled hidden selected>I am looking for</option>
             <option value="first"></option>
@@ -11,12 +11,17 @@
             <option value="first"></option>
             <option value="second"></option>
         </datalist></p>
-        <select>
-            <option selected value="ny">New York</option>
-            <option value="ny">New York2</option>
-            <option value="ny">New York3</option>
-        </select>
-        <input type="submit" class="submitSearch"value="Search">
+        <div class="styled-select">
+            <select>
+                <option selected value="ny">New York</option>
+                <option value="ny">New York2</option>
+                <option value="ny">New York3</option>
+            </select>
+        </div>
+        <div class="search-btn">
+            <input class="submitSearch" type="submit" value="Search">
+            <span class="search-icon"></span>
+        </div>
     </form>
     <div class="categories">
         <div class="item">
