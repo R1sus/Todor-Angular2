@@ -1,4 +1,5 @@
 @import "modules/variables";
+@import "modules/_media";
 
 .container {
   width:40%;
@@ -58,6 +59,9 @@ form {
   }
 
 }
+//.btn[disabled]{
+//  cursor:pointer;
+//}
 form {
   .btn-green {
     background-color: #abd154;
@@ -66,7 +70,9 @@ form {
     }
   }
 }
-
+input {
+  cursor: pointer;
+}
 input[name="username"]{
   outline: none;
   background: url("../img/user.png") no-repeat;

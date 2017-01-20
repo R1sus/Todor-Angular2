@@ -56,7 +56,7 @@ nav {
       a {
         text-transform: uppercase;
         font-family: $general-font;
-        font-size: 1em;
+        font-size: 13px;
         color: #bfc3c5;
         padding: 10px 20px;
         border-radius: 5px;
@@ -113,7 +113,7 @@ footer {
 
 /*////////Search page//////////////*/
 .search-page {
-  width: 50%;
+  width: 57%;
   margin: 0 auto;
   h2 {
     text-align: center;
@@ -146,9 +146,12 @@ footer {
 .item {
   text-align: center;
 }
-
+input[type="search"] {
+  width:100%;
+}
 /*/*/
 h1 {
   color: #fff;
   text-align: center;
 }
+

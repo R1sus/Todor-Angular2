@@ -72,7 +72,7 @@ nav ul li {
 nav ul li a {
   text-transform: uppercase;
   font-family: "Lato", sans-serif;
-  font-size: 1em;
+  font-size: 13px;
   color: #bfc3c5;
   padding: 10px 20px;
   border-radius: 5px;
@@ -131,7 +131,7 @@ footer {
 /*////////Search page//////////////*/
 /* line 115, ../sass/modules/_all.scss */
 .search-page {
-  width: 50%;
+  width: 57%;
   margin: 0 auto;
 }
 /* line 118, ../sass/modules/_all.scss */
@@ -169,11 +169,17 @@ footer {
   text-align: center;
 }
 
+/* line 149, ../sass/modules/_all.scss */
+input[type="search"] {
+  width: 100%;
+}
+
 /*/*/
-/* line 151, ../sass/modules/_all.scss */
+/* line 153, ../sass/modules/_all.scss */
 h1 {
   color: #fff;
   text-align: center;
 }
 
 /*general styles*/
+/*responsive styles*/
