@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { Response} from '@angular/http';
-import { HttpService} from './http.service';
+import { Response } from '@angular/http';
+import { HttpService } from './http.service';
+import { HttpAddUserService } from './http-add-user.service';
 @Component({
   selector: 'my-app',
   styles:[` 
@@ -22,7 +23,7 @@ import { HttpService} from './http.service';
         </nav>
       </header>
     <router-outlet></router-outlet> `,
-  providers: [HttpService]
+  providers: [HttpService, HttpAddUserService]
       // '<search-page></search-page>'
       // '<login-form></login-form>'
       // '<authorization-form></authorization-form>'

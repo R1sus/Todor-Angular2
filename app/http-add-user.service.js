@@ -11,7 +11,7 @@ System.register(['@angular/core', '@angular/http', 'rxjs/Observable', 'rxjs/add/
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1, http_1, Observable_1;
-    var HttpService;
+    var HttpAddUserService;
     return {
         setters:[
             function (core_1_1) {
@@ -27,29 +27,26 @@ System.register(['@angular/core', '@angular/http', 'rxjs/Observable', 'rxjs/add/
             function (_2) {},
             function (_3) {}],
         execute: function() {
-            HttpService = (function () {
-                function HttpService(http) {
+            HttpAddUserService = (function () {
+                function HttpAddUserService(http) {
                     this.http = http;
                 }
-                HttpService.prototype.postData = function (obj) {
+                HttpAddUserService.prototype.postData = function (obj) {
                     var body = JSON.stringify(obj);
                     var headers = new http_1.Headers({ 'Content-Type': 'application/json;charset=utf-8' });
-                    return this.http.post('http://104.196.125.63:9000/api/signin', body, { headers: headers })
+                    return this.http.post('http://104.196.125.63:9000/api/adduser', body, { headers: headers })
                         .map(function (resp) { return resp.json(); })
                         .catch(function (error) { return Observable_1.Observable.throw(error); });
                 };
-                HttpService = __decorate([
+                HttpAddUserService = __decorate([
                     core_1.Injectable(), 
                     __metadata('design:paramtypes', [(typeof (_a = typeof http_1.Http !== 'undefined' && http_1.Http) === 'function' && _a) || Object])
-                ], HttpService);
-                return HttpService;
+                ], HttpAddUserService);
+                return HttpAddUserService;
                 var _a;
             }());
-            exports_1("HttpService", HttpService);
+            exports_1("HttpAddUserService", HttpAddUserService);
         }
     }
 });
-/**
- * Created by D on 20.01.2017.
- */
-//# sourceMappingURL=http.service.js.map
+//# sourceMappingURL=http-add-user.service.js.map

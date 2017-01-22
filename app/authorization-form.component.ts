@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from './user.interface';
+import { AddUser } from './adduser';
+import { HttpAddUserService } from './http-add-user.service';
 import {
   NgForm,
   FormBuilder,
@@ -8,40 +9,24 @@ import {
   AbstractControl
 } from '@angular/forms';
 
-// export class User{
-//     name: string;
-//     email: string;
-//     password: string;
-//     confirmPassword: string;
-// }
-
 @Component({
   moduleId: module.id,
   selector: 'authorization-form',
-  templateUrl: 'authorization-form.component.html'
+  templateUrl: 'authorization-form.component.html',
+  providers: [HttpAddUserService]
 })
-export class  AuthorizationFormComponent implements OnInit {
+export class  AuthorizationFormComponent {
 
-    public user: User;
+  user: AddUser = new AddUser();
+  receivedUser: AddUser;
 
-    ngOnInit() {
-        // initialize model here
-        this.user = {
-            username: '',
-            email: '',
-            password: '',
-            confirmPassword: ''
-        }
-    }
+  constructor(private httpAddUserService: HttpAddUserService) {}
 
-    save(model: User, isValid: boolean) {
-        // call API to save customer
-        console.log(model, isValid);
-    }
-
-  // submit(form) {
-  //   this.value = form;
-  // }
+  submit(user) {
+    this.httpAddUserService.postData(user)
+        .subscribe((data) => {this.receivedUser=data});
+    console.log(this.user);
+  }
 }
 
 

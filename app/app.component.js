@@ -1,4 +1,4 @@
-System.register(['@angular/core', './http.service'], function(exports_1, context_1) {
+System.register(['@angular/core', './http.service', './http-add-user.service'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['@angular/core', './http.service'], function(exports_1, context
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, http_service_1;
+    var core_1, http_service_1, http_add_user_service_1;
     var AppComponent;
     return {
         setters:[
@@ -19,6 +19,9 @@ System.register(['@angular/core', './http.service'], function(exports_1, context
             },
             function (http_service_1_1) {
                 http_service_1 = http_service_1_1;
+            },
+            function (http_add_user_service_1_1) {
+                http_add_user_service_1 = http_add_user_service_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -29,7 +32,7 @@ System.register(['@angular/core', './http.service'], function(exports_1, context
                         selector: 'my-app',
                         styles: [" \n        .active a {\n        color:#fff;\n        }\n    "],
                         template: " <header>\n        <div class=\"logo\">\n          <a routerLink=\"\"> <img src=\"../img/logo@2x.png\" alt=\"logo\"/></a>\n        </div>\n        <nav>\n          <ul>\n            <li routerLinkActive=\"active\"><a routerLink=\"/about\">About</a></li>\n            <li routerLinkActive=\"active\"><a routerLink=\"/contact_us\" >Contact us</a></li>\n            <li routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\"><a routerLink=\"/login\" class=\"loginLink\" >Log in</a></li>\n            <li routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\"><a routerLink=\"/signin\" class=\"signLink\" >Sign in </a></li>\n          </ul>\n        </nav>\n      </header>\n    <router-outlet></router-outlet> ",
-                        providers: [http_service_1.HttpService]
+                        providers: [http_service_1.HttpService, http_add_user_service_1.HttpAddUserService]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
