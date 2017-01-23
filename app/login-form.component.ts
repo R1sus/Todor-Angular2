@@ -20,15 +20,14 @@ import {User} from './user';
 })
 export class LoginFormComponent {
     user: User = new User();
-    receivedUser: User; // полученный пользователь
     done: boolean = false;
 
     constructor(private httpService: HttpService){}
     
     submit(user){
         this.httpService.postData(user)
-            .subscribe((data) => {this.receivedUser=data; this.done=true;});
-        console.log(this.user);
+            .subscribe((data) => { this.done=data.loggedIn; });
+        console.log(this.done);
     }
 }
 
