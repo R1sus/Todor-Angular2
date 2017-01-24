@@ -19,5 +19,6 @@ export class HttpAddUserService {
 		return this.http.post('http://104.196.125.63:9000/api/adduser', body, { headers: headers })
             .map((resp:Response)=>resp.json())
             .catch((error:any) =>{return Observable.throw(error);});
+
 	}
 }

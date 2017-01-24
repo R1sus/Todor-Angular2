@@ -79,6 +79,11 @@ System.register(['@angular/core', '@angular/platform-browser', '@angular/forms',
                             search_page_component_1.SearchPageComponent,
                             not_found_component_1.NotFoundComponent
                         ],
+                        // providers: [
+                        //   fakeBackendProvider,
+                        //   MockBackend,
+                        //   BaseRequestOptions
+                        // ],
                         bootstrap: [app_component_1.AppComponent]
                     }), 
                     __metadata('design:paramtypes', [])

@@ -295,6 +295,13 @@ h1 {
   text-align: center;
 }
 
+/* line 260, ../sass/modules/_all.scss */
+.close {
+  position: absolute;
+  top: 0rem;
+  right: -5rem;
+}
+
 /*general styles*/
 @media only screen and (max-width: 1024px) {
   /* line 2, ../sass/modules/_media.scss */
@@ -330,6 +337,30 @@ h1 {
   /* line 20, ../sass/modules/_media.scss */
   .search-page {
     width: 70%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* line 25, ../sass/modules/_media.scss */
+  .container {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 425px) {
+  /* line 31, ../sass/modules/_media.scss */
+  .container {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 375px) {
+  /* line 36, ../sass/modules/_media.scss */
+  .container {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  /* line 42, ../sass/modules/_media.scss */
+  .container {
+    width: 90%;
   }
 }
 /*responsive styles*/
