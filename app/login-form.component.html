@@ -11,16 +11,8 @@
             <input type="password" class="form-control" id="password"  [(ngModel)]="user.password" name="login-password" placeholder = "Password" ngModel #password="ngModel" maxlength="25"required>
         </div>
         <button type="submit" [disabled]="name.invalid || password.invalid" class="btn btn-green" (click)="submit(user)">Log in</button>
-<<<<<<< HEAD
         <a class = "form-link" href="/signin">You don't have an account?</a>
-=======
         <a class = "form-link" [routerLink]="['/signin']">You don't have an account?</a>
-        <div *ngIf="done">
-            <div>Получено от сервера:</div>
-            <div>Имя: {{receivedUser.name}}</div>
-            <div>Возраст: {{receivedUser.password}}</div>
-        </div>
->>>>>>> e1bb9775c4181db5327280b6741243907f683c6d
         <pre>submitted value: <br>{{loginform.value | json}}</pre>
     </form>
     <br>
