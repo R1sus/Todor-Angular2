@@ -1,0 +1,40 @@
+<div class ="business-profile-container">
+    <h2>Business <b>Account</b></h2>
+    <form class="business-profile" novalidate #bprofile="ngForm" >
+        <div class="form-group">
+            <input type="text" class="form-control"
+                   name="business-name"  placeholder = "Business Name" maxlength="25" ngModel #business="ngModel" required >
+            <input type="text" class="form-control"
+                   name="street"  placeholder = "Street Adress" maxlength="25" ngModel #street="ngModel" required >
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control"
+                   name="city"  placeholder = "City" maxlength="25" ngModel #city="ngModel" required >
+            <input type="text" class="form-control"
+                   name="zip"  placeholder = "Zip" maxlength="25" ngModel #zip="ngModel" required >
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control"
+                   name="phone"  placeholder = "Phone" maxlength="25" ngModel #city="ngModel" required >
+            <input type="number" class="form-control"
+                   name="text"  placeholder = "Fax" maxlength="25" ngModel #zip="ngModel" required >
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control"
+                   name="website"  placeholder = "Website" maxlength="25" ngModel #site="ngModel" required >
+            <input type="text" class="form-control"
+                   name="category"  placeholder = "Business Category" maxlength="25" ngModel #category="ngModel" required >
+        </div>
+        <textarea class="form-control" placeholder="Business Description"></textarea>
+        <div class="form-group">
+            <input type="text" class="form-control"
+                   name="business-photo"  placeholder = "Business Photo" maxlength="25" ngModel #bphoto="ngModel" required >
+            <input type="text" class="form-control"
+                   name="business-logo"  placeholder = "Business Logo" maxlength="25" ngModel #blogo="ngModel" required >
+        </div>
+        <div class="form-btn">
+            <button type="submit" class="btn">Submit</button>
+        </div>
+
+    </form>
+</div>

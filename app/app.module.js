@@ -1,4 +1,4 @@
-System.register(['@angular/core', '@angular/platform-browser', '@angular/forms', '@angular/router', '@angular/http', './app.component', './equal-validator.directive', './authorization-form.component', './login-form.component', './search-page.component', './not-found.component'], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/platform-browser', '@angular/forms', '@angular/router', '@angular/http', './app.component', './equal-validator.directive', './authorization-form.component', './login-form.component', './search-page.component', './not-found.component', './user-profile.component', './business-profile.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['@angular/core', '@angular/platform-browser', '@angular/forms',
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, platform_browser_1, forms_1, router_1, http_1, app_component_1, equal_validator_directive_1, authorization_form_component_1, login_form_component_1, search_page_component_1, not_found_component_1;
+    var core_1, platform_browser_1, forms_1, router_1, http_1, app_component_1, equal_validator_directive_1, authorization_form_component_1, login_form_component_1, search_page_component_1, not_found_component_1, user_profile_component_1, business_profile_component_1;
     var appRoutes, AppModule;
     return {
         setters:[
@@ -46,10 +46,18 @@ System.register(['@angular/core', '@angular/platform-browser', '@angular/forms',
             },
             function (not_found_component_1_1) {
                 not_found_component_1 = not_found_component_1_1;
+            },
+            function (user_profile_component_1_1) {
+                user_profile_component_1 = user_profile_component_1_1;
+            },
+            function (business_profile_component_1_1) {
+                business_profile_component_1 = business_profile_component_1_1;
             }],
         execute: function() {
             appRoutes = [
                 { path: '', component: search_page_component_1.SearchPageComponent },
+                { path: 'uprofile', component: user_profile_component_1.UserProfileComponent },
+                { path: 'bprofile', component: business_profile_component_1.BusinessProfileComponent },
                 { path: 'signin', component: authorization_form_component_1.AuthorizationFormComponent },
                 { path: 'login', component: login_form_component_1.LoginFormComponent },
                 { path: '**', component: not_found_component_1.NotFoundComponent }
@@ -77,7 +85,9 @@ System.register(['@angular/core', '@angular/platform-browser', '@angular/forms',
                             login_form_component_1.LoginFormComponent,
                             authorization_form_component_1.AuthorizationFormComponent,
                             search_page_component_1.SearchPageComponent,
-                            not_found_component_1.NotFoundComponent
+                            not_found_component_1.NotFoundComponent,
+                            user_profile_component_1.UserProfileComponent,
+                            business_profile_component_1.BusinessProfileComponent
                         ],
                         // providers: [
                         //   fakeBackendProvider,

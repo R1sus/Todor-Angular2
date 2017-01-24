@@ -14,13 +14,18 @@ import { AuthorizationFormComponent } from './authorization-form.component';
 import { LoginFormComponent } from './login-form.component';
 import { SearchPageComponent } from './search-page.component';
 import { NotFoundComponent } from './not-found.component';
+import { UserProfileComponent } from './user-profile.component';
+import { BusinessProfileComponent } from './business-profile.component';
 
 
 const appRoutes: Routes =[
   { path: '', component: SearchPageComponent },
+  { path: 'uprofile', component:  UserProfileComponent },
+  { path: 'bprofile', component: BusinessProfileComponent},
   { path: 'signin', component: AuthorizationFormComponent},
   { path: 'login', component: LoginFormComponent},
   { path: '**', component: NotFoundComponent }
+
 ];
 
 // RouterModule.forRoot([
@@ -43,7 +48,10 @@ const appRoutes: Routes =[
     LoginFormComponent,
     AuthorizationFormComponent,
     SearchPageComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    UserProfileComponent,
+    BusinessProfileComponent
+
   ],
   // providers: [
   //   fakeBackendProvider,

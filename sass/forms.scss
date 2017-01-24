@@ -30,6 +30,7 @@ h2 {
 form {
   .form-control {
     border-radius: 25px;
+    letter-spacing: 1;
     height: 45px;
     font-size: 15px;
     font-family: $general-font;
@@ -84,7 +85,7 @@ form {
 input {
   cursor: pointer;
 }
-input[name="username"]{
+input[name="username"],input[name="business-name"]{
   outline: none;
   background: url("../img/user.png") no-repeat;
   background-color: #fff;
@@ -135,3 +136,42 @@ input[name="login-password"]{
   background-size: 7%;
 }
 //@import "modules/_media";
+////////////////////////business profile///////////////////////
+.business-profile-container {
+  background-color:rgba(127,135,138, 0.6);
+  width: 100%;
+  border-radius:7px;
+  h2{
+    text-align: center;
+  }
+  .business-profile {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom:45px;
+    .form-group {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      justify-content: space-between;
+      input {
+        width:47%;
+        padding-left: 53px;
+      }
+    }
+    textarea{
+      width:100%;
+      border-radius: 25px;
+      padding-left: 53px;
+      resize:none;
+      outline: none;
+      height:25rem;
+      margin-bottom: 15px;
+      }
+
+    }
+  }
+.form-btn {
+  width:30%;
+  margin: 0 auto;
+
+}
