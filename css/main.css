@@ -18,7 +18,6 @@ body {
   background: url("../../img/bg.png") no-repeat;
   background-size: 100%;
   background-position: center;
-  height: 100vh;
 }
 
 /* line 17, ../sass/modules/_all.scss */
@@ -272,11 +271,34 @@ input[type="search"] {
   width: 100%;
 }
 
+/* line 240, ../sass/modules/_all.scss */
+#lookFor {
+  outline: none;
+}
+/* line 242, ../sass/modules/_all.scss */
+#lookFor option {
+  border-radius: 10px;
+  width: 80%;
+}
+
+/* line 248, ../sass/modules/_all.scss */
+option:checked, option:hover {
+  color: white;
+  background: #488f8f !important;
+}
+
 /*/*/
-/* line 241, ../sass/modules/_all.scss */
+/* line 256, ../sass/modules/_all.scss */
 h1 {
   color: #fff;
   text-align: center;
+}
+
+/* line 260, ../sass/modules/_all.scss */
+.close {
+  position: absolute;
+  top: 0rem;
+  right: -5rem;
 }
 
 /*general styles*/
@@ -314,6 +336,30 @@ h1 {
   /* line 20, ../sass/modules/_media.scss */
   .search-page {
     width: 70%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* line 25, ../sass/modules/_media.scss */
+  .container {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 425px) {
+  /* line 31, ../sass/modules/_media.scss */
+  .container {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 375px) {
+  /* line 36, ../sass/modules/_media.scss */
+  .container {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  /* line 42, ../sass/modules/_media.scss */
+  .container {
+    width: 90%;
   }
 }
 /*responsive styles*/

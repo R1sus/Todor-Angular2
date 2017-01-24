@@ -1,79 +1,39 @@
-<!--<div class="container">
-  <h2>Sign Up to <b>Locify</b></h2>
-  <form #form="ngForm" novalidate (ngSubmit)="save(f.value, f.valid)" >
-    <div class="form-group">
-      <input type="text" class="form-control" id="name" name="username"  placeholder = "Full Name"
-             [(ngModel)]="user.username" maxlength="25" #username="ngModel" required >
-      <small [hidden]="username.valid || (username.pristine && !f.submitted)" class="text-danger">
-        Name is required.
-      </small>
-    </div>
-    <div class="form-group">
-      <input type="email" class="form-control" id="email"  name="email"
-             placeholder = "Email" [(ngModel)]="user.email" #email="ngModel" maxlength="25"
-             pattern="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+" required >
-      <small [hidden]="email.valid || (email.pristine && !f.submitted)" class="text-danger">
-        Email is required and format should be <i>john@doe.com</i>.
-      </small>
-    </div>
-    <div class="form-group">
-      <input type="password" class="form-control password" name="password"
-             placeholder="Password" [(ngModel)]="user.password"  #password="ngModel"
-             maxlength="25" validateEqual="confirmPassword" reverse="true" required>
-      <small [hidden]="password.valid || (password.pristine && !f.submitted)" class="text-danger">
-        Password is required
-      </small>
-    </div>
-    <div class="form-group">
-    <input type="password" class="form-control password" name="confirmPassword" [(ngModel)]="user.confirmPassword"
-           #confirmPassword="ngModel" validateEqual="password" placeholder = "Confirm Password"
-           maxlength="25" reverse="false" required>
-      <small [hidden]="confirmPassword.valid ||  (confirmPassword.pristine && !f.submitted)" class="text-danger">
-        Password mismatch
-      </small>
-    </div>
-    <button [disabled]="!myForm.valid" type="submit" class="btn">sign up</button>
-    <a class = "form-link" href="/login">You already have an account?</a>
-     <div class="margin-20" *ngIf="f">
-      <div>Form details:-</div>
-      <pre>Is form valid?: <br>{{f.valid | json}}</pre>
-      <pre>Is form submitted?: <br>{{f.submitted | json}}</pre>
-      <pre>submitted value: <br>{{f.value | json}}</pre>
-    </div>
-  </form>
-</div>-->
 <div class="container">
   <h2>Sign Up to <b>Locify</b></h2>
+  <div class = "close">
+    <a [routerLink]="['']"><img src ="../img/close.png" alt="close"/></a>
+  </div>
   <form #f="ngForm" novalidate>
     <div class="form-group">
       <input placeholder = "Full Name" type="text" class="form-control" name="username" [(ngModel)]="user.username"
-             required  maxlength="25" #username="ngModel">
+             required  maxlength="25" #username="ngModel" autocomplete="off">
       <small [hidden]="username.valid || (username.pristine && !f.submitted)" class="text-danger">
         Username is required.
       </small>
     </div>
     <div class="form-group">
       <input placeholder = "Email" maxlength="25" type="email" class="form-control" name="email" [(ngModel)]="user.email"
-             required  #email="ngModel" pattern="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+">
+             required  #email="ngModel" pattern="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+" autocomplete="off">
       <small [hidden]="email.valid || (email.pristine && !f.submitted)" class="text-danger">
         Email is required and format should be <i>john@doe.com</i>.
       </small>
     </div>
     <div class="form-group">
       <input  placeholder="Password" maxlength="25" type="password" class="form-control" name="password" [(ngModel)]="user.password"
-             required validateEqual="confirmPassword" reverse="true" #password="ngModel">
+             required validateEqual="confirmPassword" reverse="true" #password="ngModel" autocomplete="off">
       <small [hidden]="password.valid || (password.pristine && !f.submitted)" class="text-danger">
         Password is required
       </small>
     </div>
     <div class="form-group">
       <input placeholder = "Confirm Password" maxlength="25" type="password" class="form-control" name="confirmPassword" [(ngModel)]="user.confirmPassword"
-             required validateEqual="password" reverse="false" #confirmPassword="ngModel">
+             required validateEqual="password" reverse="false" #confirmPassword="ngModel" autocomplete="off">
       <small [hidden]="confirmPassword.valid || (confirmPassword.pristine && !f.submitted)" class="text-danger">
         Password mismatch
       </small>
     </div>
-    <button [disabled]="!f.valid" type="submit" class="btn btn-default" (click)="submit(user)" >Submit</button>
+    <button [routerLink]="['/login']" [disabled]="!f.valid" type="submit" class="btn btn-default" (click)="submit(user)" >Submit</button>
+    <a class = "form-link" [routerLink]="['/login']">You already have an account?</a>
     <div class="margin-20" *ngIf="f">
       <div>Form details:-</div>
       <!--<pre>Is form valid?: <br>{{f.valid | json}}</pre>-->

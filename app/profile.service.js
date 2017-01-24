@@ -1,4 +1,4 @@
-System.register(['@angular/core', '@angular/http', 'rxjs/Observable', 'rxjs/add/operator/map', 'rxjs/add/operator/catch', 'rxjs/add/observable/throw'], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/http', 'rxjs/Observable', 'rxjs/add/operator/map', 'rxjs/add/observable/throw'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -11,7 +11,7 @@ System.register(['@angular/core', '@angular/http', 'rxjs/Observable', 'rxjs/add/
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1, http_1, Observable_1;
-    var HttpAddUserService;
+    var ProfileService;
     return {
         setters:[
             function (core_1_1) {
@@ -24,29 +24,28 @@ System.register(['@angular/core', '@angular/http', 'rxjs/Observable', 'rxjs/add/
                 Observable_1 = Observable_1_1;
             },
             function (_1) {},
-            function (_2) {},
-            function (_3) {}],
+            function (_2) {}],
         execute: function() {
-            HttpAddUserService = (function () {
-                function HttpAddUserService(http) {
+            ProfileService = (function () {
+                function ProfileService(http) {
                     this.http = http;
                 }
-                HttpAddUserService.prototype.postData = function (obj) {
-                    var body = JSON.stringify(obj);
-                    var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
-                    return this.http.post('http://104.196.125.63:9000/api/adduser', body, { headers: headers })
+                ProfileService.prototype.getProfile = function () {
+                    var headers = new http_1.Headers({ 'Content-Type': 'application/json;charset=utf-8' });
+                    var authToken = JSON.parse(localStorage.getItem('auth_token'));
+                    return this.http.post('http://104.196.125.63:9000/api/sendtoken', authToken, { headers: headers })
                         .map(function (resp) { return resp.json(); })
                         .catch(function (error) { return Observable_1.Observable.throw(error); });
                 };
-                HttpAddUserService = __decorate([
+                ProfileService = __decorate([
                     core_1.Injectable(), 
                     __metadata('design:paramtypes', [(typeof (_a = typeof http_1.Http !== 'undefined' && http_1.Http) === 'function' && _a) || Object])
-                ], HttpAddUserService);
-                return HttpAddUserService;
+                ], ProfileService);
+                return ProfileService;
                 var _a;
             }());
-            exports_1("HttpAddUserService", HttpAddUserService);
+            exports_1("ProfileService", ProfileService);
         }
     }
 });
-//# sourceMappingURL=http-add-user.service.js.map
+//# sourceMappingURL=profile.service.js.map

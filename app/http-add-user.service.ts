@@ -14,10 +14,11 @@ export class HttpAddUserService {
 	postData(obj: AddUser) {
 		const body = JSON.stringify(obj);
 
-		let headers = new Headers({ 'Content-Type': 'application/json;charset=utf-8' });
+		let headers = new Headers({'Content-Type': 'application/json' });
 
 		return this.http.post('http://104.196.125.63:9000/api/adduser', body, { headers: headers })
             .map((resp:Response)=>resp.json())
             .catch((error:any) =>{return Observable.throw(error);});
+
 	}
 }
