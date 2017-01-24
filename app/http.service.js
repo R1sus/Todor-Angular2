@@ -30,12 +30,22 @@ System.register(['@angular/core', '@angular/http', 'rxjs/Observable', 'rxjs/add/
             HttpService = (function () {
                 function HttpService(http) {
                     this.http = http;
+                    this.loggedIn = false;
+                    this.loggedIn = !!localStorage.getItem('auth_token');
                 }
                 HttpService.prototype.postData = function (obj) {
+                    var _this = this;
                     var body = JSON.stringify(obj);
                     var headers = new http_1.Headers({ 'Content-Type': 'application/json;charset=utf-8' });
                     return this.http.post('http://104.196.125.63:9000/api/signin', body, { headers: headers })
                         .map(function (resp) { return resp.json(); })
+                        .map(function (resp) {
+                        if (resp.success) {
+                            localStorage.setItem('auth_token', resp.token);
+                            _this.loggedIn = true;
+                        }
+                        return resp.success;
+                    })
                         .catch(function (error) { return Observable_1.Observable.throw(error); });
                 };
                 HttpService = __decorate([
