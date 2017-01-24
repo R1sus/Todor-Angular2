@@ -33,8 +33,8 @@ System.register(['@angular/core', './http.service', './user'], function(exports_
                 LoginFormComponent.prototype.submit = function (user) {
                     var _this = this;
                     this.httpService.postData(user)
-                        .subscribe(function (data) { _this.receivedUser = data; _this.done = true; });
-                    console.log(this.user);
+                        .subscribe(function (data) { _this.done = data.loggedIn; });
+                    console.log(this.done);
                 };
                 LoginFormComponent = __decorate([
                     core_1.Component({

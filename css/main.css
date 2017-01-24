@@ -272,8 +272,24 @@ input[type="search"] {
   width: 100%;
 }
 
+/* line 240, ../sass/modules/_all.scss */
+#lookFor {
+  outline: none;
+}
+/* line 242, ../sass/modules/_all.scss */
+#lookFor option {
+  border-radius: 10px;
+  width: 80%;
+}
+
+/* line 248, ../sass/modules/_all.scss */
+option:checked, option:hover {
+  color: white;
+  background: #488f8f !important;
+}
+
 /*/*/
-/* line 241, ../sass/modules/_all.scss */
+/* line 256, ../sass/modules/_all.scss */
 h1 {
   color: #fff;
   text-align: center;

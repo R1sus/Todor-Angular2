@@ -237,6 +237,21 @@ footer {
 input[type="search"] {
   width:100%;
 }
+#lookFor {
+  outline: none;
+  option{
+    border-radius: 10px;
+    width:80%;
+  }
+}
+option {
+  &:checked, &:hover {
+    color: white;
+    background: #488f8f !important;
+  }
+}
+
+
 /*/*/
 h1 {
   color: #fff;
