@@ -28,25 +28,3 @@ export class  AuthorizationFormComponent {
     console.log(this.user);
   }
 }
-
-
-
-
-
-/**
- * Created by D on 17.01.2017.
- */
-
-//
-// signinForm:FormGroup;
-// name:AbstractControl;
-//
-// constructor(form:FormBuilder) {
-//   this.signinForm = form.group({
-//     'name': ['', Validators.required]
-//   });
-//   this.name = this.signinForm.controls['name'];
-// }
-// onSubmit(value:string):void {
-//   console.log('your name:', value);
-// }
