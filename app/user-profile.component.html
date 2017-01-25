@@ -1,0 +1,39 @@
+<div class ="user-profile-container">
+    <h2>User <b>Profile</b></h2>
+    <form class="user-profile" novalidate #uprofile="ngForm" >
+        <div class="form-group">
+            <input type="text" class="form-control"
+                   name="name"  placeholder = "Name" maxlength="25" ngModel #name="ngModel" required >
+            <input type="text" class="form-control"
+                   name="username"  placeholder = "Username" maxlength="25" ngModel #uname="ngModel" required >
+        </div>
+        <div class="form-group">
+            <input type="email" class="form-control"
+                   name="email"  placeholder = "Email" maxlength="25" ngModel #email="ngModel" required >
+        </div>
+        <h4>Optional</h4>
+        <textarea class="form-control" placeholder="Bio"></textarea>
+        <div class="form-group">
+            <input type="text" class="form-control"
+                   name="phone"  placeholder = "Phone Numder" maxlength="25" ngModel #phone="ngModel"  pattern="[0-9]{10}" required >
+            <!--<input type="" class="form-control"-->
+                   <!--name="gender"  placeholder = "Gender" maxlength="25" ngModel #gender="ngModel" required >-->
+            <select class="form-control">
+                <option selected hidden disabled>Gender</option>
+                <option >Male</option>
+                <option>Female</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control"
+                   name="adress"  placeholder = "Address" maxlength="25" ngModel #adress="ngModel" required >
+            <input type="date" class="form-control"
+                   name="birthday"  placeholder = "Birthday" maxlength="25" ngModel #birthday="ngModel" required >
+        </div>
+        <a href="#" class="form-link">By sugning up, you agree to Locify's Terms of Service and Privacy Policy</a>
+        <div class="form-btn">
+            <button type="submit" class="btn">Submit</button>
+        </div>
+
+    </form>
+</div>

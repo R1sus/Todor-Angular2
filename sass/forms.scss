@@ -110,14 +110,7 @@ input[type="email"] {
   background-size: 12%;
 }
 .form-link {
-  color:#bfc1c3;
-  line-height: 2.3;
-  text-transform: uppercase;
-  font-size:11px;
-  &:hover{
-    color:#fff;
 
-  }
 }
 input[name="login-name"]{
   outline: none;
@@ -132,19 +125,25 @@ input[name="login-password"]{
   background: url("../img/pass-green.png") no-repeat;
   background-color: #fff;
   padding-left: 53px;
-  background-position: 15px;
+  background-position: 15px; color:#bfc1c3;
+  line-height: 2.3;
+  text-transform: uppercase;
+  font-size:11px;
+  &:hover{
+    color:#fff;
+
+  }
   background-size: 7%;
 }
-//@import "modules/_media";
 ////////////////////////business profile///////////////////////
-.business-profile-container {
+.business-profile-container, .user-profile-container {
   background-color:rgba(127,135,138, 0.6);
   width: 100%;
   border-radius:7px;
   h2{
     text-align: center;
   }
-  .business-profile {
+  .business-profile,.user-profile{
     width: 90%;
     margin: 0 auto;
     padding-bottom:45px;
@@ -174,4 +173,23 @@ input[name="login-password"]{
   width:30%;
   margin: 0 auto;
 
+}
+////////////////////////user profile///////////////////////
+h4 {
+  font-family: "Lato", sans-serif;
+  color:#fff;
+  font-weight: 300;
+  line-height: 3;
+  text-align: center;
+}
+
+.user-profile {
+  input[type="date"],
+  select {
+    width:47%;
+    padding-left: 50px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+  }
 }

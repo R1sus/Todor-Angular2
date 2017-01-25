@@ -122,19 +122,7 @@ input[type="email"] {
   background-size: 12%;
 }
 
-/* line 112, ../sass/forms.scss */
-.form-link {
-  color: #bfc1c3;
-  line-height: 2.3;
-  text-transform: uppercase;
-  font-size: 11px;
-}
-/* line 117, ../sass/forms.scss */
-.form-link:hover {
-  color: #fff;
-}
-
-/* line 122, ../sass/forms.scss */
+/* line 115, ../sass/forms.scss */
 input[name="login-name"] {
   outline: none;
   background: url("../img/user-green.png") no-repeat;
@@ -144,46 +132,54 @@ input[name="login-name"] {
   background-size: 8%;
 }
 
-/* line 130, ../sass/forms.scss */
+/* line 123, ../sass/forms.scss */
 input[name="login-password"] {
   outline: none;
   background: url("../img/pass-green.png") no-repeat;
   background-color: #fff;
   padding-left: 53px;
   background-position: 15px;
+  color: #bfc1c3;
+  line-height: 2.3;
+  text-transform: uppercase;
+  font-size: 11px;
   background-size: 7%;
 }
+/* line 132, ../sass/forms.scss */
+input[name="login-password"]:hover {
+  color: #fff;
+}
 
-/* line 140, ../sass/forms.scss */
-.business-profile-container {
+/* line 139, ../sass/forms.scss */
+.business-profile-container, .user-profile-container {
   background-color: rgba(127, 135, 138, 0.6);
   width: 100%;
   border-radius: 7px;
 }
-/* line 144, ../sass/forms.scss */
-.business-profile-container h2 {
+/* line 143, ../sass/forms.scss */
+.business-profile-container h2, .user-profile-container h2 {
   text-align: center;
 }
-/* line 147, ../sass/forms.scss */
-.business-profile-container .business-profile {
+/* line 146, ../sass/forms.scss */
+.business-profile-container .business-profile, .business-profile-container .user-profile, .user-profile-container .business-profile, .user-profile-container .user-profile {
   width: 90%;
   margin: 0 auto;
   padding-bottom: 45px;
 }
-/* line 151, ../sass/forms.scss */
-.business-profile-container .business-profile .form-group {
+/* line 150, ../sass/forms.scss */
+.business-profile-container .business-profile .form-group, .business-profile-container .user-profile .form-group, .user-profile-container .business-profile .form-group, .user-profile-container .user-profile .form-group {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-between;
 }
-/* line 156, ../sass/forms.scss */
-.business-profile-container .business-profile .form-group input {
+/* line 155, ../sass/forms.scss */
+.business-profile-container .business-profile .form-group input, .business-profile-container .user-profile .form-group input, .user-profile-container .business-profile .form-group input, .user-profile-container .user-profile .form-group input {
   width: 47%;
   padding-left: 53px;
 }
-/* line 161, ../sass/forms.scss */
-.business-profile-container .business-profile textarea {
+/* line 160, ../sass/forms.scss */
+.business-profile-container .business-profile textarea, .business-profile-container .user-profile textarea, .user-profile-container .business-profile textarea, .user-profile-container .user-profile textarea {
   width: 100%;
   border-radius: 25px;
   padding-left: 53px;
@@ -193,8 +189,26 @@ input[name="login-password"] {
   margin-bottom: 15px;
 }
 
-/* line 173, ../sass/forms.scss */
+/* line 172, ../sass/forms.scss */
 .form-btn {
   width: 30%;
   margin: 0 auto;
+}
+
+/* line 178, ../sass/forms.scss */
+h4 {
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  font-weight: 300;
+  line-height: 3;
+  text-align: center;
+}
+
+/* line 187, ../sass/forms.scss */
+.user-profile input[type="date"],
+.user-profile select {
+  width: 47%;
+  padding-left: 50px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }

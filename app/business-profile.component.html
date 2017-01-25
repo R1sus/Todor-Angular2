@@ -11,16 +11,16 @@
             <input type="text" class="form-control"
                    name="city"  placeholder = "City" maxlength="25" ngModel #city="ngModel" required >
             <input type="text" class="form-control"
-                   name="zip"  placeholder = "Zip" maxlength="25" ngModel #zip="ngModel" required >
+                   name="zip"  placeholder = "Zip" maxlength="25" ngModel #zip="ngModel" pattern="[0-9]{10}"  required >
         </div>
         <div class="form-group">
             <input type="text" class="form-control"
-                   name="phone"  placeholder = "Phone" maxlength="25" ngModel #city="ngModel" required >
-            <input type="number" class="form-control"
-                   name="text"  placeholder = "Fax" maxlength="25" ngModel #zip="ngModel" required >
+                   name="phone"  placeholder = "Phone" maxlength="25" ngModel #phone="ngModel"  pattern="[0-9]{10}" required >
+            <input type="text" class="form-control"
+                   name="fax"  placeholder = "Fax" maxlength="25" ngModel #fax="ngModel"  pattern="[0-9]{10}" required >
         </div>
         <div class="form-group">
-            <input type="text" class="form-control"
+            <input type="url" class="form-control"
                    name="website"  placeholder = "Website" maxlength="25" ngModel #site="ngModel" required >
             <input type="text" class="form-control"
                    name="category"  placeholder = "Business Category" maxlength="25" ngModel #category="ngModel" required >
