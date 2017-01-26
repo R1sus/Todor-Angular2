@@ -1,4 +1,4 @@
-System.register(['@angular/core', '@angular/platform-browser', '@angular/forms', '@angular/router', '@angular/http', './app.component', './equal-validator.directive', './authorization-form.component', './login-form.component', './search-page.component', './not-found.component', './user-profile.component', './business-profile.component'], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/platform-browser', '@angular/forms', '@angular/http', './app.routing', './app.component', './equal-validator.directive', './authorization-form.component', './login-form.component', './search-page.component', './not-found.component', './user-profile.component', './business-profile.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,8 +10,8 @@ System.register(['@angular/core', '@angular/platform-browser', '@angular/forms',
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, platform_browser_1, forms_1, router_1, http_1, app_component_1, equal_validator_directive_1, authorization_form_component_1, login_form_component_1, search_page_component_1, not_found_component_1, user_profile_component_1, business_profile_component_1;
-    var appRoutes, AppModule;
+    var core_1, platform_browser_1, forms_1, http_1, app_routing_1, app_component_1, equal_validator_directive_1, authorization_form_component_1, login_form_component_1, search_page_component_1, not_found_component_1, user_profile_component_1, business_profile_component_1;
+    var AppModule;
     return {
         setters:[
             function (core_1_1) {
@@ -23,11 +23,11 @@ System.register(['@angular/core', '@angular/platform-browser', '@angular/forms',
             function (forms_1_1) {
                 forms_1 = forms_1_1;
             },
-            function (router_1_1) {
-                router_1 = router_1_1;
-            },
             function (http_1_1) {
                 http_1 = http_1_1;
+            },
+            function (app_routing_1_1) {
+                app_routing_1 = app_routing_1_1;
             },
             function (app_component_1_1) {
                 app_component_1 = app_component_1_1;
@@ -54,14 +54,17 @@ System.register(['@angular/core', '@angular/platform-browser', '@angular/forms',
                 business_profile_component_1 = business_profile_component_1_1;
             }],
         execute: function() {
-            appRoutes = [
-                { path: '', component: search_page_component_1.SearchPageComponent },
-                { path: 'uprofile', component: user_profile_component_1.UserProfileComponent },
-                { path: 'bprofile', component: business_profile_component_1.BusinessProfileComponent },
-                { path: 'signin', component: authorization_form_component_1.AuthorizationFormComponent },
-                { path: 'login', component: login_form_component_1.LoginFormComponent },
-                { path: '**', component: not_found_component_1.NotFoundComponent }
-            ];
+            //
+            // const appRoutes: Routes =[
+            //   { path: '', component: AuthorizationFormComponent},
+            //   { path: 'search', component: SearchPageComponent },
+            //   { path: 'uprofile', component:  UserProfileComponent },
+            //   { path: 'bprofile', component: BusinessProfileComponent},
+            //   { path: 'signin', component: AuthorizationFormComponent},
+            //   { path: 'login', component: LoginFormComponent},
+            //   { path: '**', component: NotFoundComponent }
+            //
+            // ];
             // RouterModule.forRoot([
             //   {
             //     path: 'login',
@@ -77,7 +80,7 @@ System.register(['@angular/core', '@angular/platform-browser', '@angular/forms',
                             platform_browser_1.BrowserModule,
                             forms_1.FormsModule,
                             http_1.HttpModule,
-                            router_1.RouterModule.forRoot(appRoutes)
+                            app_routing_1.routing
                         ],
                         declarations: [
                             equal_validator_directive_1.EqualValidator,
@@ -89,11 +92,6 @@ System.register(['@angular/core', '@angular/platform-browser', '@angular/forms',
                             user_profile_component_1.UserProfileComponent,
                             business_profile_component_1.BusinessProfileComponent
                         ],
-                        // providers: [
-                        //   fakeBackendProvider,
-                        //   MockBackend,
-                        //   BaseRequestOptions
-                        // ],
                         bootstrap: [app_component_1.AppComponent]
                     }), 
                     __metadata('design:paramtypes', [])

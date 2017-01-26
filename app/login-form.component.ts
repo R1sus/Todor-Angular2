@@ -19,6 +19,7 @@ import {User} from './user';
     providers: [HttpService]
 })
 export class LoginFormComponent {
+    // model: any = {};
     user: User = new User();
     done: boolean = false;
 
@@ -27,6 +28,9 @@ export class LoginFormComponent {
     submit(user){
         this.httpService.postData(user)
             .subscribe((data) => { this.done=data.loggedIn; });
+        alert("Login success! Have a nice day!");
+        // this.Routes.navigate(['']);
+        // window.location.href = "";
         console.log(this.done);
     }
 }

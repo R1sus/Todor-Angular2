@@ -25,6 +25,7 @@ export class  AuthorizationFormComponent {
   submit(user) {
     this.httpAddUserService.postData(user)
         .subscribe((data) => {this.receivedUser=data});
+    alert("Signin success! Welcome " + user.username + "!");
     console.log(this.user);
   }
 }

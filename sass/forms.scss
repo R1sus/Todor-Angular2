@@ -7,7 +7,7 @@
   position:relative;
   padding-left: 4rem;
   padding-right: 4rem;
-  background-color:rgba(127,135,138, 0.6);
+  background-color:rgba(127,135,138, 0.5);
   opacity:0.9;
   border-radius:7px;
   text-align: center;
@@ -90,8 +90,8 @@ input[name="username"],input[name="business-name"]{
   background: url("../img/user.png") no-repeat;
   background-color: #fff;
   padding-left: 53px;
-  background-position: 12px;
-  background-size: 8%;
+  background-position: 16px;
+  background-size: 5%;
 }
 input[type="password"]{
   outline: none;
@@ -99,7 +99,7 @@ input[type="password"]{
   background-color: #fff;
   padding-left: 53px;
   background-position: 15px;
-  background-size: 7%;
+  background-size: 5%;
 }
 input[type="email"] {
   outline: none;
@@ -107,10 +107,18 @@ input[type="email"] {
   background-color: #fff;
   padding-left: 53px;
   background-position: 10px;
-  background-size: 12%;
+  background-size: 9%;
 }
 .form-link {
+  text-align: center;
+  color:#bfc1c3;
+  line-height: 2.3;
+  text-transform: uppercase;
+  font-size:11px;
+  &:hover{
+    color:#fff;
 
+  }
 }
 input[name="login-name"]{
   outline: none;
@@ -118,7 +126,7 @@ input[name="login-name"]{
   background-color: #fff;
   padding-left: 53px;
   background-position: 12px;
-  background-size: 8%;
+  background-size: 6%;
 }
 input[name="login-password"]{
   outline: none;
@@ -129,15 +137,16 @@ input[name="login-password"]{
   line-height: 2.3;
   text-transform: uppercase;
   font-size:11px;
+  background-size: 5%;
   &:hover{
     color:#fff;
 
   }
-  background-size: 7%;
+
 }
 ////////////////////////business profile///////////////////////
 .business-profile-container, .user-profile-container {
-  background-color:rgba(127,135,138, 0.6);
+  background-color:rgba(127,135,138, 0.5);
   width: 100%;
   border-radius:7px;
   h2{
@@ -155,7 +164,9 @@ input[name="login-password"]{
       input {
         width:47%;
         padding-left: 53px;
+        outline:none;
       }
+
     }
     textarea{
       width:100%;
@@ -166,7 +177,17 @@ input[name="login-password"]{
       height:25rem;
       margin-bottom: 15px;
       }
+.upload-file {
+  background-color: #fff;
+  border-radius:25px;
+  height:45px;
+  input[type="file"] {
+    outline: none;
+    opacity:0;
+    //filter:alpha(opacity:0);
 
+  }
+}
     }
   }
 .form-btn {
@@ -184,6 +205,11 @@ h4 {
 }
 
 .user-profile {
+  .form-link {
+    font-size:12px;
+    line-height: 8;
+    text-transform: none;
+  }
   input[type="date"],
   select {
     width:47%;

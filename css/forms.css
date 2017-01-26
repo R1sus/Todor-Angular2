@@ -13,7 +13,7 @@
   position: relative;
   padding-left: 4rem;
   padding-right: 4rem;
-  background-color: rgba(127, 135, 138, 0.6);
+  background-color: rgba(127, 135, 138, 0.5);
   opacity: 0.9;
   border-radius: 7px;
   text-align: center;
@@ -98,8 +98,8 @@ input[name="username"], input[name="business-name"] {
   background: url("../img/user.png") no-repeat;
   background-color: #fff;
   padding-left: 53px;
-  background-position: 12px;
-  background-size: 8%;
+  background-position: 16px;
+  background-size: 5%;
 }
 
 /* line 96, ../sass/forms.scss */
@@ -109,7 +109,7 @@ input[type="password"] {
   background-color: #fff;
   padding-left: 53px;
   background-position: 15px;
-  background-size: 7%;
+  background-size: 5%;
 }
 
 /* line 104, ../sass/forms.scss */
@@ -119,20 +119,33 @@ input[type="email"] {
   background-color: #fff;
   padding-left: 53px;
   background-position: 10px;
-  background-size: 12%;
+  background-size: 9%;
 }
 
-/* line 115, ../sass/forms.scss */
+/* line 112, ../sass/forms.scss */
+.form-link {
+  text-align: center;
+  color: #bfc1c3;
+  line-height: 2.3;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+/* line 118, ../sass/forms.scss */
+.form-link:hover {
+  color: #fff;
+}
+
+/* line 123, ../sass/forms.scss */
 input[name="login-name"] {
   outline: none;
   background: url("../img/user-green.png") no-repeat;
   background-color: #fff;
   padding-left: 53px;
   background-position: 12px;
-  background-size: 8%;
+  background-size: 6%;
 }
 
-/* line 123, ../sass/forms.scss */
+/* line 131, ../sass/forms.scss */
 input[name="login-password"] {
   outline: none;
   background: url("../img/pass-green.png") no-repeat;
@@ -143,42 +156,43 @@ input[name="login-password"] {
   line-height: 2.3;
   text-transform: uppercase;
   font-size: 11px;
-  background-size: 7%;
+  background-size: 5%;
 }
-/* line 132, ../sass/forms.scss */
+/* line 141, ../sass/forms.scss */
 input[name="login-password"]:hover {
   color: #fff;
 }
 
-/* line 139, ../sass/forms.scss */
+/* line 148, ../sass/forms.scss */
 .business-profile-container, .user-profile-container {
-  background-color: rgba(127, 135, 138, 0.6);
+  background-color: rgba(127, 135, 138, 0.5);
   width: 100%;
   border-radius: 7px;
 }
-/* line 143, ../sass/forms.scss */
+/* line 152, ../sass/forms.scss */
 .business-profile-container h2, .user-profile-container h2 {
   text-align: center;
 }
-/* line 146, ../sass/forms.scss */
+/* line 155, ../sass/forms.scss */
 .business-profile-container .business-profile, .business-profile-container .user-profile, .user-profile-container .business-profile, .user-profile-container .user-profile {
   width: 90%;
   margin: 0 auto;
   padding-bottom: 45px;
 }
-/* line 150, ../sass/forms.scss */
+/* line 159, ../sass/forms.scss */
 .business-profile-container .business-profile .form-group, .business-profile-container .user-profile .form-group, .user-profile-container .business-profile .form-group, .user-profile-container .user-profile .form-group {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-between;
 }
-/* line 155, ../sass/forms.scss */
+/* line 164, ../sass/forms.scss */
 .business-profile-container .business-profile .form-group input, .business-profile-container .user-profile .form-group input, .user-profile-container .business-profile .form-group input, .user-profile-container .user-profile .form-group input {
   width: 47%;
   padding-left: 53px;
+  outline: none;
 }
-/* line 160, ../sass/forms.scss */
+/* line 171, ../sass/forms.scss */
 .business-profile-container .business-profile textarea, .business-profile-container .user-profile textarea, .user-profile-container .business-profile textarea, .user-profile-container .user-profile textarea {
   width: 100%;
   border-radius: 25px;
@@ -188,14 +202,25 @@ input[name="login-password"]:hover {
   height: 25rem;
   margin-bottom: 15px;
 }
+/* line 180, ../sass/forms.scss */
+.business-profile-container .business-profile .upload-file, .business-profile-container .user-profile .upload-file, .user-profile-container .business-profile .upload-file, .user-profile-container .user-profile .upload-file {
+  background-color: #fff;
+  border-radius: 25px;
+  height: 45px;
+}
+/* line 184, ../sass/forms.scss */
+.business-profile-container .business-profile .upload-file input[type="file"], .business-profile-container .user-profile .upload-file input[type="file"], .user-profile-container .business-profile .upload-file input[type="file"], .user-profile-container .user-profile .upload-file input[type="file"] {
+  outline: none;
+  opacity: 0;
+}
 
-/* line 172, ../sass/forms.scss */
+/* line 193, ../sass/forms.scss */
 .form-btn {
   width: 30%;
   margin: 0 auto;
 }
 
-/* line 178, ../sass/forms.scss */
+/* line 199, ../sass/forms.scss */
 h4 {
   font-family: "Lato", sans-serif;
   color: #fff;
@@ -204,7 +229,13 @@ h4 {
   text-align: center;
 }
 
-/* line 187, ../sass/forms.scss */
+/* line 208, ../sass/forms.scss */
+.user-profile .form-link {
+  font-size: 12px;
+  line-height: 8;
+  text-transform: none;
+}
+/* line 213, ../sass/forms.scss */
 .user-profile input[type="date"],
 .user-profile select {
   width: 47%;

@@ -33,6 +33,7 @@ System.register(['@angular/core', './adduser', './http-add-user.service'], funct
                     var _this = this;
                     this.httpAddUserService.postData(user)
                         .subscribe(function (data) { _this.receivedUser = data; });
+                    alert("Signin success! Welcome " + user.username + "!");
                     console.log(this.user);
                 };
                 AuthorizationFormComponent = __decorate([
@@ -50,20 +51,4 @@ System.register(['@angular/core', './adduser', './http-add-user.service'], funct
         }
     }
 });
-/**
- * Created by D on 17.01.2017.
- */
-//
-// signinForm:FormGroup;
-// name:AbstractControl;
-//
-// constructor(form:FormBuilder) {
-//   this.signinForm = form.group({
-//     'name': ['', Validators.required]
-//   });
-//   this.name = this.signinForm.controls['name'];
-// }
-// onSubmit(value:string):void {
-//   console.log('your name:', value);
-// } 
 //# sourceMappingURL=authorization-form.component.js.map

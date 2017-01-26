@@ -12,13 +12,14 @@
                    name="email"  placeholder = "Email" maxlength="25" ngModel #email="ngModel" required >
         </div>
         <h4>Optional</h4>
+        <!--<fieldset>-->
         <textarea class="form-control" placeholder="Bio"></textarea>
         <div class="form-group">
             <input type="text" class="form-control"
                    name="phone"  placeholder = "Phone Numder" maxlength="25" ngModel #phone="ngModel"  pattern="[0-9]{10}" required >
             <!--<input type="" class="form-control"-->
                    <!--name="gender"  placeholder = "Gender" maxlength="25" ngModel #gender="ngModel" required >-->
-            <select class="form-control">
+            <select title="fsf" class="form-control">
                 <option selected hidden disabled>Gender</option>
                 <option >Male</option>
                 <option>Female</option>
@@ -30,7 +31,9 @@
             <input type="date" class="form-control"
                    name="birthday"  placeholder = "Birthday" maxlength="25" ngModel #birthday="ngModel" required >
         </div>
-        <a href="#" class="form-link">By sugning up, you agree to Locify's Terms of Service and Privacy Policy</a>
+        <!--</fieldset>-->
+        <div class ="form-link">
+        <a href="#" class="form-link">By signing up, you agree to Locify's Terms of Service and Privacy Policy</a></div>
         <div class="form-btn">
             <button type="submit" class="btn">Submit</button>
         </div>

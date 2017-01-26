@@ -11,6 +11,7 @@ body {
   background-size: 100%;
   background-position: center;
   background-attachment: fixed;
+
   //height: 100vh;
   
 }
@@ -190,6 +191,9 @@ footer {
         border: none;
       }
     }
+  }
+  input::-webkit-calendar-picker-indicator {
+    display: none;
   }
 
   .search-btn {

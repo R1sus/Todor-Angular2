@@ -11,7 +11,7 @@ import { HttpAddUserService } from './http-add-user.service';
     `],
   template: ` <header>
         <div class="logo">
-          <a routerLink=""> <img src="../img/logo@2x.png" alt="logo"/></a>
+          <a routerLink="/search"> <img src="../img/logo@2x.png" alt="logo"/></a>
         </div>
         <nav>
           <ul>
@@ -21,7 +21,7 @@ import { HttpAddUserService } from './http-add-user.service';
                 <a routerLink="/login" class="loginLink" >Log in</a>
             </li>
             <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-                <a routerLink="/signin" class="signLink" >Sign in </a>
+                <a routerLink="" class="signLink" >Sign in </a>
             </li>
             <!--<li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">-->
                 <!--<a routerLink="/bprofile" class="loginLink" >Log in</a>-->

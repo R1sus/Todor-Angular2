@@ -27,8 +27,11 @@
         </div>
         <textarea class="form-control" placeholder="Business Description"></textarea>
         <div class="form-group">
-            <input type="text" class="form-control"
-                   name="business-photo"  placeholder = "Business Photo" maxlength="25" ngModel #bphoto="ngModel" required >
+            <div class="upload-file">
+                <h5>Business Photo</h5>
+                <input type="file" class="form-control" name="business-photo"  placeholder = "Business Photo"
+                       maxlength="25" ngModel #bphoto="ngModel" required >
+            </div>
             <input type="text" class="form-control"
                    name="business-logo"  placeholder = "Business Logo" maxlength="25" ngModel #blogo="ngModel" required >
         </div>

@@ -27,6 +27,7 @@ System.register(['@angular/core', './http.service', './user'], function(exports_
             LoginFormComponent = (function () {
                 function LoginFormComponent(httpService) {
                     this.httpService = httpService;
+                    // model: any = {};
                     this.user = new user_1.User();
                     this.done = false;
                 }
@@ -34,6 +35,9 @@ System.register(['@angular/core', './http.service', './user'], function(exports_
                     var _this = this;
                     this.httpService.postData(user)
                         .subscribe(function (data) { _this.done = data.loggedIn; });
+                    alert("Login success! Have a nice day!");
+                    // this.Routes.navigate(['']);
+                    // window.location.href = "";
                     console.log(this.done);
                 };
                 LoginFormComponent = __decorate([
