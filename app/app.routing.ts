@@ -9,10 +9,10 @@ import { BusinessProfileComponent } from './business-profile.component';
 
 
 const appRoutes: Routes =[
-    { path: '', component: AuthorizationFormComponent},
+    { path: '',redirectTo: '/signin', pathMatch:'full'},
     { path: 'search', component: SearchPageComponent, canActivate: [AuthGuard] },
-    { path: 'uprofile', component:  UserProfileComponent },
-    { path: 'bprofile', component: BusinessProfileComponent},
+    { path: 'uprofile', component:  UserProfileComponent, canActivate: [AuthGuard] },
+    { path: 'bprofile', component: BusinessProfileComponent, canActivate: [AuthGuard]},
     { path: 'signin', component: AuthorizationFormComponent},
     { path: 'login', component: LoginFormComponent},
     { path: '**', component: NotFoundComponent }

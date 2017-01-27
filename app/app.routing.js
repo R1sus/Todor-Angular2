@@ -31,10 +31,10 @@ System.register(['@angular/router', './guards', './authorization-form.component'
             }],
         execute: function() {
             appRoutes = [
-                { path: '', component: authorization_form_component_1.AuthorizationFormComponent },
+                { path: '', redirectTo: '/signin', pathMatch: 'full' },
                 { path: 'search', component: search_page_component_1.SearchPageComponent, canActivate: [guards_1.AuthGuard] },
-                { path: 'uprofile', component: user_profile_component_1.UserProfileComponent },
-                { path: 'bprofile', component: business_profile_component_1.BusinessProfileComponent },
+                { path: 'uprofile', component: user_profile_component_1.UserProfileComponent, canActivate: [guards_1.AuthGuard] },
+                { path: 'bprofile', component: business_profile_component_1.BusinessProfileComponent, canActivate: [guards_1.AuthGuard] },
                 { path: 'signin', component: authorization_form_component_1.AuthorizationFormComponent },
                 { path: 'login', component: login_form_component_1.LoginFormComponent },
                 { path: '**', component: not_found_component_1.NotFoundComponent }
