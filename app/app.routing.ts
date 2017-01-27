@@ -1,5 +1,5 @@
 import { Routes, RouterModule } from '@angular/router';
-
+import {AuthGuard} from './guards';
 import { AuthorizationFormComponent } from './authorization-form.component';
 import { LoginFormComponent } from './login-form.component';
 import { SearchPageComponent } from './search-page.component';
@@ -7,9 +7,10 @@ import { NotFoundComponent } from './not-found.component';
 import { UserProfileComponent } from './user-profile.component';
 import { BusinessProfileComponent } from './business-profile.component';
 
+
 const appRoutes: Routes =[
     { path: '', component: AuthorizationFormComponent},
-    { path: 'search', component: SearchPageComponent },
+    { path: 'search', component: SearchPageComponent, canActivate: [AuthGuard] },
     { path: 'uprofile', component:  UserProfileComponent },
     { path: 'bprofile', component: BusinessProfileComponent},
     { path: 'signin', component: AuthorizationFormComponent},

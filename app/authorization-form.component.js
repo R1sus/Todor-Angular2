@@ -33,6 +33,7 @@ System.register(['@angular/core', './adduser', './http-add-user.service'], funct
                     var _this = this;
                     this.httpAddUserService.postData(user)
                         .subscribe(function (data) { _this.receivedUser = data; });
+                    localStorage.setItem('currentUser', JSON.stringify(user));
                     alert("Signin success! Welcome " + user.username + "!");
                     console.log(this.user);
                 };

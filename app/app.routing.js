@@ -1,12 +1,15 @@
-System.register(['@angular/router', './authorization-form.component', './login-form.component', './search-page.component', './not-found.component', './user-profile.component', './business-profile.component'], function(exports_1, context_1) {
+System.register(['@angular/router', './guards', './authorization-form.component', './login-form.component', './search-page.component', './not-found.component', './user-profile.component', './business-profile.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
-    var router_1, authorization_form_component_1, login_form_component_1, search_page_component_1, not_found_component_1, user_profile_component_1, business_profile_component_1;
+    var router_1, guards_1, authorization_form_component_1, login_form_component_1, search_page_component_1, not_found_component_1, user_profile_component_1, business_profile_component_1;
     var appRoutes, routing;
     return {
         setters:[
             function (router_1_1) {
                 router_1 = router_1_1;
+            },
+            function (guards_1_1) {
+                guards_1 = guards_1_1;
             },
             function (authorization_form_component_1_1) {
                 authorization_form_component_1 = authorization_form_component_1_1;
@@ -29,7 +32,7 @@ System.register(['@angular/router', './authorization-form.component', './login-f
         execute: function() {
             appRoutes = [
                 { path: '', component: authorization_form_component_1.AuthorizationFormComponent },
-                { path: 'search', component: search_page_component_1.SearchPageComponent },
+                { path: 'search', component: search_page_component_1.SearchPageComponent, canActivate: [guards_1.AuthGuard] },
                 { path: 'uprofile', component: user_profile_component_1.UserProfileComponent },
                 { path: 'bprofile', component: business_profile_component_1.BusinessProfileComponent },
                 { path: 'signin', component: authorization_form_component_1.AuthorizationFormComponent },

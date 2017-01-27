@@ -1,11 +1,12 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
-// import {Routes, RouterModule} from '@angular/router';
+ //import {Routes, RouterModule} from '@angular/router';
 import { HttpModule }   from '@angular/http';
 import { routing }        from './app.routing';
 
 
+import {AuthGuard} from './guards';
 import { AppComponent }  from './app.component';
 import { EqualValidator } from './equal-validator.directive';
 import { AuthorizationFormComponent } from './authorization-form.component';
@@ -52,6 +53,9 @@ import { BusinessProfileComponent } from './business-profile.component';
     UserProfileComponent,
     BusinessProfileComponent
 
+  ],
+  providers: [
+    AuthGuard
   ],
 
   bootstrap: [ AppComponent ]
