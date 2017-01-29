@@ -40,9 +40,10 @@ System.register(['@angular/core', '@angular/http', 'rxjs/Observable', 'rxjs/add/
                 };
                 HttpAddUserService = __decorate([
                     core_1.Injectable(), 
-                    __metadata('design:paramtypes', [http_1.Http])
+                    __metadata('design:paramtypes', [(typeof (_a = typeof http_1.Http !== 'undefined' && http_1.Http) === 'function' && _a) || Object])
                 ], HttpAddUserService);
                 return HttpAddUserService;
+                var _a;
             }());
             exports_1("HttpAddUserService", HttpAddUserService);
         }

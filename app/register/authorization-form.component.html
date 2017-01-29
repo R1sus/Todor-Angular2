@@ -32,7 +32,7 @@
         Password mismatch
       </small>
     </div>
-    <button [routerLink]="['/login']" [disabled]="!f.valid" type="submit" class="btn btn-default" (click)="submit(user)" >Submit</button>
+    <button [disabled]="!f.valid" type="submit" class="btn btn-default" (click)="submit(user)" >Submit</button>
     <a class = "form-link" [routerLink]="['/login']">You already have an account?</a>
     <div class="margin-20" *ngIf="f">
       <div>Form details:-</div>

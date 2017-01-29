@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Response } from '@angular/http';
-import { HttpService } from './http.service';
-import { HttpAddUserService } from './http-add-user.service';
+import { HttpService } from './_services/http.service';
+import { HttpAddUserService } from './_services/http-add-user.service';
 @Component({
   selector: 'my-app',
   styles:[` 
