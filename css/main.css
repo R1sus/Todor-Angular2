@@ -17,7 +17,7 @@ body {
   width: 100%;
   background: url("../../img/bg.png") no-repeat;
   background-size: 100%;
-  background-position: center;
+  background-position: left bottom;
   background-attachment: fixed;
 }
 

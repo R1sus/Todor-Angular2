@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-System.register(['@angular/core', './http.service', '@angular/router'], function(exports_1, context_1) {
-=======
-System.register(['@angular/core', './_services/http.service', './_services/http-add-user.service'], function(exports_1, context_1) {
->>>>>>> bd85032bae7b9565933443ae7990ca71b819869b
+System.register(['@angular/core', './_services/http.service'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -14,7 +10,7 @@ System.register(['@angular/core', './_services/http.service', './_services/http-
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, http_service_1, router_1;
+    var core_1, http_service_1;
     var AppComponent;
     return {
         setters:[
@@ -23,31 +19,20 @@ System.register(['@angular/core', './_services/http.service', './_services/http-
             },
             function (http_service_1_1) {
                 http_service_1 = http_service_1_1;
-            },
-            function (router_1_1) {
-                router_1 = router_1_1;
             }],
         execute: function() {
-            //import { routing }        from './app.routing';
             AppComponent = (function () {
-                function AppComponent(auth, router) {
-                    this.auth = auth;
-                    this.router = router;
-                    this.loggedIn = false;
-                    this.loggedIn = this.auth.isLoggedIn();
+                function AppComponent() {
                 }
-                AppComponent.prototype.logout = function () {
-                    localStorage.removeItem('authToken');
-                    this.router.navigate(['/login']);
-                };
                 AppComponent = __decorate([
                     core_1.Component({
+                        moduleId: module.id,
                         selector: 'my-app',
                         styles: [" \n        .active a {\n        color:#fff;\n        }\n    "],
                         templateUrl: './app.component.html',
                         providers: [http_service_1.HttpService, http_service_1.HttpService]
                     }), 
-                    __metadata('design:paramtypes', [http_service_1.HttpService, router_1.Router])
+                    __metadata('design:paramtypes', [])
                 ], AppComponent);
                 return AppComponent;
             }());
@@ -55,4 +40,15 @@ System.register(['@angular/core', './_services/http.service', './_services/http-
         }
     }
 });
+//isloggedIn = false;
+//
+//    if (localStorage.getItem("currentUser")) {
+//        isloggedIn = true;
+//    }
+//
+//else
+// {
+//    localStorage.removeItem('currentUser');
+//    this.router.navigate(['/login']);
+//}
 //# sourceMappingURL=app.component.js.map
