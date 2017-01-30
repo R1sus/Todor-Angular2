@@ -42,7 +42,7 @@ System.register(['@angular/core', '@angular/router', '../_services/http.service'
                         .then(function (data) {
                         if (data) {
                             alert("Login success! Have a nice day!");
-                            _this.router.navigate(['/uprofile']);
+                            _this.router.navigate(['/search']);
                         }
                         else {
                             alert("Login unsuccessful!");

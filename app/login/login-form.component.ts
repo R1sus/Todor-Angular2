@@ -35,7 +35,7 @@ export class LoginFormComponent implements OnInit {
             .then(data => {
                 if (data) {
                     alert("Login success! Have a nice day!");
-                    this.router.navigate(['/uprofile']);
+                    this.router.navigate(['/search']);
                 } else {
                     alert("Login unsuccessful!");
                     console.log(data);

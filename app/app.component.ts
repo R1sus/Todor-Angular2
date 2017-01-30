@@ -20,21 +20,17 @@ import { HttpAddUserService } from './_services/http-add-user.service';
       // '<authorization-form></authorization-form>'
 })
 export class AppComponent {
+    loggedIn = false;
 
-}
-    //isloggedIn = false;
-    //
-    //    if (localStorage.getItem("currentUser")) {
-    //        isloggedIn = true;
-    //    }
-    //
-    //else
-    // {
+    constructor(private auth: HttpService, private router: Router) {
+        this.loggedIn = this.auth.login();
+    }
+
+    //logout() {
     //    localStorage.removeItem('currentUser');
     //    this.router.navigate(['/login']);
     //}
 
-
-
+}
 
 
