@@ -1,4 +1,4 @@
-System.register(['@angular/core', './http.service', './user'], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/router', '../_services/http.service', '../_models/user'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,12 +10,15 @@ System.register(['@angular/core', './http.service', './user'], function(exports_
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, http_service_1, user_1;
+    var core_1, router_1, http_service_1, user_1;
     var LoginFormComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (router_1_1) {
+                router_1 = router_1_1;
             },
             function (http_service_1_1) {
                 http_service_1 = http_service_1_1;
@@ -25,20 +28,27 @@ System.register(['@angular/core', './http.service', './user'], function(exports_
             }],
         execute: function() {
             LoginFormComponent = (function () {
-                function LoginFormComponent(httpService) {
+                function LoginFormComponent(httpService, router) {
                     this.httpService = httpService;
-                    // model: any = {};
+                    this.router = router;
                     this.user = new user_1.User();
-                    this.done = false;
                 }
-                LoginFormComponent.prototype.submit = function (user) {
+                LoginFormComponent.prototype.ngOnInit = function () {
+                    this.httpService.logout();
+                };
+                LoginFormComponent.prototype.login = function (user) {
                     var _this = this;
-                    this.httpService.postData(user)
-                        .subscribe(function (data) { _this.done = data.loggedIn; });
-                    alert("Login success! Have a nice day!");
-                    // this.Routes.navigate(['']);
-                    // window.location.href = "";
-                    console.log(this.done);
+                    this.httpService.login(user)
+                        .then(function (data) {
+                        if (data) {
+                            alert("Login success! Have a nice day!");
+                            _this.router.navigate(['/search']);
+                        }
+                        else {
+                            alert("Login unsuccessful!");
+                            console.log(data);
+                        }
+                    });
                 };
                 LoginFormComponent = __decorate([
                     core_1.Component({
@@ -47,7 +57,7 @@ System.register(['@angular/core', './http.service', './user'], function(exports_
                         templateUrl: 'login-form.component.html',
                         providers: [http_service_1.HttpService]
                     }), 
-                    __metadata('design:paramtypes', [http_service_1.HttpService])
+                    __metadata('design:paramtypes', [http_service_1.HttpService, router_1.Router])
                 ], LoginFormComponent);
                 return LoginFormComponent;
             }());

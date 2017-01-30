@@ -1,4 +1,4 @@
-System.register(['@angular/core', './adduser', './http-add-user.service'], function(exports_1, context_1) {
+System.register(['@angular/core', '../_models/adduser', '../_services/http-add-user.service', '@angular/router'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['@angular/core', './adduser', './http-add-user.service'], funct
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, adduser_1, http_add_user_service_1;
+    var core_1, adduser_1, http_add_user_service_1, router_1;
     var AuthorizationFormComponent;
     return {
         setters:[
@@ -22,20 +22,26 @@ System.register(['@angular/core', './adduser', './http-add-user.service'], funct
             },
             function (http_add_user_service_1_1) {
                 http_add_user_service_1 = http_add_user_service_1_1;
+            },
+            function (router_1_1) {
+                router_1 = router_1_1;
             }],
         execute: function() {
             AuthorizationFormComponent = (function () {
-                function AuthorizationFormComponent(httpAddUserService) {
+                function AuthorizationFormComponent(httpAddUserService, router) {
                     this.httpAddUserService = httpAddUserService;
+                    this.router = router;
                     this.user = new adduser_1.AddUser();
                 }
                 AuthorizationFormComponent.prototype.submit = function (user) {
                     var _this = this;
                     this.httpAddUserService.postData(user)
-                        .subscribe(function (data) { _this.receivedUser = data; });
-                    localStorage.setItem('currentUser', JSON.stringify(user));
-                    alert("Signin success! Welcome " + user.username + "!");
-                    console.log(this.user);
+                        .subscribe(function (data) {
+                        alert("Signin success! Welcome " + user.username + "!");
+                        _this.router.navigate(['/login']);
+                    }, function (error) {
+                        alert("Registration is not success. Repeat please.");
+                    });
                 };
                 AuthorizationFormComponent = __decorate([
                     core_1.Component({
@@ -44,7 +50,7 @@ System.register(['@angular/core', './adduser', './http-add-user.service'], funct
                         templateUrl: 'authorization-form.component.html',
                         providers: [http_add_user_service_1.HttpAddUserService]
                     }), 
-                    __metadata('design:paramtypes', [http_add_user_service_1.HttpAddUserService])
+                    __metadata('design:paramtypes', [http_add_user_service_1.HttpAddUserService, router_1.Router])
                 ], AuthorizationFormComponent);
                 return AuthorizationFormComponent;
             }());

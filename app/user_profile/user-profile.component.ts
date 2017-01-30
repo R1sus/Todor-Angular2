@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Response} from '@angular/http';
+import { Response } from '@angular/http';
 import {
     NgForm,
     FORM_DIRECTIVES,

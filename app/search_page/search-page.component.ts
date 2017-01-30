@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 
-// import { User }    from './user';
-
 @Component({
     moduleId: module.id,
     selector: 'search-page',

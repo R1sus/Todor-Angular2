@@ -1,4 +1,4 @@
-System.register(['@angular/core', '@angular/platform-browser', '@angular/forms', '@angular/http', './app.routing', './guards', './app.component', './equal-validator.directive', './authorization-form.component', './login-form.component', './search-page.component', './not-found.component', './user-profile.component', './business-profile.component'], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/platform-browser', '@angular/forms', '@angular/http', './app.routing', './_guards/guards', './app.component', './_directives/equal-validator.directive', './register/authorization-form.component', './login/login-form.component', './search_page/search-page.component', './not_found/not-found.component', './user_profile/user-profile.component', './business_profile/business-profile.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {

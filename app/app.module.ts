@@ -6,15 +6,15 @@ import { HttpModule }   from '@angular/http';
 import { routing }        from './app.routing';
 
 
-import {AuthGuard} from './guards';
+import { AuthGuard } from './_guards/guards';
 import { AppComponent }  from './app.component';
-import { EqualValidator } from './equal-validator.directive';
-import { AuthorizationFormComponent } from './authorization-form.component';
-import { LoginFormComponent } from './login-form.component';
-import { SearchPageComponent } from './search-page.component';
-import { NotFoundComponent } from './not-found.component';
-import { UserProfileComponent } from './user-profile.component';
-import { BusinessProfileComponent } from './business-profile.component';
+import { EqualValidator } from './_directives/equal-validator.directive';
+import { AuthorizationFormComponent } from './register/authorization-form.component';
+import { LoginFormComponent } from './login/login-form.component';
+import { SearchPageComponent } from './search_page/search-page.component';
+import { NotFoundComponent } from './not_found/not-found.component';
+import { UserProfileComponent } from './user_profile/user-profile.component';
+import { BusinessProfileComponent } from './business_profile/business-profile.component';
 
 //
 // const appRoutes: Routes =[

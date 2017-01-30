@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 System.register(['@angular/core', './http.service', '@angular/router'], function(exports_1, context_1) {
+=======
+System.register(['@angular/core', './_services/http.service', './_services/http-add-user.service'], function(exports_1, context_1) {
+>>>>>>> bd85032bae7b9565933443ae7990ca71b819869b
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {

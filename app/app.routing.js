@@ -1,4 +1,4 @@
-System.register(['@angular/router', './guards', './authorization-form.component', './login-form.component', './search-page.component', './not-found.component', './user-profile.component', './business-profile.component'], function(exports_1, context_1) {
+System.register(['@angular/router', './_guards/guards', './register/authorization-form.component', './login/login-form.component', './search_page/search-page.component', './not_found/not-found.component', './user_profile/user-profile.component', './business_profile/business-profile.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var router_1, guards_1, authorization_form_component_1, login_form_component_1, search_page_component_1, not_found_component_1, user_profile_component_1, business_profile_component_1;
