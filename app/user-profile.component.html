@@ -10,26 +10,30 @@
         <div class="form-group">
             <input type="email" class="form-control"
                    name="email"  placeholder = "Email" maxlength="25" ngModel #email="ngModel" required >
+            <input type="text" class="form-control"
+                   name="phone"  placeholder = "Phone Numder" maxlength="25" ngModel #phone="ngModel"  pattern="[0-9]{10}" required >
         </div>
         <h4>Optional</h4>
         <!--<fieldset>-->
-        <textarea class="form-control" placeholder="Bio"></textarea>
+        <textarea name="bio" class="form-control" placeholder="Bio"></textarea>
         <div class="form-group">
-            <input type="text" class="form-control"
-                   name="phone"  placeholder = "Phone Numder" maxlength="25" ngModel #phone="ngModel"  pattern="[0-9]{10}" required >
+
             <!--<input type="" class="form-control"-->
                    <!--name="gender"  placeholder = "Gender" maxlength="25" ngModel #gender="ngModel" required >-->
-            <select title="fsf" class="form-control">
+            <select title="fsf" class="form-control" name="gender">
                 <option selected hidden disabled>Gender</option>
                 <option >Male</option>
                 <option>Female</option>
             </select>
+            <input type="date" class="form-control"
+                   name="birthday"  placeholder = "Birthday" maxlength="25" ngModel #birthday="ngModel" required >
         </div>
         <div class="form-group">
             <input type="text" class="form-control"
                    name="adress"  placeholder = "Address" maxlength="25" ngModel #adress="ngModel" required >
-            <input type="date" class="form-control"
-                   name="birthday"  placeholder = "Birthday" maxlength="25" ngModel #birthday="ngModel" required >
+            <input type="file" class="form-control" name="user-photo"  placeholder = "User Photo"
+                   maxlength="25" ngModel #bphoto="ngModel" required >
+
         </div>
         <!--</fieldset>-->
         <div class ="form-link">

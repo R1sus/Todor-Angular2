@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { Response } from '@angular/http';
 import { HttpService } from './http.service';
-import { HttpAddUserService } from './http-add-user.service';
+import { HttpService } from './http-add-user.service';
+import { Router } from '@angular/router';
+//import { routing }        from './app.routing';
 @Component({
   selector: 'my-app',
   styles:[` 
@@ -9,34 +11,23 @@ import { HttpAddUserService } from './http-add-user.service';
         color:#fff;
         }
     `],
-  template: ` <header>
-        <div class="logo">
-          <a routerLink="/search"> <img src="../img/logo@2x.png" alt="logo"/></a>
-        </div>
-        <nav>
-          <ul>
-            <li routerLinkActive="active"><a routerLink="/about">About</a></li>
-            <li routerLinkActive="active"><a routerLink="/contact_us" >Contact us</a></li>
-            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-                <a routerLink="/login" class="loginLink" >Log in</a>
-            </li>
-            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-                <a routerLink="" class="signLink" >Sign in </a>
-            </li>
-            <!--<li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">-->
-                <!--<a routerLink="/bprofile" class="loginLink" >Log in</a>-->
-            <!--</li>-->
-            <!--<li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">-->
-                <!--<a routerLink="/uprofile" class="signLink" >Sign in </a>-->
-            <!--</li>-->
-          </ul>
-        </nav>
-      </header>
-    <router-outlet></router-outlet> `,
-  providers: [HttpService, HttpAddUserService]
+  templateUrl: './app.component.html',
+  providers: [HttpService, HttpService]
       // '<search-page></search-page>'
       // '<login-form></login-form>'
       // '<authorization-form></authorization-form>'
 })
-export class AppComponent { }
+export class AppComponent {
+    loggedIn = false;
+    constructor(private auth: HttpService , private router: Router ) {
+        this.loggedIn = this.auth.isLoggedIn();
+    }
+
+    logout() {
+        localStorage.removeItem('authToken');
+        this.router.navigate(['/login']);
+    }
+
+
+}
 

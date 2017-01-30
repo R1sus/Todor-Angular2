@@ -85,13 +85,13 @@ form {
 input {
   cursor: pointer;
 }
-input[name="username"],input[name="business-name"]{
+input[name="username"],input[name="business-name"],input[name="name"]{
   outline: none;
   background: url("../img/user.png") no-repeat;
   background-color: #fff;
   padding-left: 53px;
   background-position: 16px;
-  background-size: 5%;
+  background-size: 6%;
 }
 input[type="password"]{
   outline: none;
@@ -202,9 +202,9 @@ input[name="login-password"]{
   background-size: 6%;
     //background-position: 17px;
 }
-  input[name="street"] {
-    background-size: 9%;
+  input[name = "street"],input[name="adress"] {
     background: url("../img/icons/street.svg") no-repeat;
+    background-size: 9%;
 
   }
   input[name="city"] {
@@ -213,7 +213,7 @@ input[name="login-password"]{
   }
   input[name="zip"] {
     background: url("../img/icons/zip-code.svg") no-repeat;
-    background-size: 9%;
+    background-size: 11%;
   }
   input[name="phone"] {
     background: url("../img/icons/phone.svg") no-repeat;
@@ -226,7 +226,7 @@ input[name="login-password"]{
   }
   input[name="website"] {
     background: url("../img/icons/website.svg") no-repeat;
-    background-size: 10%;
+    background-size: 12%;
 
   }
 input[name="category"] {
@@ -237,7 +237,7 @@ textarea[name="bdescription"] {
   background: url("../img/icons/business-description.svg") no-repeat;
   background-size: 4%;
 }
-input[name="business-photo"] {
+input[name="business-photo"], input[name="user-photo"] {
   background: url("../img/icons/business-photo.svg") no-repeat;
   background-size: 9%;
 }
@@ -272,9 +272,24 @@ h4 {
   input[type="date"],
   select {
     width:47%;
-    padding-left: 50px;
+    padding-left: 80px;
     -webkit-appearance: none;
     -moz-appearance: none;
 
   }
+}
+textarea[name="bio"] {
+  background: url("../img/icons/bio.svg") no-repeat;
+  background-size: 4%;
+  background-position: 18px 0px;
+}
+select[name="gender"]{
+  background: url("../img/icons/gender.svg") no-repeat;
+  background-size: 12%;
+  background-color: #fff;
+  background-position: 15px;
+}
+input[name="birthday"] {
+  background: url("../img/icons/birthday.svg") no-repeat;
+  background-size: 9%;
 }

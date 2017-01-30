@@ -1,4 +1,4 @@
-System.register(['@angular/core', './http.service', './http-add-user.service'], function(exports_1, context_1) {
+System.register(['@angular/core', './http.service', '@angular/router'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['@angular/core', './http.service', './http-add-user.service'], 
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, http_service_1, http_add_user_service_1;
+    var core_1, http_service_1, router_1;
     var AppComponent;
     return {
         setters:[
@@ -20,21 +20,30 @@ System.register(['@angular/core', './http.service', './http-add-user.service'], 
             function (http_service_1_1) {
                 http_service_1 = http_service_1_1;
             },
-            function (http_add_user_service_1_1) {
-                http_add_user_service_1 = http_add_user_service_1_1;
+            function (router_1_1) {
+                router_1 = router_1_1;
             }],
         execute: function() {
+            //import { routing }        from './app.routing';
             AppComponent = (function () {
-                function AppComponent() {
+                function AppComponent(auth, router) {
+                    this.auth = auth;
+                    this.router = router;
+                    this.loggedIn = false;
+                    this.loggedIn = this.auth.isLoggedIn();
                 }
+                AppComponent.prototype.logout = function () {
+                    localStorage.removeItem('authToken');
+                    this.router.navigate(['/login']);
+                };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
                         styles: [" \n        .active a {\n        color:#fff;\n        }\n    "],
-                        template: " <header>\n        <div class=\"logo\">\n          <a routerLink=\"/search\"> <img src=\"../img/logo@2x.png\" alt=\"logo\"/></a>\n        </div>\n        <nav>\n          <ul>\n            <li routerLinkActive=\"active\"><a routerLink=\"/about\">About</a></li>\n            <li routerLinkActive=\"active\"><a routerLink=\"/contact_us\" >Contact us</a></li>\n            <li routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\">\n                <a routerLink=\"/login\" class=\"loginLink\" >Log in</a>\n            </li>\n            <li routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\">\n                <a routerLink=\"\" class=\"signLink\" >Sign in </a>\n            </li>\n            <!--<li routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\">-->\n                <!--<a routerLink=\"/bprofile\" class=\"loginLink\" >Log in</a>-->\n            <!--</li>-->\n            <!--<li routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\">-->\n                <!--<a routerLink=\"/uprofile\" class=\"signLink\" >Sign in </a>-->\n            <!--</li>-->\n          </ul>\n        </nav>\n      </header>\n    <router-outlet></router-outlet> ",
-                        providers: [http_service_1.HttpService, http_add_user_service_1.HttpAddUserService]
+                        templateUrl: './app.component.html',
+                        providers: [http_service_1.HttpService, http_service_1.HttpService]
                     }), 
-                    __metadata('design:paramtypes', [])
+                    __metadata('design:paramtypes', [http_service_1.HttpService, router_1.Router])
                 ], AppComponent);
                 return AppComponent;
             }());

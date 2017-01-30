@@ -90,6 +90,9 @@ nav {
   color: #fff;
   padding: 13px 20px;
 }
+.signLink:visited {
+    color: #fff;
+  }
 
 .logo {
   /*width:50%;*/
@@ -131,6 +134,7 @@ footer {
   }
   h5 {
     color: #b6babc;
+    margin: 0;
   }
 }
 

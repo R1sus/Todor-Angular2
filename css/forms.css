@@ -93,13 +93,13 @@ input {
 }
 
 /* line 88, ../sass/forms.scss */
-input[name="username"], input[name="business-name"] {
+input[name="username"], input[name="business-name"], input[name="name"] {
   outline: none;
   background: url("../img/user.png") no-repeat;
   background-color: #fff;
   padding-left: 53px;
   background-position: 16px;
-  background-size: 5%;
+  background-size: 6%;
 }
 
 /* line 96, ../sass/forms.scss */
@@ -224,9 +224,9 @@ input [name="business-name"] {
 }
 
 /* line 205, ../sass/forms.scss */
-input[name="street"] {
-  background-size: 9%;
+input[name="street"], input[name="adress"] {
   background: url("../img/icons/street.svg") no-repeat;
+  background-size: 9%;
 }
 
 /* line 210, ../sass/forms.scss */
@@ -238,7 +238,7 @@ input[name="city"] {
 /* line 214, ../sass/forms.scss */
 input[name="zip"] {
   background: url("../img/icons/zip-code.svg") no-repeat;
-  background-size: 9%;
+  background-size: 11%;
 }
 
 /* line 218, ../sass/forms.scss */
@@ -256,7 +256,7 @@ input[name="fax"] {
 /* line 227, ../sass/forms.scss */
 input[name="website"] {
   background: url("../img/icons/website.svg") no-repeat;
-  background-size: 10%;
+  background-size: 12%;
 }
 
 /* line 232, ../sass/forms.scss */
@@ -272,7 +272,7 @@ textarea[name="bdescription"] {
 }
 
 /* line 240, ../sass/forms.scss */
-input[name="business-photo"] {
+input[name="business-photo"], input[name="user-photo"] {
   background: url("../img/icons/business-photo.svg") no-repeat;
   background-size: 9%;
 }
@@ -308,7 +308,28 @@ h4 {
 .user-profile input[type="date"],
 .user-profile select {
   width: 47%;
-  padding-left: 50px;
+  padding-left: 80px;
   -webkit-appearance: none;
   -moz-appearance: none;
+}
+
+/* line 281, ../sass/forms.scss */
+textarea[name="bio"] {
+  background: url("../img/icons/bio.svg") no-repeat;
+  background-size: 4%;
+  background-position: 18px 0px;
+}
+
+/* line 286, ../sass/forms.scss */
+select[name="gender"] {
+  background: url("../img/icons/gender.svg") no-repeat;
+  background-size: 12%;
+  background-color: #fff;
+  background-position: 15px;
+}
+
+/* line 292, ../sass/forms.scss */
+input[name="birthday"] {
+  background: url("../img/icons/birthday.svg") no-repeat;
+  background-size: 9%;
 }
