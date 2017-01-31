@@ -20,11 +20,15 @@ import { HttpAddUserService } from './_services/http-add-user.service';
       // '<authorization-form></authorization-form>'
 })
 export class AppComponent {
-    loggedIn = false;
-
-    constructor(private auth: HttpService, private router: Router) {
-        this.loggedIn = this.auth.login();
-    }
+    // constructor(private _router: Router ) {
+    //     this.router = _router;
+    // }
+    // loggedIn = false;
+    // if (this.router.url === '/uprofile ')
+    //
+    // constructor(private auth: HttpService, private router: Router) {
+    //     this.loggedIn = this.auth.login();
+    // }
 
     //logout() {
     //    localStorage.removeItem('currentUser');

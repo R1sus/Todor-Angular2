@@ -13,9 +13,9 @@
   text-align: center;
   padding-bottom: 2rem;
 }
-.ng-valid[required], .ng-valid.required  {
-  border: 2px solid #abd154; /* green */
-}
+//.ng-valid[required], .ng-valid.required  {
+//  border: 2px solid #abd154; /* green */
+//}
 /*.ng-invalid:not(form)  {*/
 /*  border: 2px solid #e0494a; /* red */
 /*}*/
@@ -30,11 +30,13 @@ h2 {
 form {
   .form-control {
     border-radius: 25px;
-    letter-spacing: 1;
-    height: 45px;
-    font-size: 15px;
+    letter-spacing: normal;
+    height: auto;
+    font-size: 16px;
+    padding: 15px;
     font-family: $general-font;
     color: #7f878a;
+    cursor:auto;
 
   }
   .btn {
@@ -42,7 +44,9 @@ form {
     background-color: #e0494a;
     border-radius: 20px;
     border: none;
-    height: 45px;
+    height: auto;
+    margin: 15px 0;
+    padding: 15px;
     text-align: center;
     font-family: $general-font;
     color: #fff;
@@ -85,13 +89,14 @@ form {
 input {
   cursor: pointer;
 }
-input[name="username"],input[name="business-name"],input[name="name"]{
+input[name="username"]{
   outline: none;
   background: url("../img/user.png") no-repeat;
   background-color: #fff;
   padding-left: 53px;
   background-position: 16px;
-  background-size: 6%;
+  background-size: 23px;
+  //background-size: 6%;
 }
 input[type="password"]{
   outline: none;
@@ -99,7 +104,8 @@ input[type="password"]{
   background-color: #fff;
   padding-left: 53px;
   background-position: 15px;
-  background-size: 5%;
+  background-size: 20px;
+  //background-size: 5%;
 }
 input[type="email"] {
   outline: none;
@@ -107,7 +113,8 @@ input[type="email"] {
   background-color: #fff;
   padding-left: 53px;
   background-position: 10px;
-  background-size: 9%;
+  background-size: 35px;
+  //background-size: 9%;
 }
 .form-link {
   text-align: center;
@@ -139,11 +146,6 @@ input[name="login-password"]{
   text-transform: uppercase;
   font-size:11px;
   background-size: 5%;
-  &:hover{
-    color:#fff;
-
-  }
-
 }
 ////////////////////////business profile///////////////////////
 .business-profile-container, .user-profile-container {
@@ -181,26 +183,27 @@ input[name="login-password"]{
       height: 25rem;
       margin-bottom: 15px;
       background-color: #fff;
-      background-position: 18px 0px;
+      background-position: 18px 6px;
     }
-    .upload-file {
-      background-color: #fff;
-      border-radius: 25px;
-      height: 45px;
-      input[type="file"] {
-        outline: none;
-        opacity: 0;
-        //filter:alpha(opacity:0);
+    //.upload-file {
+    //  background-color: #fff;
+    //  border-radius: 25px;
+    //  height: 45px;
+    //  input[type="file"] {
+    //    outline: none;
+    //    opacity: 0;
+    //    //filter:alpha(opacity:0);
+    //
+    //  }
 
-      }
 
-    }
   }
 
 }
-  input [name="business-name"]{
-  background-size: 6%;
-    //background-position: 17px;
+  input[name="business-name"],input[name="uname"]{
+    background: url("../img/icons/user.svg") no-repeat;
+    background-size: 8%;
+
 }
   input[name = "street"],input[name="adress"] {
     background: url("../img/icons/street.svg") no-repeat;
@@ -266,7 +269,7 @@ h4 {
 .user-profile {
   .form-link {
     font-size:12px;
-    line-height: 8;
+    //line-height: 8;
     text-transform: none;
   }
   input[type="date"],

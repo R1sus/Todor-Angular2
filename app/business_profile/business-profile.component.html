@@ -27,13 +27,54 @@
         </div>
         <textarea name="bdescription" class="form-control" placeholder="Business Description"></textarea>
         <div class="form-group">
-            <div class="upload-file">
-                <h5>Business Photo</h5>
-                <input type="file" class="form-control" name="business-photo"  placeholder = "Business Photo"
+                <input type="text" class="form-control" name="business-photo"  placeholder = "Business Photo"
                        maxlength="25" ngModel #bphoto="ngModel" required >
-            </div>
             <input type="text" class="form-control"
                    name="business-logo"  placeholder = "Business Logo" maxlength="25" ngModel #blogo="ngModel" required >
+        </div>
+        <div class="business-load-file">
+            <label class="uploader" ondragover="return false;"
+                   [class.loaded]="loaded"
+                   [style.outlineColor]="dragging ? activeColor : baseColor"
+                   (dragenter)="handleDragEnter()"
+                   (dragleave)="handleDragLeave()"
+                   (drop)="handleDrop($event)">
+
+                <i class="icon"
+                   [style.color]="dragging
+            ? ((imageSrc.length > 0) ? overlayColor : activeColor)
+            : ((imageSrc.length > 0) ? overlayColor : baseColor)"><h3>Enter your photo</h3></i>
+
+                <img
+                        [src]="imageSrc"
+                        (load)="handleImageLoad()"
+                        [class.loaded]="imageLoaded"/>
+                <input type="file" name="file" accept="image/*"
+                       (change)="handleInputChange($event)">
+
+                <!--<input ngModel #bphoto="ngModel" accept="image/*" (change)="handleInputChange($event)">-->
+            </label>
+            <label class="uploader" ondragover="return false;"
+                   [class.loaded]="loaded"
+                   [style.outlineColor]="dragging ? activeColor : baseColor"
+                   (dragenter)="handleDragEnter()"
+                   (dragleave)="handleDragLeave()"
+                   (drop)="handleDrop($event)">
+
+                <i class="icon"
+                   [style.color]="dragging
+            ? ((imageSrc.length > 0) ? overlayColor : activeColor)
+            : ((imageSrc.length > 0) ? overlayColor : baseColor)"><h3>Enter your photo</h3></i>
+
+                <img
+                        [src]="imageSrc"
+                        (load)="handleImageLoad()"
+                        [class.loaded]="imageLoaded"/>
+                <input type="file" name="file" accept="image/*"
+                       (change)="handleInputChange($event)">
+
+                <!--<input ngModel #bphoto="ngModel" accept="image/*" (change)="handleInputChange($event)">-->
+            </label>
         </div>
         <div class="form-btn">
             <button type="submit" class="btn">Submit</button>

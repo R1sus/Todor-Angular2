@@ -20,12 +20,6 @@
   padding-bottom: 2rem;
 }
 
-/* line 16, ../sass/forms.scss */
-.ng-valid[required], .ng-valid.required {
-  border: 2px solid #abd154;
-  /* green */
-}
-
 /*.ng-invalid:not(form)  {*/
 /*  border: 2px solid #e0494a; /* red */
 /*}*/
@@ -41,19 +35,23 @@ h2 {
 /* line 31, ../sass/forms.scss */
 form .form-control {
   border-radius: 25px;
-  letter-spacing: 1;
-  height: 45px;
-  font-size: 15px;
+  letter-spacing: normal;
+  height: auto;
+  font-size: 16px;
+  padding: 15px;
   font-family: "Lato", sans-serif;
   color: #7f878a;
+  cursor: auto;
 }
-/* line 40, ../sass/forms.scss */
+/* line 42, ../sass/forms.scss */
 form .btn {
   width: 100%;
   background-color: #e0494a;
   border-radius: 20px;
   border: none;
-  height: 45px;
+  height: auto;
+  margin: 15px 0;
+  padding: 15px;
   text-align: center;
   font-family: "Lato", sans-serif;
   color: #fff;
@@ -62,67 +60,67 @@ form .btn {
   text-transform: uppercase;
   font-size: 16px;
 }
-/* line 53, ../sass/forms.scss */
+/* line 57, ../sass/forms.scss */
 form .btn:hover, form .btn:focus {
   outline: none;
   background-color: #872a2a;
   border: 0;
   color: #fff;
 }
-/* line 62, ../sass/forms.scss */
+/* line 66, ../sass/forms.scss */
 form .btn[disabled] {
   background-color: #e0494a;
 }
-/* line 65, ../sass/forms.scss */
+/* line 69, ../sass/forms.scss */
 form .btn[disabled]:hover {
   background-color: #872a2a;
 }
 
-/* line 71, ../sass/forms.scss */
+/* line 75, ../sass/forms.scss */
 .loginform .btn, .loginform .btn[disabled] {
   background-color: #abd154;
 }
-/* line 73, ../sass/forms.scss */
+/* line 77, ../sass/forms.scss */
 .loginform .btn:hover, .loginform .btn:focus, .loginform .btn[disabled]:hover, .loginform .btn[disabled]:focus {
   background-color: #667D32;
 }
 
-/* line 85, ../sass/forms.scss */
+/* line 89, ../sass/forms.scss */
 input {
   cursor: pointer;
 }
 
-/* line 88, ../sass/forms.scss */
-input[name="username"], input[name="business-name"], input[name="name"] {
+/* line 92, ../sass/forms.scss */
+input[name="username"] {
   outline: none;
   background: url("../img/user.png") no-repeat;
   background-color: #fff;
   padding-left: 53px;
   background-position: 16px;
-  background-size: 6%;
+  background-size: 23px;
 }
 
-/* line 96, ../sass/forms.scss */
+/* line 101, ../sass/forms.scss */
 input[type="password"] {
   outline: none;
   background: url("../img/pass.png") no-repeat;
   background-color: #fff;
   padding-left: 53px;
   background-position: 15px;
-  background-size: 5%;
+  background-size: 20px;
 }
 
-/* line 104, ../sass/forms.scss */
+/* line 110, ../sass/forms.scss */
 input[type="email"] {
   outline: none;
   background: url("../img/mail.png") no-repeat;
   background-color: #fff;
   padding-left: 53px;
   background-position: 10px;
-  background-size: 9%;
+  background-size: 35px;
 }
 
-/* line 112, ../sass/forms.scss */
+/* line 119, ../sass/forms.scss */
 .form-link {
   text-align: center;
   color: #bfc1c3;
@@ -130,12 +128,12 @@ input[type="email"] {
   text-transform: uppercase;
   font-size: 11px;
 }
-/* line 118, ../sass/forms.scss */
+/* line 125, ../sass/forms.scss */
 .form-link:hover {
   color: #fff;
 }
 
-/* line 123, ../sass/forms.scss */
+/* line 130, ../sass/forms.scss */
 input[name="login-name"] {
   outline: none;
   background: url("../img/user-green.png") no-repeat;
@@ -145,7 +143,7 @@ input[name="login-name"] {
   background-size: 6%;
 }
 
-/* line 131, ../sass/forms.scss */
+/* line 138, ../sass/forms.scss */
 input[name="login-password"] {
   outline: none;
   background: url("../img/pass-green.png") no-repeat;
@@ -158,35 +156,31 @@ input[name="login-password"] {
   font-size: 11px;
   background-size: 5%;
 }
-/* line 142, ../sass/forms.scss */
-input[name="login-password"]:hover {
-  color: #fff;
-}
 
-/* line 149, ../sass/forms.scss */
+/* line 151, ../sass/forms.scss */
 .business-profile-container, .user-profile-container {
   background-color: rgba(127, 135, 138, 0.5);
   width: 100%;
   border-radius: 7px;
 }
-/* line 153, ../sass/forms.scss */
+/* line 155, ../sass/forms.scss */
 .business-profile-container h2, .user-profile-container h2 {
   text-align: center;
 }
-/* line 156, ../sass/forms.scss */
+/* line 158, ../sass/forms.scss */
 .business-profile-container .business-profile, .business-profile-container .user-profile, .user-profile-container .business-profile, .user-profile-container .user-profile {
   width: 90%;
   margin: 0 auto;
   padding-bottom: 45px;
 }
-/* line 160, ../sass/forms.scss */
+/* line 162, ../sass/forms.scss */
 .business-profile-container .business-profile .form-group, .business-profile-container .user-profile .form-group, .user-profile-container .business-profile .form-group, .user-profile-container .user-profile .form-group {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-between;
 }
-/* line 165, ../sass/forms.scss */
+/* line 167, ../sass/forms.scss */
 .business-profile-container .business-profile .form-group input, .business-profile-container .user-profile .form-group input, .user-profile-container .business-profile .form-group input, .user-profile-container .user-profile .form-group input {
   width: 47%;
   padding-left: 80px;
@@ -194,7 +188,7 @@ input[name="login-password"]:hover {
   background-color: #fff;
   background-position: 15px;
 }
-/* line 175, ../sass/forms.scss */
+/* line 177, ../sass/forms.scss */
 .business-profile-container .business-profile textarea, .business-profile-container .user-profile textarea, .user-profile-container .business-profile textarea, .user-profile-container .user-profile textarea {
   width: 100%;
   border-radius: 25px;
@@ -204,92 +198,82 @@ input[name="login-password"]:hover {
   height: 25rem;
   margin-bottom: 15px;
   background-color: #fff;
-  background-position: 18px 0px;
-}
-/* line 186, ../sass/forms.scss */
-.business-profile-container .business-profile .upload-file, .business-profile-container .user-profile .upload-file, .user-profile-container .business-profile .upload-file, .user-profile-container .user-profile .upload-file {
-  background-color: #fff;
-  border-radius: 25px;
-  height: 45px;
-}
-/* line 190, ../sass/forms.scss */
-.business-profile-container .business-profile .upload-file input[type="file"], .business-profile-container .user-profile .upload-file input[type="file"], .user-profile-container .business-profile .upload-file input[type="file"], .user-profile-container .user-profile .upload-file input[type="file"] {
-  outline: none;
-  opacity: 0;
+  background-position: 18px 6px;
 }
 
-/* line 201, ../sass/forms.scss */
-input [name="business-name"] {
-  background-size: 6%;
+/* line 203, ../sass/forms.scss */
+input[name="business-name"], input[name="uname"] {
+  background: url("../img/icons/user.svg") no-repeat;
+  background-size: 8%;
 }
 
-/* line 205, ../sass/forms.scss */
+/* line 208, ../sass/forms.scss */
 input[name="street"], input[name="adress"] {
   background: url("../img/icons/street.svg") no-repeat;
   background-size: 9%;
 }
 
-/* line 210, ../sass/forms.scss */
+/* line 213, ../sass/forms.scss */
 input[name="city"] {
   background: url("../img/icons/city.svg") no-repeat;
   background-size: 9%;
 }
 
-/* line 214, ../sass/forms.scss */
+/* line 217, ../sass/forms.scss */
 input[name="zip"] {
   background: url("../img/icons/zip-code.svg") no-repeat;
   background-size: 11%;
 }
 
-/* line 218, ../sass/forms.scss */
+/* line 221, ../sass/forms.scss */
 input[name="phone"] {
   background: url("../img/icons/phone.svg") no-repeat;
   background-size: 9%;
 }
 
-/* line 223, ../sass/forms.scss */
+/* line 226, ../sass/forms.scss */
 input[name="fax"] {
   background: url("../img/icons/phone.svg") no-repeat;
   background-size: 9%;
 }
 
-/* line 227, ../sass/forms.scss */
+/* line 230, ../sass/forms.scss */
 input[name="website"] {
   background: url("../img/icons/website.svg") no-repeat;
   background-size: 12%;
 }
 
-/* line 232, ../sass/forms.scss */
+/* line 235, ../sass/forms.scss */
 input[name="category"] {
   background: url("../img/icons/business-category.svg") no-repeat;
   background-size: 9%;
 }
 
-/* line 236, ../sass/forms.scss */
+/* line 239, ../sass/forms.scss */
 textarea[name="bdescription"] {
   background: url("../img/icons/business-description.svg") no-repeat;
   background-size: 4%;
 }
 
-/* line 240, ../sass/forms.scss */
+/* line 243, ../sass/forms.scss */
 input[name="business-photo"], input[name="user-photo"] {
   background: url("../img/icons/business-photo.svg") no-repeat;
   background-size: 9%;
 }
 
-/* line 244, ../sass/forms.scss */
+/* line 247, ../sass/forms.scss */
 input[name="business-logo"] {
   background: url("../img/icons/business-logo.svg") no-repeat;
   background-size: 9%;
 }
 
-/* line 251, ../sass/forms.scss */
+/* line 254, ../sass/forms.scss */
 .form-btn {
   width: 30%;
   margin: 0 auto;
 }
 
-/* line 258, ../sass/forms.scss */
+/* line 261, ../sass/forms.scss */
 h4 {
   font-family: "Lato", sans-serif;
   color: #fff;
@@ -298,13 +282,12 @@ h4 {
   text-align: center;
 }
 
-/* line 267, ../sass/forms.scss */
+/* line 270, ../sass/forms.scss */
 .user-profile .form-link {
   font-size: 12px;
-  line-height: 8;
   text-transform: none;
 }
-/* line 272, ../sass/forms.scss */
+/* line 275, ../sass/forms.scss */
 .user-profile input[type="date"],
 .user-profile select {
   width: 47%;
@@ -313,14 +296,14 @@ h4 {
   -moz-appearance: none;
 }
 
-/* line 281, ../sass/forms.scss */
+/* line 284, ../sass/forms.scss */
 textarea[name="bio"] {
   background: url("../img/icons/bio.svg") no-repeat;
   background-size: 4%;
   background-position: 18px 0px;
 }
 
-/* line 286, ../sass/forms.scss */
+/* line 289, ../sass/forms.scss */
 select[name="gender"] {
   background: url("../img/icons/gender.svg") no-repeat;
   background-size: 12%;
@@ -328,7 +311,7 @@ select[name="gender"] {
   background-position: 15px;
 }
 
-/* line 292, ../sass/forms.scss */
+/* line 295, ../sass/forms.scss */
 input[name="birthday"] {
   background: url("../img/icons/birthday.svg") no-repeat;
   background-size: 9%;

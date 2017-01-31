@@ -1,5 +1,98 @@
 @import "modules/variables";
 
+/* File Uploader Styles  */
+.business-load-file {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.load-file {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+.uploader input {
+  display: none;
+}
+
+.uploader {
+  -webkit-align-items: center;
+  align-items: center;
+  //background-color: #efefef;
+  background-color: rgba(0, 0, 0, 0.02);
+  cursor: pointer;
+  display: -webkit-flex;
+  display: flex;
+  margin-top: -16px;
+  height: 110px;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 25px;
+  border:3px solid #ccc;
+  //outline: 3px solid #ccc;
+  //outline-offset: 5px;
+  position: relative;
+  //float:right;
+  width:47%;
+}
+
+.uploader img,
+.uploader .icon {
+  pointer-events: none;
+}
+
+.uploader,
+.uploader .icon {
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  -ms-transition: all 100ms ease-in;
+  -o-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+}
+
+.uploader .icon {
+  color: #eee;
+  color: rgba(0, 0, 0, 0.2);
+  font-size: 5em;
+  z-index: 2;
+}
+
+.uploader img {
+  left: 50%;
+  opacity: 0;
+  max-height: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transition: all 300ms ease-in;
+  -moz-transition: all 300ms ease-in;
+  -ms-transition: all 300ms ease-in;
+  -o-transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.uploader img.loaded {
+  opacity: 1;
+  z-index: 1;
+}
+
+
+
+
+
+
+.text-danger {
+  color: #ffffff;
+  margin-top: 5px;
+  line-height:2;
+}
+
 a, a:visited, a:focus, a:active, a:hover {
   outline: 0 none;
 }
@@ -7,8 +100,8 @@ a, a:visited, a:focus, a:active, a:hover {
 body {
   position: relative;
   width: 100%;
-  background: url("../../img/bg.png") no-repeat;
-  background-size: 100%;
+  background: rgba(0,0,0,0) url("../../img/bg.png") no-repeat;
+  background-size: cover;
   background-position: left bottom;
   background-attachment: fixed;
 
@@ -17,7 +110,8 @@ body {
 }
 
 .wrapper {
-  width: 71%;
+  //width: 71%;
+  max-width:1070px;
   margin: 0 auto;
   position: relative;
   padding-top: 30px;
@@ -121,25 +215,28 @@ footer {
 .search-page {
   width: 65%;
   margin: 0 auto;
-  h2 {
+  h1 {
     text-align: center;
     font-family: $general-font;
     color: #fff;
-    font-size: 30px;
+    font-size: 45px;
     font-weight: 300;
-    line-height: 1.5;
+    //line-height: 1.5;
     b {
       color: #abd154;
     }
   }
   h5 {
     color: #b6babc;
-    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 15px 0 0;
+    //margin: 0;
   }
 }
 
 #searchForm {
-  margin: 30px 0 15px;
+  margin: 50px 0 30px;
   font-size: 16px;
   font-family: "Lato", sans-serif;
   p,
@@ -162,7 +259,7 @@ footer {
       background: transparent;
       border: 0;
       outline: 0;
-      cursor: pointer;
+      cursor: auto;
       &[placeholder] {
         font-weight: bold;
         color: #B8B8B8;
@@ -178,6 +275,7 @@ footer {
       width: 100%;
       height: 55px;
       padding: 0 25px;
+      cursor:pointer;
       //background: transparent;
       background: rgba(0, 0, 0, 0);
       border: 0;
@@ -204,6 +302,9 @@ footer {
     position: relative;
     width: 25%;
     .submitSearch {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      outline: none;
       width: 100%;
       height: 55px;
       padding-right: 25px;
@@ -274,4 +375,6 @@ h1 {
   top: 0rem;
   right: -5rem;
 }
+
+
 
