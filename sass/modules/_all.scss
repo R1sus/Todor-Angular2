@@ -5,6 +5,19 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  .uploader {
+    input {
+      display: block;
+      opacity: 0;
+      height: 100px;
+      width: 100%;
+    }
+    img {
+      z-index: 2;
+      opacity: 1;
+      left:-70px;
+    }
+  }
 }
 .load-file {
   display: flex;

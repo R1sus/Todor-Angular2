@@ -266,15 +266,16 @@ input[name="business-photo"], input[name="user-photo"] {
 input[name="business-logo"] {
   background: url("../img/icons/business-logo.svg") no-repeat;
   background-size: 9%;
+  z-index: 2;
 }
 
-/* line 255, ../sass/forms.scss */
+/* line 256, ../sass/forms.scss */
 .form-btn {
   width: 30%;
   margin: 0 auto;
 }
 
-/* line 262, ../sass/forms.scss */
+/* line 263, ../sass/forms.scss */
 h4 {
   font-family: "Lato", sans-serif;
   color: #fff;
@@ -283,12 +284,12 @@ h4 {
   text-align: center;
 }
 
-/* line 271, ../sass/forms.scss */
+/* line 272, ../sass/forms.scss */
 .user-profile .form-link {
   font-size: 12px;
   text-transform: none;
 }
-/* line 276, ../sass/forms.scss */
+/* line 277, ../sass/forms.scss */
 .user-profile input[type="date"],
 .user-profile select {
   width: 47%;
@@ -297,14 +298,14 @@ h4 {
   -moz-appearance: none;
 }
 
-/* line 285, ../sass/forms.scss */
+/* line 286, ../sass/forms.scss */
 textarea[name="bio"] {
   background: url("../img/icons/bio.svg") no-repeat;
   background-size: 4%;
   background-position: 18px 0px;
 }
 
-/* line 290, ../sass/forms.scss */
+/* line 291, ../sass/forms.scss */
 select[name="gender"] {
   background: url("../img/icons/gender.svg") no-repeat;
   background-size: 12%;
@@ -312,7 +313,7 @@ select[name="gender"] {
   background-position: 15px;
 }
 
-/* line 296, ../sass/forms.scss */
+/* line 297, ../sass/forms.scss */
 input[name="birthday"] {
   background: url("../img/icons/birthday.svg") no-repeat;
   background-size: 9%;

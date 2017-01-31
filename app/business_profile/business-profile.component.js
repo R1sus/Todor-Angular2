@@ -20,56 +20,16 @@ System.register(['@angular/core'], function(exports_1, context_1) {
         execute: function() {
             BusinessProfileComponent = (function () {
                 function BusinessProfileComponent() {
-                    this.activeColor = 'green';
-                    this.baseColor = '#ccc';
-                    this.overlayColor = 'rgba(255,255,255,0.5)';
-                    this.dragging = false;
-                    this.loaded = false;
-                    this.imageLoaded = false;
-                    this.imageSrc = '';
                 }
-                BusinessProfileComponent.prototype.handleDragEnter = function () {
-                    this.dragging = true;
-                };
-                BusinessProfileComponent.prototype.handleDragLeave = function () {
-                    this.dragging = false;
-                };
-                BusinessProfileComponent.prototype.handleDrop = function (e) {
-                    e.preventDefault();
-                    this.dragging = false;
-                    this.handleInputChange(e);
-                };
-                BusinessProfileComponent.prototype.handleImageLoad = function () {
-                    this.imageLoaded = true;
-                    this.iconColor = this.overlayColor;
-                };
-                BusinessProfileComponent.prototype.handleInputChange = function (e) {
-                    var file = e.dataTransfer ? e.dataTransfer.files[0] : e.target.files[0];
-                    var pattern = /image-*/;
-                    var reader = new FileReader();
-                    if (!file.type.match(pattern)) {
-                        alert('invalid format');
-                        return;
-                    }
-                    this.loaded = false;
-                    reader.onload = this._handleReaderLoaded.bind(this);
-                    reader.readAsDataURL(file);
-                };
-                BusinessProfileComponent.prototype._handleReaderLoaded = function (e) {
-                    var reader = e.target;
-                    this.imageSrc = reader.result;
-                    this.loaded = true;
-                };
-                BusinessProfileComponent.prototype._setActive = function () {
-                    this.borderColor = this.activeColor;
-                    if (this.imageSrc.length === 0) {
-                        this.iconColor = this.activeColor;
-                    }
-                };
-                BusinessProfileComponent.prototype._setInactive = function () {
-                    this.borderColor = this.baseColor;
-                    if (this.imageSrc.length === 0) {
-                        this.iconColor = this.baseColor;
+                BusinessProfileComponent.prototype.readUrl = function (event) {
+                    var _this = this;
+                    imageSrc: string = '';
+                    if (event.target.files && event.target.files[0]) {
+                        var reader = new FileReader();
+                        reader.onload = function (event) {
+                            _this.url = event.target.result;
+                        };
+                        reader.readAsDataURL(event.target.files[0]);
                     }
                 };
                 BusinessProfileComponent = __decorate([

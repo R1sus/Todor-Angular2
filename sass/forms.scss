@@ -248,6 +248,7 @@ input[name="business-photo"], input[name="user-photo"] {
 input[name="business-logo"] {
   background: url("../img/icons/business-logo.svg") no-repeat;
   background-size: 9%;
+  z-index: 2;
 }
 
 
