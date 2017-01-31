@@ -21,15 +21,17 @@ label {
 }
 
 .uploader {
+  padding-top: 50px;
   -webkit-align-items: center;
   align-items: center;
   //background-color: #efefef;
-  background-color: rgba(0, 0, 0, 0.02);
+  //background-color: rgba(0, 0, 0, 0.02);
+  background-color: #ccc;
   cursor: pointer;
   display: -webkit-flex;
   display: flex;
   margin-top: -70px;
-  height: 110px;
+  height: 163px;
   -webkit-justify-content: center;
   justify-content: center;
   border-radius: 25px;
@@ -63,11 +65,11 @@ label {
 }
 
 .uploader img {
-  left: 50%;
+  left: 9%;
   opacity: 0;
   max-height: 100%;
   max-width: 100%;
-  position: absolute;
+  position: relative;
   top: 50%;
   -webkit-transition: all 300ms ease-in;
   -moz-transition: all 300ms ease-in;

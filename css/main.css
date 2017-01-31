@@ -35,14 +35,15 @@ label {
 
 /* line 23, ../sass/modules/_all.scss */
 .uploader {
+  padding-top: 50px;
   -webkit-align-items: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.02);
+  background-color: #ccc;
   cursor: pointer;
   display: -webkit-flex;
   display: flex;
   margin-top: -70px;
-  height: 110px;
+  height: 163px;
   -webkit-justify-content: center;
   justify-content: center;
   border-radius: 25px;
@@ -51,13 +52,13 @@ label {
   width: 47%;
 }
 
-/* line 44, ../sass/modules/_all.scss */
+/* line 46, ../sass/modules/_all.scss */
 .uploader img,
 .uploader .icon {
   pointer-events: none;
 }
 
-/* line 49, ../sass/modules/_all.scss */
+/* line 51, ../sass/modules/_all.scss */
 .uploader,
 .uploader .icon {
   -webkit-transition: all 100ms ease-in;
@@ -67,7 +68,7 @@ label {
   transition: all 100ms ease-in;
 }
 
-/* line 58, ../sass/modules/_all.scss */
+/* line 60, ../sass/modules/_all.scss */
 .uploader .icon {
   color: #eee;
   color: rgba(0, 0, 0, 0.2);
@@ -75,13 +76,13 @@ label {
   z-index: 2;
 }
 
-/* line 65, ../sass/modules/_all.scss */
+/* line 67, ../sass/modules/_all.scss */
 .uploader img {
-  left: 50%;
+  left: 9%;
   opacity: 0;
   max-height: 100%;
   max-width: 100%;
-  position: absolute;
+  position: relative;
   top: 50%;
   -webkit-transition: all 300ms ease-in;
   -moz-transition: all 300ms ease-in;
@@ -96,25 +97,25 @@ label {
   z-index: -1;
 }
 
-/* line 85, ../sass/modules/_all.scss */
+/* line 87, ../sass/modules/_all.scss */
 .uploader img.loaded {
   opacity: 1;
   z-index: 1;
 }
 
-/* line 95, ../sass/modules/_all.scss */
+/* line 97, ../sass/modules/_all.scss */
 .text-danger {
   color: #ffffff;
   margin-top: 5px;
   line-height: 2;
 }
 
-/* line 101, ../sass/modules/_all.scss */
+/* line 103, ../sass/modules/_all.scss */
 a, a:visited, a:focus, a:active, a:hover {
   outline: 0 none;
 }
 
-/* line 105, ../sass/modules/_all.scss */
+/* line 107, ../sass/modules/_all.scss */
 body {
   position: relative;
   width: 100%;
@@ -124,7 +125,7 @@ body {
   background-attachment: fixed;
 }
 
-/* line 117, ../sass/modules/_all.scss */
+/* line 119, ../sass/modules/_all.scss */
 .wrapper {
   max-width: 1070px;
   margin: 0 auto;
@@ -132,7 +133,7 @@ body {
   padding-top: 30px;
 }
 
-/* line 125, ../sass/modules/_all.scss */
+/* line 127, ../sass/modules/_all.scss */
 header {
   width: 100%;
   display: -webkit-box;
@@ -149,11 +150,11 @@ header {
   padding-bottom: 7vh;
 }
 
-/* line 141, ../sass/modules/_all.scss */
+/* line 143, ../sass/modules/_all.scss */
 nav {
   /*width:50%;*/
 }
-/* line 142, ../sass/modules/_all.scss */
+/* line 144, ../sass/modules/_all.scss */
 nav ul {
   list-style-type: none;
   display: -webkit-box;
@@ -165,13 +166,13 @@ nav ul {
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
 }
-/* line 153, ../sass/modules/_all.scss */
+/* line 155, ../sass/modules/_all.scss */
 nav ul li {
   padding-left: 25px;
   text-align: center;
   cursor: pointer;
 }
-/* line 157, ../sass/modules/_all.scss */
+/* line 159, ../sass/modules/_all.scss */
 nav ul li a {
   text-transform: uppercase;
   font-family: "Lato", sans-serif;
@@ -181,72 +182,72 @@ nav ul li a {
   border-radius: 5px;
   text-decoration: none;
 }
-/* line 165, ../sass/modules/_all.scss */
+/* line 167, ../sass/modules/_all.scss */
 nav ul li a:visited {
   text-decoration: none;
 }
-/* line 168, ../sass/modules/_all.scss */
+/* line 170, ../sass/modules/_all.scss */
 nav ul li a:hover {
   color: #fff;
   /*background-color: #e0494a;*/
   text-decoration: none;
 }
 
-/* line 181, ../sass/modules/_all.scss */
+/* line 183, ../sass/modules/_all.scss */
 .loginLink {
   border: 3px solid #fff;
   box-sizing: border-box;
   color: #fff;
 }
 
-/* line 187, ../sass/modules/_all.scss */
+/* line 189, ../sass/modules/_all.scss */
 .signLink {
   background-color: #e0494a;
   color: #fff;
   padding: 13px 20px;
 }
 
-/* line 192, ../sass/modules/_all.scss */
+/* line 194, ../sass/modules/_all.scss */
 .signLink:visited {
   color: #fff;
 }
 
-/* line 196, ../sass/modules/_all.scss */
+/* line 198, ../sass/modules/_all.scss */
 .logo {
   /*width:50%;*/
 }
-/* line 198, ../sass/modules/_all.scss */
+/* line 200, ../sass/modules/_all.scss */
 .logo img {
   width: 165px;
   height: 70px;
 }
 
-/* line 204, ../sass/modules/_all.scss */
+/* line 206, ../sass/modules/_all.scss */
 main {
   margin-bottom: 6rem;
 }
 
-/* line 208, ../sass/modules/_all.scss */
+/* line 210, ../sass/modules/_all.scss */
 footer {
   text-align: center;
 }
 
-/* line 212, ../sass/modules/_all.scss */
+/* line 214, ../sass/modules/_all.scss */
 .social {
   margin-bottom: 30px;
 }
-/* line 214, ../sass/modules/_all.scss */
+/* line 216, ../sass/modules/_all.scss */
 .social a {
   padding-left: 10px;
 }
 
 /*////////Search page//////////////*/
-/* line 220, ../sass/modules/_all.scss */
+/* line 222, ../sass/modules/_all.scss */
 .search-page {
   width: 65%;
   margin: 0 auto;
 }
-/* line 223, ../sass/modules/_all.scss */
+/* line 225, ../sass/modules/_all.scss */
 .search-page h1 {
   text-align: center;
   font-family: "Lato", sans-serif;
@@ -254,11 +255,11 @@ footer {
   font-size: 45px;
   font-weight: 300;
 }
-/* line 230, ../sass/modules/_all.scss */
+/* line 232, ../sass/modules/_all.scss */
 .search-page h1 b {
   color: #abd154;
 }
-/* line 234, ../sass/modules/_all.scss */
+/* line 236, ../sass/modules/_all.scss */
 .search-page h5 {
   color: #b6babc;
   font-size: 16px;
@@ -266,13 +267,13 @@ footer {
   margin: 15px 0 0;
 }
 
-/* line 243, ../sass/modules/_all.scss */
+/* line 245, ../sass/modules/_all.scss */
 #searchForm {
   margin: 50px 0 30px;
   font-size: 16px;
   font-family: "Lato", sans-serif;
 }
-/* line 247, ../sass/modules/_all.scss */
+/* line 249, ../sass/modules/_all.scss */
 #searchForm p,
 #searchForm .styled-select,
 #searchForm .search-btn {
@@ -280,14 +281,14 @@ footer {
   height: 55px;
   overflow: hidden;
 }
-/* line 255, ../sass/modules/_all.scss */
+/* line 257, ../sass/modules/_all.scss */
 #searchForm p {
   width: 35%;
   margin: 0;
   background: #fff url(/img/caret.png) no-repeat 90%;
   border-radius: 30px 0 0 30px;
 }
-/* line 260, ../sass/modules/_all.scss */
+/* line 262, ../sass/modules/_all.scss */
 #searchForm p input {
   width: 17em;
   height: 55px;
@@ -297,18 +298,18 @@ footer {
   outline: 0;
   cursor: auto;
 }
-/* line 268, ../sass/modules/_all.scss */
+/* line 270, ../sass/modules/_all.scss */
 #searchForm p input[placeholder] {
   font-weight: bold;
   color: #B8B8B8;
 }
-/* line 275, ../sass/modules/_all.scss */
+/* line 277, ../sass/modules/_all.scss */
 #searchForm .styled-select {
   width: 40%;
   background: #fff url(/img/caret.png) no-repeat 90%;
   border-left: 1px solid #f0f0f0;
 }
-/* line 279, ../sass/modules/_all.scss */
+/* line 281, ../sass/modules/_all.scss */
 #searchForm .styled-select select {
   width: 100%;
   height: 55px;
@@ -323,25 +324,25 @@ footer {
   -moz-appearance: none;
   appearance: none;
 }
-/* line 293, ../sass/modules/_all.scss */
+/* line 295, ../sass/modules/_all.scss */
 #searchForm .styled-select select option {
   font-weight: bold;
 }
-/* line 296, ../sass/modules/_all.scss */
+/* line 298, ../sass/modules/_all.scss */
 #searchForm .styled-select select:focus {
   outline: none;
   border: none;
 }
-/* line 302, ../sass/modules/_all.scss */
+/* line 304, ../sass/modules/_all.scss */
 #searchForm input::-webkit-calendar-picker-indicator {
   display: none;
 }
-/* line 306, ../sass/modules/_all.scss */
+/* line 308, ../sass/modules/_all.scss */
 #searchForm .search-btn {
   position: relative;
   width: 25%;
 }
-/* line 309, ../sass/modules/_all.scss */
+/* line 311, ../sass/modules/_all.scss */
 #searchForm .search-btn .submitSearch {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -358,11 +359,11 @@ footer {
   border-radius: 0 30px 30px 0;
   transition: all .3s;
 }
-/* line 324, ../sass/modules/_all.scss */
+/* line 326, ../sass/modules/_all.scss */
 #searchForm .search-btn .submitSearch:hover {
   background: #d22425;
 }
-/* line 328, ../sass/modules/_all.scss */
+/* line 330, ../sass/modules/_all.scss */
 #searchForm .search-btn .search-icon {
   position: absolute;
   top: 20px;
@@ -373,7 +374,7 @@ footer {
   background: url(/img/search-icon.png) no-repeat center;
 }
 
-/* line 340, ../sass/modules/_all.scss */
+/* line 342, ../sass/modules/_all.scss */
 .categories {
   padding-top: 30px;
   width: 100%;
@@ -385,34 +386,34 @@ footer {
   flex-flow: row nowrap;
 }
 
-/* line 352, ../sass/modules/_all.scss */
+/* line 354, ../sass/modules/_all.scss */
 .item {
   text-align: center;
 }
 
-/* line 355, ../sass/modules/_all.scss */
+/* line 357, ../sass/modules/_all.scss */
 input[type="search"] {
   width: 100%;
 }
 
-/* line 358, ../sass/modules/_all.scss */
+/* line 360, ../sass/modules/_all.scss */
 #lookFor {
   outline: none;
 }
-/* line 360, ../sass/modules/_all.scss */
+/* line 362, ../sass/modules/_all.scss */
 #lookFor option {
   border-radius: 10px;
   width: 80%;
 }
 
 /*/*/
-/* line 374, ../sass/modules/_all.scss */
+/* line 376, ../sass/modules/_all.scss */
 h1 {
   color: #fff;
   text-align: center;
 }
 
-/* line 378, ../sass/modules/_all.scss */
+/* line 380, ../sass/modules/_all.scss */
 .close {
   position: absolute;
   top: 0rem;

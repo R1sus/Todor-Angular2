@@ -243,6 +243,7 @@ textarea[name="bdescription"] {
 input[name="business-photo"], input[name="user-photo"] {
   background: url("../img/icons/business-photo.svg") no-repeat;
   background-size: 9%;
+  z-index: 2;
 }
 input[name="business-logo"] {
   background: url("../img/icons/business-logo.svg") no-repeat;
