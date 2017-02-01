@@ -399,6 +399,16 @@ h1 {
   right: -5rem;
 }
 
+/* line 373, ../sass/modules/_all.scss */
+#menu-toggle {
+  display: none;
+}
+
+/* line 375, ../sass/modules/_all.scss */
+.label-toggle {
+  display: none;
+}
+
 /*general styles*/
 @media only screen and (max-width: 1024px) {
   /* line 2, ../sass/modules/_media.scss */
@@ -438,36 +448,140 @@ h1 {
 }
 @media only screen and (max-width: 768px) {
   /* line 25, ../sass/modules/_media.scss */
+  body {
+    background: #80888b;
+  }
+
+  /* line 29, ../sass/modules/_media.scss */
+  .wrapper {
+    width: 100%;
+    padding-top: 0;
+  }
+
+  /* line 34, ../sass/modules/_media.scss */
+  header {
+    background: #737b7e;
+    display: block;
+  }
+
+  /* line 42, ../sass/modules/_media.scss */
+  .close {
+    display: none;
+  }
+
+  /* line 46, ../sass/modules/_media.scss */
   .container {
     width: 80%;
   }
-}
-@media only screen and (max-width: 480px) {
-  /* line 31, ../sass/modules/_media.scss */
+
+  /* line 49, ../sass/modules/_media.scss */
+  .logo {
+    display: inline-block;
+    padding: 2%;
+  }
+
+  /* line 53, ../sass/modules/_media.scss */
   nav {
-    display: none;
+    width: 100%;
+    height: 0;
+  }
+  /* line 56, ../sass/modules/_media.scss */
+  nav ul {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    height: 0;
+    list-style-type: none;
+    opacity: 0;
+    text-align: center;
+    width: 100%;
+    visibility: hidden;
+  }
+  /* line 67, ../sass/modules/_media.scss */
+  nav ul li {
+    display: block;
+    padding: 2em 0;
+  }
+  /* line 72, ../sass/modules/_media.scss */
+  nav ul li a {
+    font-size: 15px;
+  }
+
+  /* line 80, ../sass/modules/_media.scss */
+  #menu-toggle:checked ~ ul {
+    padding: 0;
+    margin: 0 auto;
+    opacity: 1;
+    height: 100vh;
+    width: 100%;
+    background: #80888b;
+    position: fixed;
+    visibility: visible;
+    z-index: 10;
+    overflow: hidden;
+  }
+
+  /* line 93, ../sass/modules/_media.scss */
+  .label-toggle {
+    margin-right: 10px;
+    background: url("../../img/hamburger_menu.png");
+    cursor: pointer;
+    display: block;
+    float: right;
+    height: 35px;
+    width: 58px;
+    position: relative;
+    top: -6rem;
+  }
+
+  /* line 104, ../sass/modules/_media.scss */
+  #menu-toggle:checked ~ .label-toggle {
+    background: url("../../img/humb_close.png");
+  }
+
+  /* line 108, ../sass/modules/_media.scss */
+  .search-page h1 {
+    font-size: 40px;
+  }
+
+  /* line 111, ../sass/modules/_media.scss */
+  .categories {
+    flex-flow: row wrap;
+  }
+
+  /* line 114, ../sass/modules/_media.scss */
+  .item {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+
+  /* line 119, ../sass/modules/_media.scss */
+  #searchForm p, #searchForm .styled-select, #searchForm .search-btn {
+    width: 100%;
+    border-radius: 30px;
+    margin-bottom: 30px;
   }
 }
 @media only screen and (max-width: 425px) {
-  /* line 36, ../sass/modules/_media.scss */
+  /* line 139, ../sass/modules/_media.scss */
   .container {
     width: 95%;
     margin: 0 auto;
   }
 
-  /* line 41, ../sass/modules/_media.scss */
+  /* line 144, ../sass/modules/_media.scss */
   .search-page {
     width: 100%;
   }
 }
 @media only screen and (max-width: 375px) {
-  /* line 46, ../sass/modules/_media.scss */
+  /* line 149, ../sass/modules/_media.scss */
   .container {
     width: 90%;
   }
 }
 @media only screen and (max-width: 320px) {
-  /* line 52, ../sass/modules/_media.scss */
+  /* line 155, ../sass/modules/_media.scss */
   .container {
     width: 90%;
   }
