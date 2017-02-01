@@ -23,11 +23,12 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                 }
                 BusinessProfileComponent.prototype.readUrl = function (event) {
                     var _this = this;
-                    imageSrc: string = '';
+                    // imageSrc: string = '';
                     if (event.target.files && event.target.files[0]) {
                         var reader = new FileReader();
                         reader.onload = function (event) {
                             _this.url = event.target.result;
+                            console.log(_this.url);
                         };
                         reader.readAsDataURL(event.target.files[0]);
                     }
