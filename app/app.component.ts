@@ -27,14 +27,14 @@ export class AppComponent {
     console.log(path);
     if (path === "/uprofile") {
       this.logged = true;
-      console.log('false!');
+      // console.log('false!');
     }
     else if(path === "/bprofile"){
       this.logged = true;
     }
     else {
       this.logged = false;
-      console.log('true!');
+      // console.log('true!');
     }
     // this.logged = true;
     // console.log(router.url);

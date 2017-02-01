@@ -11,31 +11,44 @@ System.register(['@angular/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var UserProfileComponent;
+    var UploaderFileComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            UserProfileComponent = (function () {
-                function UserProfileComponent() {
+            UploaderFileComponent = (function () {
+                function UploaderFileComponent() {
                 }
-                UserProfileComponent = __decorate([
+                UploaderFileComponent.prototype.readUrl = function (event) {
+                    var _this = this;
+                    // imageSrc: string = '';
+                    if (event.target.files && event.target.files[0]) {
+                        var reader = new FileReader();
+                        reader.onload = function (event) {
+                            _this.url = event.target.result;
+                            console.log(_this.url);
+                        };
+                        reader.readAsDataURL(event.target.files[0]);
+                    }
+                };
+                UploaderFileComponent = __decorate([
                     core_1.Component({
                         moduleId: module.id,
-                        selector: 'user-profile',
-                        templateUrl: 'user-profile.component.html'
+                        selector: 'uploader',
+                        styles: [" \n        uploader-file {\n       width:100%;\n        }\n    "],
+                        templateUrl: 'uploader.component.html',
                     }), 
                     __metadata('design:paramtypes', [])
-                ], UserProfileComponent);
-                return UserProfileComponent;
+                ], UploaderFileComponent);
+                return UploaderFileComponent;
             }());
-            exports_1("UserProfileComponent", UserProfileComponent);
+            exports_1("UploaderFileComponent", UploaderFileComponent);
         }
     }
 });
 /**
- * Created by D on 24.01.2017.
+ * Created by D on 01.02.2017.
  */
-//# sourceMappingURL=user-profile.component.js.map
+//# sourceMappingURL=uploader.component.js.map

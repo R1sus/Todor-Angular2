@@ -4,40 +4,36 @@
 .business-load-file {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  .uploader {
+  width: 100%;}
+  uploader {
     padding-top: 56px;
     display:flex;
     justify-content: center;
+    //width:80%;
     input {
       display: block;
       opacity: 0;
       height: 100px;
+      width:100%;
+      position: absolute;
 
     }
     img {
       z-index: 2;
       opacity: 1;
-      left:-15%;
     }
   }
-}
+
 .load-file {
   display: flex;
   width: 100%;
   justify-content: flex-end;
 }
-label {
-  outline: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-.uploader input {
-  display: none;
-}
 
-.uploader {
-  padding-top: 50px;
+
+uploader {
+  text-align: center;
+  padding-top: 54px;
   -webkit-align-items: center;
   align-items: center;
   //background-color: #efefef;
@@ -47,42 +43,20 @@ label {
   display: -webkit-flex;
   display: flex;
   margin-top: -70px;
-  height: 163px;
+  height: 194px;
   -webkit-justify-content: center;
   justify-content: center;
   border-radius: 25px;
   border:2px solid #fff;
-  //outline: 3px solid #ccc;
-  //outline-offset: 5px;
   position: relative;
-  //float:right;
   width:47%;
 }
 
-.uploader img,
-.uploader .icon {
-  pointer-events: none;
-}
 
-.uploader,
-.uploader .icon {
-  -webkit-transition: all 100ms ease-in;
-  -moz-transition: all 100ms ease-in;
-  -ms-transition: all 100ms ease-in;
-  -o-transition: all 100ms ease-in;
-  transition: all 100ms ease-in;
-}
-
-.uploader .icon {
-  color: #eee;
-  color: rgba(0, 0, 0, 0.2);
-  font-size: 5em;
-  z-index: 2;
-}
-
-.uploader img {
-  left: 13%;
-  opacity: 0;
+uploader img {
+  display: block;
+  left: 25%;
+  width: 46%;
   max-height: 100%;
   max-width: 100%;
   position: relative;
@@ -97,15 +71,10 @@ label {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  z-index: -1;
-}
-
-.uploader img.loaded {
-  opacity: 1;
-  z-index: 1;
 }
 
 
+///////////////////////////////////all css///////////////////
 
 
 

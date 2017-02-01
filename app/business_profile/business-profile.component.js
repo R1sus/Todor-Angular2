@@ -18,21 +18,10 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
+            // import { UploaderFileComponent} from './uploader/uploader.component';
             BusinessProfileComponent = (function () {
                 function BusinessProfileComponent() {
                 }
-                BusinessProfileComponent.prototype.readUrl = function (event) {
-                    var _this = this;
-                    // imageSrc: string = '';
-                    if (event.target.files && event.target.files[0]) {
-                        var reader = new FileReader();
-                        reader.onload = function (event) {
-                            _this.url = event.target.result;
-                            console.log(_this.url);
-                        };
-                        reader.readAsDataURL(event.target.files[0]);
-                    }
-                };
                 BusinessProfileComponent = __decorate([
                     core_1.Component({
                         moduleId: module.id,

@@ -5,7 +5,7 @@ import { FormsModule }   from '@angular/forms';
 import { HttpModule }   from '@angular/http';
 import { routing }        from './app.routing';
 
-
+import { UploaderFileComponent} from './uploader/uploader.component'
 import { AuthGuard } from './_guards/guards';
 import { AppComponent }  from './app.component';
 import { EqualValidator } from './_directives/equal-validator.directive';
@@ -51,7 +51,8 @@ import { BusinessProfileComponent } from './business_profile/business-profile.co
     SearchPageComponent,
     NotFoundComponent,
     UserProfileComponent,
-    BusinessProfileComponent
+    BusinessProfileComponent,
+    UploaderFileComponent
 
   ],
   providers: [

@@ -34,12 +34,14 @@
         </div>
 
         <div class="business-load-file">
-            <div class="uploader">
-                <input type='file' (change)="readUrl($event)">
-                <img [src]="url"></div>
-            <div class="uploader">
-                <input type='file' (change)="readUrl($event)">
-                <img [src]="url"></div>
+            <uploader></uploader>
+            <uploader></uploader>
+            <!--<div class="uploader">-->
+                <!--<input type='file' (change)="readUrl($event)">-->
+                <!--<img [src]="url"></div>-->
+            <!--<div class="uploader">-->
+                <!--<input type='file' (change)="readUrl($event)">-->
+                <!--<img [src]="url"></div>-->
 
         </div>
 
