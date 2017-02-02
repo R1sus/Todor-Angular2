@@ -27,23 +27,29 @@
         </div>
         <textarea name="bdescription" class="form-control" placeholder="Business Description"></textarea>
         <div class="form-group">
+            <div class="business-load-file">
                 <input type="text" class="form-control" name="business-photo"  placeholder = "Business Photo"
                        maxlength="25" ngModel #bphoto="ngModel" disabled >
-            <input type="text" class="form-control"
+                <uploader></uploader>
+            </div>
+            <div class="business-load-file">
+                <input type="text" class="form-control"
                    name="business-logo"  placeholder = "Business Logo" maxlength="25" ngModel #blogo="ngModel" disabled >
+                <uploader></uploader>
+            </div>
         </div>
 
-        <div class="business-load-file">
-            <uploader></uploader>
-            <uploader></uploader>
-            <!--<div class="uploader">-->
-                <!--<input type='file' (change)="readUrl($event)">-->
-                <!--<img [src]="url"></div>-->
-            <!--<div class="uploader">-->
-                <!--<input type='file' (change)="readUrl($event)">-->
-                <!--<img [src]="url"></div>-->
+        <!--<div class="business-load-file">-->
+            <!--<uploader></uploader>-->
+            <!--<uploader></uploader>-->
+            <!--&lt;!&ndash;<div class="uploader">&ndash;&gt;-->
+                <!--&lt;!&ndash;<input type='file' (change)="readUrl($event)">&ndash;&gt;-->
+                <!--&lt;!&ndash;<img [src]="url"></div>&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="uploader">&ndash;&gt;-->
+                <!--&lt;!&ndash;<input type='file' (change)="readUrl($event)">&ndash;&gt;-->
+                <!--&lt;!&ndash;<img [src]="url"></div>&ndash;&gt;-->
 
-        </div>
+        <!--</div>-->
 
         <div class="form-btn">
             <button type="submit" class="btn">Submit</button>

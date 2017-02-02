@@ -9,7 +9,11 @@
         </div>
         <div class="form-group">
             <input type="email" class="form-control"
-                   name="email"  placeholder = "Email" maxlength="25" ngModel #email="ngModel" required >
+                   name="email"  placeholder = "Email" maxlength="25" ngModel #email="ngModel"
+                   pattern="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+" required >
+            <!--<small [hidden]="email.valid || (email.pristine && !f.submitted)" class="text-danger">-->
+                <!--Email is required and format should be <i>john@doe.com</i>.-->
+            <!--</small>-->
             <input type="text" class="form-control"
                    name="phone"  placeholder = "Phone Numder" maxlength="25" ngModel #phone="ngModel"  pattern="[0-9]{10}" required >
         </div>
@@ -31,14 +35,14 @@
         <div class="form-group">
             <input type="text" class="form-control"
                    name="adress"  placeholder = "Address" maxlength="25" ngModel #adress="ngModel" required >
-
+            <div class="load-file">
             <input type="text" class="form-control" name="user-photo"  placeholder = "User Photo"
                    maxlength="25" ngModel #bphoto="ngModel" disabled >
+                <uploader></uploader>
+            </div>
 
         </div>
-        <div class="load-file">
-            <uploader></uploader>
-        </div>
+
         <!--<label class="uploader" ondragover="return false;"-->
                <!--[class.loaded]="loaded"-->
                <!--[style.outlineColor]="dragging ? activeColor : baseColor"-->
