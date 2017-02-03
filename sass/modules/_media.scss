@@ -72,55 +72,86 @@
     width: 100%;
     height: 0;
     ul {
-      display: block;
+      display: none;
+      overflow:auto;
       /*justify-content: flex-start;*/
-      height: 0;
+      padding-top: 50px;
+      //height: 0;
+      margin: 0 auto;
       list-style-type: none;
-      opacity: 0;
-      text-align: center;
-      /*transition: all 1s ease;*/
+      //opacity: 0;
       width: 100%;
-      visibility: hidden;
+      text-align: center;
+      position: relative;
+      background: #80888b;
+      //opacity: 1;
+      height: 100vh;
+      z-index: 10;
+      //visibility: visible;
+      transition: all 1s ease-in;
+      //visibility: hidden;
       li {
         margin: 0 auto;
         display: block;
         /*font-size: 1.5em;*/
         padding: 2em 0;
-        &:first-child {
-          margin-left: 5em;
-        }
+        //&:first-child {
+        //  margin-left: 5em;
+        //}
         a {
-          font-size: 15px;
+          font-size: 25px;
         }
       }
     }
   }
-  #menu-toggle:checked~ul {
-    padding: 0;
-    margin: 0 auto;
-    /*flex-flow: column wrap;*/
-    opacity: 1;
-    height: 100vh;
-    width: 100%;
-    background: #80888b;
-    position: relative;
-    visibility: visible;
-    z-index: 10;
+  //.humburger-icon {
+  //  display: block;
+
+  //.display-mobile-menu {
+  //  display:block;
+  //
+  //
+  //}
+
+
+
+    //#menu-toggle:checked ~ ul {
+    //  padding-top: 50px;
+    //  //padding: 0;
+    //  margin: 0 auto;
+    //  /*flex-flow: column wrap;*/
+    //  opacity: 1;
+    //  height: 100vh;
+    //  width: 100%;
+    //  background: #80888b;
+    //  position: relative;
+    //  visibility: visible;
+    //  z-index: 10;
+    //}
+    .label-toggle {
+      cursor:pointer;
+      margin-right: 10px;
+      background: url("../../img/hamburger_menu.png");
+      background-size: 30px;
+      cursor: pointer;
+      display: block;
+      float: right;
+      height: 20px;
+      width: 37px;
+      position: relative;
+      top: -5rem;
+    }
+  .label-toggle-click {
+      background: url("../../img/humb_close.png");
+      background-size: cover;
+      height: 25px;
   }
-  .label-toggle {
-    margin-right: 10px;
-    background: url("../../img/hamburger_menu.png");
-    cursor: pointer;
-    display: block;
-    float: right;
-    height: 35px;
-    width: 58px;
-    position: relative;
-    top: -6rem;
-  }
-  #menu-toggle:checked~.label-toggle {
-    background: url("../../img/humb_close.png");
-  }
+    //#menu-toggle:checked ~ .label-toggle {
+    //  background: url("../../img/humb_close.png");
+    //  background-size: cover;
+    //  height: 23px;
+    //}
+
   /*///////////Search media////////////////*/
   .search-page h1 {
     font-size: 40px;
@@ -144,10 +175,11 @@
   }
   /*////////////////////profiles media//////////////*/
   .user-profile-container {
+    background-color: transparent;
     .user-profile {
       .form-group {
         -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+        flex-wrap: wrap;
         margin-bottom: 0;
         input {
           width: 100%;
@@ -170,7 +202,10 @@
         margin-top: -78px;
       }
       .load-file {
-        width:100%;
+        width: 100%;
+      }
+      .form-btn {
+        width: 100%;
       }
     }
   }
@@ -201,6 +236,7 @@
     background-position: 6px;
   }
   .business-profile-container {
+    background-color: transparent;
     .business-profile {
       .form-group {
         -ms-flex-wrap: wrap;
@@ -273,18 +309,52 @@
     width: 95%;
     margin: 0 auto;
   }
-}
+   .user-profile-container {
+     .user-profile {
+       width: 95%;
+     }
+   }
+  }
+
 
 @media only screen and (max-width:320px) {
+  body {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
   .container {
     width: 98%;
     margin: 0 auto;
   }
-  .business-load-file {
-    width: 100%;
-    uploader {
-      /*margin-top: -15px;*/
-      margin-bottom: 25px;
+  .business-profile-container {
+    .business-profile {
+      .business-load-file {
+        uploader {
+          input[type="file"] {
+            padding: 0;
+            width: 70%;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+
+
+
+ .user-profile-container {
+  .user-profile {
+      width: 95%;
+      uploader {
+        /*margin-top: -15px;*/
+        margin-bottom: 25px;
+        input[type= "file"] {
+          padding: 0;
+          width: 70%;
+          margin: 0 auto;
+        }
+      }
     }
   }
 }

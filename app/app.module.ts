@@ -16,6 +16,9 @@ import { NotFoundComponent } from './not_found/not-found.component';
 import { UserProfileComponent } from './user_profile/user-profile.component';
 import { BusinessProfileComponent } from './business_profile/business-profile.component';
 
+
+
+
 //
 // const appRoutes: Routes =[
 //   { path: '', component: AuthorizationFormComponent},

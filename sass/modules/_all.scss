@@ -355,10 +355,14 @@ h1 {
 }
 
 /*//////////*/
-#menu-toggle {
-  display: none;
-}
+//.humburger-icon {
+//    display: none;
+  #menu-toggle {
+    display: none;
+  }
+  //
+  //.label-toggle {
+  //  display: none;
+  //}
 
-.label-toggle {
-  display: none;
-}
+//}

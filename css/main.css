@@ -404,13 +404,8 @@ h1 {
 }
 
 /*//////////*/
-/* line 358, ../sass/modules/_all.scss */
+/* line 360, ../sass/modules/_all.scss */
 #menu-toggle {
-  display: none;
-}
-
-/* line 362, ../sass/modules/_all.scss */
-.label-toggle {
   display: none;
 }
 
@@ -517,83 +512,73 @@ h1 {
   }
   /* line 74, ../sass/modules/_media.scss */
   nav ul {
-    display: block;
+    display: none;
+    overflow: auto;
     /*justify-content: flex-start;*/
-    height: 0;
+    padding-top: 50px;
+    margin: 0 auto;
     list-style-type: none;
-    opacity: 0;
-    text-align: center;
-    /*transition: all 1s ease;*/
     width: 100%;
-    visibility: hidden;
+    text-align: center;
+    position: relative;
+    background: #80888b;
+    height: 100vh;
+    z-index: 10;
+    transition: all 1s ease-in;
   }
-  /* line 84, ../sass/modules/_media.scss */
+  /* line 93, ../sass/modules/_media.scss */
   nav ul li {
     margin: 0 auto;
     display: block;
     /*font-size: 1.5em;*/
     padding: 2em 0;
   }
-  /* line 89, ../sass/modules/_media.scss */
-  nav ul li:first-child {
-    margin-left: 5em;
-  }
-  /* line 92, ../sass/modules/_media.scss */
+  /* line 101, ../sass/modules/_media.scss */
   nav ul li a {
-    font-size: 15px;
+    font-size: 25px;
   }
 
-  /* line 98, ../sass/modules/_media.scss */
-  #menu-toggle:checked ~ ul {
-    padding: 0;
-    margin: 0 auto;
-    /*flex-flow: column wrap;*/
-    opacity: 1;
-    height: 100vh;
-    width: 100%;
-    background: #80888b;
-    position: relative;
-    visibility: visible;
-    z-index: 10;
-  }
-
-  /* line 110, ../sass/modules/_media.scss */
+  /* line 131, ../sass/modules/_media.scss */
   .label-toggle {
+    cursor: pointer;
     margin-right: 10px;
     background: url("../../img/hamburger_menu.png");
+    background-size: 30px;
     cursor: pointer;
     display: block;
     float: right;
-    height: 35px;
-    width: 58px;
+    height: 20px;
+    width: 37px;
     position: relative;
-    top: -6rem;
+    top: -5rem;
   }
 
-  /* line 121, ../sass/modules/_media.scss */
-  #menu-toggle:checked ~ .label-toggle {
+  /* line 144, ../sass/modules/_media.scss */
+  .label-toggle-click {
     background: url("../../img/humb_close.png");
+    background-size: cover;
+    height: 25px;
   }
 
   /*///////////Search media////////////////*/
-  /* line 125, ../sass/modules/_media.scss */
+  /* line 156, ../sass/modules/_media.scss */
   .search-page h1 {
     font-size: 40px;
   }
 
-  /* line 128, ../sass/modules/_media.scss */
+  /* line 159, ../sass/modules/_media.scss */
   .categories {
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
   }
 
-  /* line 132, ../sass/modules/_media.scss */
+  /* line 163, ../sass/modules/_media.scss */
   .item {
     width: 50%;
     margin-bottom: 30px;
   }
 
-  /* line 137, ../sass/modules/_media.scss */
+  /* line 168, ../sass/modules/_media.scss */
   #searchForm p,
   #searchForm .styled-select,
   #searchForm .search-btn {
@@ -603,42 +588,50 @@ h1 {
   }
 
   /*////////////////////profiles media//////////////*/
-  /* line 148, ../sass/modules/_media.scss */
+  /* line 177, ../sass/modules/_media.scss */
+  .user-profile-container {
+    background-color: transparent;
+  }
+  /* line 180, ../sass/modules/_media.scss */
   .user-profile-container .user-profile .form-group {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-bottom: 0;
   }
-  /* line 152, ../sass/modules/_media.scss */
+  /* line 184, ../sass/modules/_media.scss */
   .user-profile-container .user-profile .form-group input {
     width: 100%;
     margin-bottom: 25px;
   }
-  /* line 156, ../sass/modules/_media.scss */
+  /* line 188, ../sass/modules/_media.scss */
   .user-profile-container .user-profile .form-group input[name="email"] {
     background-size: 5%;
   }
-  /* line 160, ../sass/modules/_media.scss */
+  /* line 192, ../sass/modules/_media.scss */
   .user-profile-container .user-profile select {
     width: 100%;
     margin-bottom: 25px;
     background-size: 9%;
   }
-  /* line 165, ../sass/modules/_media.scss */
+  /* line 197, ../sass/modules/_media.scss */
   .user-profile-container .user-profile textarea {
     margin-bottom: 25px;
   }
-  /* line 168, ../sass/modules/_media.scss */
+  /* line 200, ../sass/modules/_media.scss */
   .user-profile-container .user-profile uploader {
     width: 100%;
     margin-top: -78px;
   }
-  /* line 172, ../sass/modules/_media.scss */
+  /* line 204, ../sass/modules/_media.scss */
   .user-profile-container .user-profile .load-file {
     width: 100%;
   }
+  /* line 207, ../sass/modules/_media.scss */
+  .user-profile-container .user-profile .form-btn {
+    width: 100%;
+  }
 
-  /* line 177, ../sass/modules/_media.scss */
+  /* line 212, ../sass/modules/_media.scss */
   input[name="business-name"],
   input[name="fax"],
   input[name="city"],
@@ -656,63 +649,67 @@ h1 {
     background-size: 6%;
   }
 
-  /* line 193, ../sass/modules/_media.scss */
+  /* line 228, ../sass/modules/_media.scss */
   input[name="zip"] {
     background-size: 7%;
   }
 
-  /* line 196, ../sass/modules/_media.scss */
+  /* line 231, ../sass/modules/_media.scss */
   input[name="birthday"] {
     line-height: 20;
   }
 
-  /* line 199, ../sass/modules/_media.scss */
+  /* line 234, ../sass/modules/_media.scss */
   input[name="website"] {
     background-size: 8%;
     background-position: 6px;
   }
 
-  /* line 205, ../sass/modules/_media.scss */
+  /* line 238, ../sass/modules/_media.scss */
+  .business-profile-container {
+    background-color: transparent;
+  }
+  /* line 241, ../sass/modules/_media.scss */
   .business-profile-container .business-profile .form-group {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-bottom: 0;
   }
-  /* line 209, ../sass/modules/_media.scss */
+  /* line 245, ../sass/modules/_media.scss */
   .business-profile-container .business-profile .form-group input {
     width: 100%;
     margin-bottom: 25px;
   }
-  /* line 214, ../sass/modules/_media.scss */
+  /* line 250, ../sass/modules/_media.scss */
   .business-profile-container .business-profile textarea {
     margin-bottom: 25px;
   }
-  /* line 217, ../sass/modules/_media.scss */
+  /* line 253, ../sass/modules/_media.scss */
   .business-profile-container .business-profile .business-load-file {
     width: 100%;
   }
-  /* line 219, ../sass/modules/_media.scss */
+  /* line 255, ../sass/modules/_media.scss */
   .business-profile-container .business-profile .business-load-file uploader {
     margin-top: -78px;
     margin-bottom: 2em;
   }
-  /* line 222, ../sass/modules/_media.scss */
+  /* line 258, ../sass/modules/_media.scss */
   .business-profile-container .business-profile .business-load-file uploader input {
     padding-left: 0;
   }
-  /* line 228, ../sass/modules/_media.scss */
+  /* line 264, ../sass/modules/_media.scss */
   .business-profile-container .form-btn {
     width: 100%;
   }
 }
 @media only screen and (max-width: 480px) {
-  /* line 235, ../sass/modules/_media.scss */
+  /* line 271, ../sass/modules/_media.scss */
   .search-page {
     width: 85%;
     position: relative;
   }
 
-  /* line 239, ../sass/modules/_media.scss */
+  /* line 275, ../sass/modules/_media.scss */
   .container {
     width: 90%;
     padding-left: 0;
@@ -721,58 +718,83 @@ h1 {
     position: relative;
   }
 
-  /* line 246, ../sass/modules/_media.scss */
+  /* line 282, ../sass/modules/_media.scss */
   .business-load-file {
     width: 100%;
   }
-  /* line 248, ../sass/modules/_media.scss */
+  /* line 284, ../sass/modules/_media.scss */
   .business-load-file uploader {
     margin-top: -15px;
     margin-bottom: 25px;
   }
 }
 @media only screen and (max-width: 425px) {
-  /* line 256, ../sass/modules/_media.scss */
+  /* line 292, ../sass/modules/_media.scss */
   .container {
     width: 95%;
     margin: 0 auto;
   }
 
-  /* line 260, ../sass/modules/_media.scss */
+  /* line 296, ../sass/modules/_media.scss */
   .search-page {
     width: 94%;
     margin: 0 auto;
   }
 }
 @media only screen and (max-width: 375px) {
-  /* line 267, ../sass/modules/_media.scss */
+  /* line 303, ../sass/modules/_media.scss */
   body {
     width: 100%;
     margin: 0 auto;
     padding: 0;
   }
 
-  /* line 272, ../sass/modules/_media.scss */
+  /* line 308, ../sass/modules/_media.scss */
   .container {
     width: 95%;
     margin: 0 auto;
   }
+
+  /* line 313, ../sass/modules/_media.scss */
+  .user-profile-container .user-profile {
+    width: 95%;
+  }
 }
 @media only screen and (max-width: 320px) {
-  /* line 279, ../sass/modules/_media.scss */
+  /* line 321, ../sass/modules/_media.scss */
+  body {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  /* line 326, ../sass/modules/_media.scss */
   .container {
     width: 98%;
     margin: 0 auto;
   }
 
-  /* line 283, ../sass/modules/_media.scss */
-  .business-load-file {
-    width: 100%;
+  /* line 334, ../sass/modules/_media.scss */
+  .business-profile-container .business-profile .business-load-file uploader input[type="file"] {
+    padding: 0;
+    width: 70%;
+    margin: 0 auto;
   }
-  /* line 285, ../sass/modules/_media.scss */
-  .business-load-file uploader {
+
+  /* line 347, ../sass/modules/_media.scss */
+  .user-profile-container .user-profile {
+    width: 95%;
+  }
+  /* line 349, ../sass/modules/_media.scss */
+  .user-profile-container .user-profile uploader {
     /*margin-top: -15px;*/
     margin-bottom: 25px;
+  }
+  /* line 352, ../sass/modules/_media.scss */
+  .user-profile-container .user-profile uploader input[type="file"] {
+    padding: 0;
+    width: 70%;
+    margin: 0 auto;
   }
 }
 /*responsive styles*/

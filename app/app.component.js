@@ -44,6 +44,43 @@ System.register(['@angular/core', './_services/http.service', '@angular/common']
                     // console.log(router.url);
                     // console.log(this.logged + 'logged');
                 }
+                AppComponent.prototype.closeMenu = function () {
+                    var scrollHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.offsetHeight, document.documentElement.offsetHeight, document.body.clientHeight, document.documentElement.clientHeight);
+                    console.log('Высота с учетом прокрутки: ' + scrollHeight);
+                    var clientHeight = document.documentElement.clientHeight;
+                    var navMenu = $('#navigation-menu');
+                    var linkActive = $('li');
+                    $('.label-toggle').addClass('label-toggle-click');
+                    navMenu.toggle(function () {
+                        var menuClose = $('#navigation-menu').css('display');
+                        console.log(menuClose + ' test');
+                        linkActive.click(function () {
+                            navMenu.css('display', 'none');
+                            $('.label-toggle').removeClass('label-toggle-click');
+                        });
+                        if (menuClose == 'block') {
+                            // $('main').css('position', 'fixed');
+                            // $('html, body').css('height',clientHeight);
+                            $('#navigation-menu').css('height', scrollHeight);
+                            // $('html, body').css('overflow', 'hidden');
+                            // $('nav').css('overflow', 'auto');
+                            // $('body').on('touchmove', function (e) {
+                            // 	e.preventDefault();
+                            // });
+                            console.log('test display block');
+                        }
+                        else if (menuClose == 'none') {
+                            $('.label-toggle').removeClass('label-toggle-click');
+                            // $('html, body').css('height','auto');
+                            // $('main').css('position', 'relative');
+                            // $('html, body').css('overflow', 'auto');
+                            // $('body').off('touchmove');
+                            console.log('test display none');
+                        }
+                        // });
+                    });
+                    // linkActive.
+                };
                 AppComponent = __decorate([
                     core_1.Component({
                         moduleId: module.id,
