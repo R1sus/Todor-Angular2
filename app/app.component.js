@@ -46,10 +46,13 @@ System.register(['@angular/core', './_services/http.service', '@angular/common']
                 }
                 AppComponent.prototype.closeMenu = function () {
                     var scrollHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.offsetHeight, document.documentElement.offsetHeight, document.body.clientHeight, document.documentElement.clientHeight);
-                    console.log('Высота с учетом прокрутки: ' + scrollHeight);
+                    // console.log( 'Высота с учетом прокрутки: ' + scrollHeight );
                     var clientHeight = document.documentElement.clientHeight;
                     var navMenu = $('#navigation-menu');
+                    var menuHeight = $('#navigation-menu').outerHeight();
+                    var headerHeight = $('header').height();
                     var linkActive = $('li');
+                    // console.log(menuHeight);
                     $('.label-toggle').addClass('label-toggle-click');
                     navMenu.toggle(function () {
                         var menuClose = $('#navigation-menu').css('display');
@@ -57,11 +60,14 @@ System.register(['@angular/core', './_services/http.service', '@angular/common']
                         linkActive.click(function () {
                             navMenu.css('display', 'none');
                             $('.label-toggle').removeClass('label-toggle-click');
+                            $('.wrapper').height('auto');
                         });
                         if (menuClose == 'block') {
-                            // $('main').css('position', 'fixed');
+                            $('.wrapper').height(menuHeight + headerHeight);
+                            $('.wrapper').css('overflow', 'hidden');
+                            // $('main').css('position',, 'fixed');
                             // $('html, body').css('height',clientHeight);
-                            $('#navigation-menu').css('height', scrollHeight);
+                            // $('#navigation-menu').css('height',scrollHeight);
                             // $('html, body').css('overflow', 'hidden');
                             // $('nav').css('overflow', 'auto');
                             // $('body').on('touchmove', function (e) {
@@ -71,6 +77,8 @@ System.register(['@angular/core', './_services/http.service', '@angular/common']
                         }
                         else if (menuClose == 'none') {
                             $('.label-toggle').removeClass('label-toggle-click');
+                            $('.wrapper').height('auto');
+                            $('.wrapper').css('overflow-y', 'scroll');
                             // $('html, body').css('height','auto');
                             // $('main').css('position', 'relative');
                             // $('html, body').css('overflow', 'auto');

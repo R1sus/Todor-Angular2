@@ -513,7 +513,7 @@ h1 {
   /* line 74, ../sass/modules/_media.scss */
   nav ul {
     display: none;
-    overflow: auto;
+    overflow-y: scroll;
     /*justify-content: flex-start;*/
     padding-top: 50px;
     margin: 0 auto;
@@ -522,7 +522,6 @@ h1 {
     text-align: center;
     position: relative;
     background: #80888b;
-    height: 100vh;
     z-index: 10;
     transition: all 1s ease-in;
   }
@@ -532,6 +531,10 @@ h1 {
     display: block;
     /*font-size: 1.5em;*/
     padding: 2em 0;
+  }
+  /* line 98, ../sass/modules/_media.scss */
+  nav ul li:last-child {
+    padding-bottom: 2em;
   }
   /* line 101, ../sass/modules/_media.scss */
   nav ul li a {
