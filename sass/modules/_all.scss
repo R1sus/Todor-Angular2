@@ -8,7 +8,7 @@
   display: flex;
   width: 47%;
   -ms-flex-flow: column wrap;
-      flex-flow: column wrap;
+  flex-flow: column wrap;
   uploader {
     margin-top: -54px;
     width: 100%;
@@ -22,13 +22,13 @@ uploader {
   display: flex;
   height: 194px;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-top: -54px;
   text-align: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
   background-color: #eeeeee;
   border-radius: 25px;
@@ -54,7 +54,7 @@ uploader {
   display: flex;
   width: 47%;
   -ms-flex-flow: column wrap;
-      flex-flow: column wrap;
+  flex-flow: column wrap;
 }
 
 uploader img {
@@ -193,7 +193,6 @@ footer {
   }
 }
 
-
 /*////////Search page//////////////*/
 
 .search-page {
@@ -322,7 +321,7 @@ footer {
   display: flex;
   /*-ms-flex-pack: distribute;*/
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
 }
@@ -357,12 +356,13 @@ h1 {
 /*//////////*/
 //.humburger-icon {
 //    display: none;
-  #menu-toggle {
-    display: none;
-  }
-  //
-  //.label-toggle {
-  //  display: none;
-  //}
+#menu-toggle {
+  display: none;
+}
+
+//
+//.label-toggle {
+//  display: none;
+//}
 
 //}

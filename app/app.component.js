@@ -29,7 +29,6 @@ System.register(['@angular/core', './_services/http.service', '@angular/common']
                     this.location = location;
                     var logged;
                     var path = location.path();
-                    // let logged;
                     console.log(path);
                     if (path === "/uprofile") {
                         this.logged = true;
@@ -40,9 +39,6 @@ System.register(['@angular/core', './_services/http.service', '@angular/common']
                     else {
                         this.logged = false;
                     }
-                    // this.logged = $('#navigation-menu');;
-                    // console.log(router.url);
-                    // console.log(this.logged + 'logged');
                 }
                 AppComponent.prototype.closeMenu = function () {
                     var clientHeight = document.documentElement.clientHeight;
@@ -71,12 +67,23 @@ System.register(['@angular/core', './_services/http.service', '@angular/common']
                             $('.label-toggle').removeClass('label-toggle-click');
                             $('.wrapper').height('auto');
                             $('.wrapper').css('overflow', 'auto');
+                            // navMenu.css('display','flex');
                             // $('body').off('touchmove');
                             console.log('test display none');
                         }
                         // });
                     });
-                    // linkActive.
+                    $(window).resize(function () {
+                        var width = $(window).width();
+                        console.log(width);
+                        if (width > 768) {
+                            $('#navigation-menu').css('display', 'flex');
+                            console.log(width + 'if');
+                        }
+                        else {
+                            $('#navigation-menu').css('display', 'none');
+                        }
+                    });
                 };
                 AppComponent = __decorate([
                     core_1.Component({

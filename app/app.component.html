@@ -5,17 +5,17 @@
     <nav>
 
         <!--<input type="checkbox" id="menu-toggle">-->
-             <label for="menu-toggle" class="label-toggle" (click)="closeMenu()"></label>
+        <label for="menu-toggle" class="label-toggle" (click)="closeMenu()"></label>
         <!--</input>-->
         <ul id="navigation-menu">
             <!--class="display-mobile-menu" >-->
             <li routerLinkActive="active"><a routerLink="/about">About</a></li>
-            <li routerLinkActive="active"><a routerLink="/contact_us" >Contact us</a></li>
+            <li routerLinkActive="active"><a routerLink="/contact_us">Contact us</a></li>
             <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" *ngIf="logged===false">
-                <a routerLink="/login" class="loginLink" >Log in</a>
+                <a routerLink="/login" class="loginLink">Log in</a>
             </li>
             <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" *ngIf="logged===false">
-                <a routerLink="" class="signLink" >Sign in </a>
+                <a routerLink="" class="signLink">Sign in </a>
             </li>
             <!--<li routerLinkActive="active">-->
             <li><a routerLink="/login" class="loginLink" *ngIf="logged===true" (click)="logout()">Logout</a></li>

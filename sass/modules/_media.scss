@@ -1,4 +1,4 @@
-@media only screen and (max-width:1024px) {
+@media only screen and (max-width: 1024px) {
   body {
     /*background-size: initial;*/
     width: 100%;
@@ -38,7 +38,7 @@
   }
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width: 768px) {
   body {
     padding: 0;
     background: #80888b;
@@ -106,45 +106,43 @@
   //
   //}
 
-
-
-    //#menu-toggle:checked ~ ul {
-    //  padding-top: 50px;
-    //  //padding: 0;
-    //  margin: 0 auto;
-    //  /*flex-flow: column wrap;*/
-    //  opacity: 1;
-    //  height: 100vh;
-    //  width: 100%;
-    //  background: #80888b;
-    //  position: relative;
-    //  visibility: visible;
-    //  z-index: 10;
-    //}
-    .label-toggle {
-      cursor:pointer;
-      margin-right: 10px;
-      background: url("../../img/hamburger_menu.png");
-      background-size: 30px;
-      cursor: pointer;
-      display: block;
-      float: right;
-      height: 20px;
-      width: 37px;
-      position: relative;
-      top: -5rem;
-      margin-bottom: 0;
-    }
-  .label-toggle-click {
-      background: url("../../img/humb_close.png");
-      background-size: cover;
-      height: 25px;
+  //#menu-toggle:checked ~ ul {
+  //  padding-top: 50px;
+  //  //padding: 0;
+  //  margin: 0 auto;
+  //  /*flex-flow: column wrap;*/
+  //  opacity: 1;
+  //  height: 100vh;
+  //  width: 100%;
+  //  background: #80888b;
+  //  position: relative;
+  //  visibility: visible;
+  //  z-index: 10;
+  //}
+  .label-toggle {
+    cursor: pointer;
+    margin-right: 10px;
+    background: url("../../img/hamburger_menu.png");
+    background-size: 30px;
+    cursor: pointer;
+    display: block;
+    float: right;
+    height: 20px;
+    width: 37px;
+    position: relative;
+    top: -5rem;
+    margin-bottom: 0;
   }
-    //#menu-toggle:checked ~ .label-toggle {
-    //  background: url("../../img/humb_close.png");
-    //  background-size: cover;
-    //  height: 23px;
-    //}
+  .label-toggle-click {
+    background: url("../../img/humb_close.png");
+    background-size: cover;
+    height: 25px;
+  }
+  //#menu-toggle:checked ~ .label-toggle {
+  //  background: url("../../img/humb_close.png");
+  //  background-size: cover;
+  //  height: 23px;
+  //}
 
   /*///////////Search media////////////////*/
   .search-page h1 {
@@ -152,7 +150,7 @@
   }
   .categories {
     -ms-flex-flow: row wrap;
-        flex-flow: row wrap;
+    flex-flow: row wrap;
   }
   .item {
     width: 50%;
@@ -234,7 +232,7 @@
     .business-profile {
       .form-group {
         -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+        flex-wrap: wrap;
         margin-bottom: 0;
         input {
           width: 100%;
@@ -261,7 +259,7 @@
   }
 }
 
-@media only screen and (max-width:480px) {
+@media only screen and (max-width: 480px) {
   .search-page {
     width: 85%;
     position: relative;
@@ -282,7 +280,7 @@
   }
 }
 
-@media only screen and (max-width:425px) {
+@media only screen and (max-width: 425px) {
   .container {
     width: 95%;
     margin: 0 auto;
@@ -293,7 +291,7 @@
   }
 }
 
-@media only screen and (max-width:375px) {
+@media only screen and (max-width: 375px) {
   body {
     width: 100%;
     margin: 0 auto;
@@ -303,15 +301,14 @@
     width: 95%;
     margin: 0 auto;
   }
-   .user-profile-container {
-     .user-profile {
-       width: 95%;
-     }
-   }
+  .user-profile-container {
+    .user-profile {
+      width: 95%;
+    }
   }
+}
 
-
-@media only screen and (max-width:320px) {
+@media only screen and (max-width: 320px) {
   body {
     width: 100%;
     margin: 0 auto;
@@ -335,10 +332,8 @@
     }
   }
 
-
-
- .user-profile-container {
-  .user-profile {
+  .user-profile-container {
+    .user-profile {
       width: 95%;
       uploader {
         /*margin-top: -15px;*/
