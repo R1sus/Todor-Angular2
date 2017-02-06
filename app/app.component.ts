@@ -39,28 +39,19 @@ export class AppComponent {
       this.logged = false;
       // console.log('true!');
     }
-    // this.logged = true;
+    // this.logged = $('#navigation-menu');;
     // console.log(router.url);
     // console.log(this.logged + 'logged');
   }
 
   closeMenu() {
 
-      var scrollHeight = Math.max(
-          document.body.scrollHeight, document.documentElement.scrollHeight,
-          document.body.offsetHeight, document.documentElement.offsetHeight,
-          document.body.clientHeight, document.documentElement.clientHeight
-      );
-      // console.log( 'Высота с учетом прокрутки: ' + scrollHeight );
-
       var clientHeight = document.documentElement.clientHeight;
       const navMenu = $('#navigation-menu');
       const menuHeight = $('#navigation-menu').outerHeight();
       const headerHeight = $('header').height();
       const linkActive = $('li');
-        // console.log(menuHeight);
       $('.label-toggle').addClass('label-toggle-click');
-
 
       navMenu.toggle(function () {
           let menuClose = $('#navigation-menu').css('display');
@@ -73,11 +64,7 @@ export class AppComponent {
         if (menuClose == 'block') {
             $('.wrapper').height(menuHeight+headerHeight);
             $('.wrapper').css('overflow','hidden');
-            // $('main').css('position',, 'fixed');
-            // $('html, body').css('height',clientHeight);
-            // $('#navigation-menu').css('height',scrollHeight);
-            // $('html, body').css('overflow', 'hidden');
-            // $('nav').css('overflow', 'auto');
+
             // $('body').on('touchmove', function (e) {
             // 	e.preventDefault();
             // });
@@ -87,10 +74,8 @@ export class AppComponent {
         else if (menuClose == 'none') {
           $('.label-toggle').removeClass('label-toggle-click');
             $('.wrapper').height('auto');
-            $('.wrapper').css('overflow-y','scroll');
-            // $('html, body').css('height','auto');
-            // $('main').css('position', 'relative');
-            // $('html, body').css('overflow', 'auto');
+            $('.wrapper').css('overflow','auto');
+
             // $('body').off('touchmove');
             console.log('test display none');
         }

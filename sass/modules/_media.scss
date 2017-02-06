@@ -56,6 +56,7 @@
     /*padding-top:30px;*/
     /*padding: 2%;*/
     display: block;
+    //padding-bottom: 0;
     /*align-items: flex-start;*/
   }
   .close {
@@ -73,27 +74,19 @@
     height: 0;
     ul {
       display: none;
-      overflow-y:scroll;
-      /*justify-content: flex-start;*/
       padding-top: 50px;
-      //height: 0;
       margin: 0 auto;
       list-style-type: none;
-      //opacity: 0;
       width: 100%;
       text-align: center;
       position: relative;
-      background: #80888b;
-      //opacity: 1;
-      //height: 100vh;
+      background: #80888b none repeat scroll 0 0;
       z-index: 10;
-      //visibility: visible;
+      //height:100vh;
       transition: all 1s ease-in;
-      //visibility: hidden;
       li {
         margin: 0 auto;
         display: block;
-        /*font-size: 1.5em;*/
         padding: 2em 0;
         &:last-child {
           padding-bottom: 2em;
@@ -140,6 +133,7 @@
       width: 37px;
       position: relative;
       top: -5rem;
+      margin-bottom: 0;
     }
   .label-toggle-click {
       background: url("../../img/humb_close.png");

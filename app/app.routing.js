@@ -28,7 +28,7 @@ System.register(['@angular/router', './register/authorization-form.component', '
             }],
         execute: function() {
             appRoutes = [
-                { path: '', redirectTo: '/signin', pathMatch: 'full' },
+                { path: '', redirectTo: '/search', pathMatch: 'full' },
                 { path: 'search', component: search_page_component_1.SearchPageComponent },
                 //canActivate: [AuthGuard] },
                 { path: 'uprofile', component: user_profile_component_1.UserProfileComponent },
