@@ -4,7 +4,6 @@ import {Router} from '@angular/router';
 import {HttpService} from './_services/http.service';
 import {HttpAddUserService} from './_services/http-add-user.service';
 import {Location} from '@angular/common';
-// import * as $ from 'jquery';
 declare var $: any;
 
 @Component({
@@ -17,9 +16,7 @@ declare var $: any;
     `],
     templateUrl: './app.component.html',
     providers: [HttpService, HttpService]
-    // '<search-page></search-page>'
-    // '<login-form></login-form>'
-    // '<authorization-form></authorization-form>'
+
 })
 export class AppComponent {
 
@@ -30,14 +27,14 @@ export class AppComponent {
         console.log(path);
         if (path === "/uprofile") {
             this.logged = true;
-            // console.log('false!');
+
         }
         else if (path === "/bprofile") {
             this.logged = true;
         }
         else {
             this.logged = false;
-            // console.log('true!');
+
         }
 
     }
@@ -63,9 +60,6 @@ export class AppComponent {
                 $('.wrapper').height(menuHeight + headerHeight);
                 $('.wrapper').css('overflow', 'hidden');
 
-                // $('body').on('touchmove', function (e) {
-                // 	e.preventDefault();
-                // });
                 console.log('test display block');
 
             }
@@ -73,29 +67,35 @@ export class AppComponent {
                 $('.label-toggle').removeClass('label-toggle-click');
                 $('.wrapper').height('auto');
                 $('.wrapper').css('overflow', 'auto');
-                // navMenu.css('display','flex');
-
-                // $('body').off('touchmove');
                 console.log('test display none');
             }
-            // });
 
         });
 
 
         $(window).resize(function () {
-            let width = $(window).width();
-            console.log(width);
-            if (width > 768) {
-                $('#navigation-menu').css('display', 'flex');
-                console.log(width + 'if');
-            }
-            else {
-                $('#navigation-menu').css('display', 'none');
-            }
-        });
+                    let menuC = $('#navigation-menu').css('display');
+                    let width = $(window).width();
+                    console.log(width);
+                    if (width > 768) {
+                        $('#navigation-menu').css('display', 'flex');
+                        console.log(width + 'if');
+                    }
+                    else if( width < 768 && menuC == 'block') {
+                        $('.label-toggle').removeClass('label-toggle-click');
+                        console.log('width < 768 && menuC == block');
+                        }
+                    else {
+                        $('#navigation-menu').css('display', 'none');
+                    }
+                });
 
-    }
+            }
+
+
+
+
+
 }
 
 

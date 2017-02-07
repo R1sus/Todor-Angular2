@@ -58,27 +58,26 @@ System.register(['@angular/core', './_services/http.service', '@angular/common']
                         if (menuClose == 'block') {
                             $('.wrapper').height(menuHeight + headerHeight);
                             $('.wrapper').css('overflow', 'hidden');
-                            // $('body').on('touchmove', function (e) {
-                            // 	e.preventDefault();
-                            // });
                             console.log('test display block');
                         }
                         else if (menuClose == 'none') {
                             $('.label-toggle').removeClass('label-toggle-click');
                             $('.wrapper').height('auto');
                             $('.wrapper').css('overflow', 'auto');
-                            // navMenu.css('display','flex');
-                            // $('body').off('touchmove');
                             console.log('test display none');
                         }
-                        // });
                     });
                     $(window).resize(function () {
+                        var menuC = $('#navigation-menu').css('display');
                         var width = $(window).width();
                         console.log(width);
                         if (width > 768) {
                             $('#navigation-menu').css('display', 'flex');
                             console.log(width + 'if');
+                        }
+                        else if (width < 768 && menuC == 'block') {
+                            $('.label-toggle').removeClass('label-toggle-click');
+                            console.log('width < 768 && menuC == block');
                         }
                         else {
                             $('#navigation-menu').css('display', 'none');

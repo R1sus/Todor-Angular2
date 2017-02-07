@@ -1,12 +1,15 @@
-System.register(['@angular/router', './register/authorization-form.component', './login/login-form.component', './search_page/search-page.component', './not_found/not-found.component', './user_profile/user-profile.component', './business_profile/business-profile.component'], function(exports_1, context_1) {
+System.register(['@angular/router', './_guards/guards', './register/authorization-form.component', './login/login-form.component', './search_page/search-page.component', './not_found/not-found.component', './user_profile/user-profile.component', './business_profile/business-profile.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
-    var router_1, authorization_form_component_1, login_form_component_1, search_page_component_1, not_found_component_1, user_profile_component_1, business_profile_component_1;
+    var router_1, guards_1, authorization_form_component_1, login_form_component_1, search_page_component_1, not_found_component_1, user_profile_component_1, business_profile_component_1;
     var appRoutes, routing;
     return {
         setters:[
             function (router_1_1) {
                 router_1 = router_1_1;
+            },
+            function (guards_1_1) {
+                guards_1 = guards_1_1;
             },
             function (authorization_form_component_1_1) {
                 authorization_form_component_1 = authorization_form_component_1_1;
@@ -31,10 +34,8 @@ System.register(['@angular/router', './register/authorization-form.component', '
                 { path: '', redirectTo: '/search', pathMatch: 'full' },
                 { path: 'search', component: search_page_component_1.SearchPageComponent },
                 //canActivate: [AuthGuard] },
-                { path: 'uprofile', component: user_profile_component_1.UserProfileComponent },
-                //canActivate: [AuthGuard] },
-                { path: 'bprofile', component: business_profile_component_1.BusinessProfileComponent },
-                //canActivate: [AuthGuard]},
+                { path: 'uprofile', component: user_profile_component_1.UserProfileComponent, canActivate: [guards_1.AuthGuard] },
+                { path: 'bprofile', component: business_profile_component_1.BusinessProfileComponent, canActivate: [guards_1.AuthGuard] },
                 { path: 'signin', component: authorization_form_component_1.AuthorizationFormComponent },
                 { path: 'login', component: login_form_component_1.LoginFormComponent },
                 { path: '**', component: not_found_component_1.NotFoundComponent }

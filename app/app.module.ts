@@ -17,32 +17,13 @@ import {UserProfileComponent} from './user_profile/user-profile.component';
 import {BusinessProfileComponent} from './business_profile/business-profile.component';
 
 
-//
-// const appRoutes: Routes =[
-//   { path: '', component: AuthorizationFormComponent},
-//   { path: 'search', component: SearchPageComponent },
-//   { path: 'uprofile', component:  UserProfileComponent },
-//   { path: 'bprofile', component: BusinessProfileComponent},
-//   { path: 'signin', component: AuthorizationFormComponent},
-//   { path: 'login', component: LoginFormComponent},
-//   { path: '**', component: NotFoundComponent }
-//
-// ];
-
-// RouterModule.forRoot([
-//   {
-//     path: 'login',
-//     component:  LoginFormComponent
-//   }
-// ])
-
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
         HttpModule,
         routing
-        // RouterModule.forRoot(appRoutes)
+
     ],
     declarations: [
         EqualValidator,

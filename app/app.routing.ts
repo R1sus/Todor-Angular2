@@ -12,10 +12,8 @@ const appRoutes: Routes =[
     { path: '', redirectTo: '/search', pathMatch:'full'},
     { path: 'search', component: SearchPageComponent},
     //canActivate: [AuthGuard] },
-    { path: 'uprofile', component:  UserProfileComponent},
-    //canActivate: [AuthGuard] },
-    { path: 'bprofile', component: BusinessProfileComponent},
-    //canActivate: [AuthGuard]},
+    { path: 'uprofile', component:  UserProfileComponent, canActivate: [AuthGuard] },
+    { path: 'bprofile', component: BusinessProfileComponent, canActivate: [AuthGuard]},
     { path: 'signin', component: AuthorizationFormComponent},
     { path: 'login', component: LoginFormComponent},
     { path: '**', component: NotFoundComponent }

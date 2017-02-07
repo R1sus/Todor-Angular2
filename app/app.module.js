@@ -60,23 +60,6 @@ System.register(['@angular/core', '@angular/platform-browser', '@angular/forms',
                 business_profile_component_1 = business_profile_component_1_1;
             }],
         execute: function() {
-            //
-            // const appRoutes: Routes =[
-            //   { path: '', component: AuthorizationFormComponent},
-            //   { path: 'search', component: SearchPageComponent },
-            //   { path: 'uprofile', component:  UserProfileComponent },
-            //   { path: 'bprofile', component: BusinessProfileComponent},
-            //   { path: 'signin', component: AuthorizationFormComponent},
-            //   { path: 'login', component: LoginFormComponent},
-            //   { path: '**', component: NotFoundComponent }
-            //
-            // ];
-            // RouterModule.forRoot([
-            //   {
-            //     path: 'login',
-            //     component:  LoginFormComponent
-            //   }
-            // ])
             AppModule = (function () {
                 function AppModule() {
                 }

@@ -1,6 +1,5 @@
 @media only screen and (max-width: 1024px) {
   body {
-    /*background-size: initial;*/
     width: 100%;
     margin: 0 auto;
     overflow-x: hidden;
@@ -56,7 +55,7 @@
     /*padding-top:30px;*/
     /*padding: 2%;*/
     display: block;
-    //padding-bottom: 0;
+    padding-bottom: 0;
     /*align-items: flex-start;*/
   }
   .close {
@@ -97,27 +96,6 @@
       }
     }
   }
-  //.humburger-icon {
-  //  display: block;
-
-  //.display-mobile-menu {
-  //  display:block;
-  //
-  //
-  //}
-
-  //#menu-toggle:checked ~ ul {
-  //  padding-top: 50px;
-  //  //padding: 0;
-  //  margin: 0 auto;
-  //  /*flex-flow: column wrap;*/
-  //  opacity: 1;
-  //  height: 100vh;
-  //  width: 100%;
-  //  background: #80888b;
-  //  position: relative;
-  //  visibility: visible;
-  //  z-index: 10;
   //}
   .label-toggle {
     cursor: pointer;
@@ -138,11 +116,6 @@
     background-size: cover;
     height: 25px;
   }
-  //#menu-toggle:checked ~ .label-toggle {
-  //  background: url("../../img/humb_close.png");
-  //  background-size: cover;
-  //  height: 23px;
-  //}
 
   /*///////////Search media////////////////*/
   .search-page h1 {
@@ -336,7 +309,6 @@
     .user-profile {
       width: 95%;
       uploader {
-        /*margin-top: -15px;*/
         margin-bottom: 25px;
         input[type= "file"] {
           padding: 0;
