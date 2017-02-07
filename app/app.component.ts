@@ -83,43 +83,21 @@ export class AppComponent {
         });
 
 
-        $( window ).resize(function() {
+        $(window).resize(function () {
             let width = $(window).width();
             console.log(width);
-            if(width > 768) {
-            $('#navigation-menu').css('display','flex');
-            console.log(width+'if');
-        }
-        else {
-            $('#navigation-menu').css('display', 'none');
-        }
+            if (width > 768) {
+                $('#navigation-menu').css('display', 'flex');
+                console.log(width + 'if');
+            }
+            else {
+                $('#navigation-menu').css('display', 'none');
+            }
         });
 
     }
 }
 
-
-//
-//
-//   constructor(router: Router) {
-//     // logout()
-//     // {
-//     //   localStorage.removeItem('currentUser');
-//     //   router.navigate(['/login']);
-//     // }
-//
-//     router.events.subscribe((url: any) => console.log(url));
-
-
-// constructor(private _router: Router ) {
-//     this.router = _router;
-// }
-// loggedIn = false;
-// if (this.router.url === '/uprofile ')
-//
-// constructor(private auth: HttpService, private router: Router) {
-//     this.loggedIn = this.auth.login();
-// }
 
 
 

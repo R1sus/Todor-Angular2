@@ -102,23 +102,4 @@ System.register(['@angular/core', './_services/http.service', '@angular/common']
         }
     }
 });
-//
-//
-//   constructor(router: Router) {
-//     // logout()
-//     // {
-//     //   localStorage.removeItem('currentUser');
-//     //   router.navigate(['/login']);
-//     // }
-//
-//     router.events.subscribe((url: any) => console.log(url));
-// constructor(private _router: Router ) {
-//     this.router = _router;
-// }
-// loggedIn = false;
-// if (this.router.url === '/uprofile ')
-//
-// constructor(private auth: HttpService, private router: Router) {
-//     this.loggedIn = this.auth.login();
-// }
 //# sourceMappingURL=app.component.js.map
