@@ -1,32 +1,26 @@
 @import "modules/variables";
-
-
 .container {
-  width:45%;
-  margin:0 auto;
-  position:relative;
+  width: 45%;
+  margin: 0 auto;
+  position: relative;
   padding-left: 4rem;
   padding-right: 4rem;
-  background-color:rgba(127,135,138, 0.5);
-  opacity:0.9;
-  border-radius:7px;
+  background-color: rgba(127, 135, 138, 0.5);
+  /*opacity:0.9;*/
+  border-radius: 7px;
   text-align: center;
   padding-bottom: 2rem;
 }
-//.ng-valid[required], .ng-valid.required  {
-//  border: 2px solid #abd154; /* green */
-//}
-/*.ng-invalid:not(form)  {*/
-/*  border: 2px solid #e0494a; /* red */
-/*}*/
+
 
 h2 {
   font-family: $general-font;
-  color:#fff;
-  font-size:30px;
-  line-height:3;
+  color: #fff;
+  font-size: 30px;
+  line-height: 3;
   font-weight: 300;
 }
+
 form {
   .form-control {
     border-radius: 25px;
@@ -36,8 +30,7 @@ form {
     padding: 15px;
     font-family: $general-font;
     color: #7f878a;
-    cursor:auto;
-
+    cursor: auto;
   }
   .btn {
     width: 100%;
@@ -54,170 +47,183 @@ form {
     cursor: pointer;
     text-transform: uppercase;
     font-size: 16px;
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       outline: none;
       background-color: #872a2a;
       border: 0;
       color: #fff;
     }
-
   }
-
   .btn[disabled] {
-    //cursor:pointer;
+    /*cursor:pointer;*/
     background-color: #e0494a;
     &:hover {
       background-color: #872a2a;
     }
   }
 }
+
 .loginform {
-  .btn,.btn[disabled]  {
+  .btn,
+  .btn[disabled] {
     background-color: #abd154;
-    &:hover,&:focus {
+    &:hover,
+    &:focus {
       background-color: #667D32;
     }
-
-  }
-  //.btn-green {
-  //      background-color: #abd154;
-  //      &:hover {
-  //        background-color: #667D32;
-  //      }
-  //}
-}
-input {
-  cursor: pointer;
-}
-input[name="username"]{
-  outline: none;
-  background: url("../img/user.png") no-repeat;
-  background-color: #fff;
-  padding-left: 53px;
-  background-position: 16px;
-  background-size: 23px;
-  //background-size: 6%;
-}
-input[type="password"]{
-  outline: none;
-  background: url("../img/pass.png") no-repeat;
-  background-color: #fff;
-  padding-left: 53px;
-  background-position: 15px;
-  background-size: 20px;
-  //background-size: 5%;
-}
-input[type="email"] {
-  outline: none;
-  background: url("../img/mail.png") no-repeat;
-  background-color: #fff;
-  padding-left: 53px;
-  background-position: 10px;
-  background-size: 35px;
-  //background-size: 9%;
-}
-.form-link {
-  text-align: center;
-  color:#bfc1c3;
-  line-height: 2.3;
-  text-transform: uppercase;
-  font-size:11px;
-  &:hover{
-    color:#fff;
-
   }
 }
-input[name="login-name"]{
-  outline: none;
-  background: url("../img/user-green.png") no-repeat;
-  background-color: #fff;
-  padding-left: 53px;
-  background-position: 12px;
-  background-size: 6%;
-}
-input[name="login-password"]{
-  outline: none;
-  background: url("../img/pass-green.png") no-repeat;
-  background-color: #fff;
-  padding-left: 53px;
-  background-position: 15px;
-  color:#bfc1c3;
-  line-height: 2.3;
-  text-transform: uppercase;
-  font-size:11px;
-  background-size: 5%;
-}
-////////////////////////business profile///////////////////////
-.business-profile-container, .user-profile-container {
-  background-color: rgba(127, 135, 138, 0.5);
-  width: 100%;
-  border-radius: 7px;
-  h2 {
+
+  input {
+    cursor: pointer;
+  }
+
+  input[name="username"] {
+    outline: none;
+    background: url("../img/user.png") no-repeat;
+    background-color: #fff;
+    padding-left: 53px;
+    background-position: 16px;
+    background-size: 23px;
+    /*background-size: 6%;*/
+  }
+
+  input[type="password"] {
+    outline: none;
+    background: url("../img/pass.png") no-repeat;
+    background-color: #fff;
+    padding-left: 53px;
+    background-position: 15px;
+    background-size: 20px;
+    /*background-size: 5%;*/
+  }
+
+  input[type="email"] {
+    outline: none;
+    background: url("../img/mail.png") no-repeat;
+    background-color: #fff;
+    padding-left: 53px;
+    background-position: 10px;
+    background-size: 35px;
+
+  }
+
+  .form-link {
     text-align: center;
+    color: #bfc1c3;
+    line-height: 2.3;
+    text-transform: uppercase;
+    font-size: 11px;
+    &:hover {
+      color: #fff;
+    }
   }
-  .business-profile, .user-profile {
-    width: 90%;
-    margin: 0 auto;
-    padding-bottom: 45px;
-    .form-group {
-      display: flex;
-      flex-wrap: nowrap;
-      flex-direction: row;
-      justify-content: space-between;
-      input {
-        width: 47%;
-        padding-left: 80px;
-        outline: none;
-        background-color: #fff;
-        background-position: 15px;
 
+  input[name="login-name"] {
+    outline: none;
+    background: url("../img/user-green.png") no-repeat;
+    background-color: #fff;
+    padding-left: 53px;
+    background-position: 12px;
+    background-size: 6%;
+  }
+
+  input[name="login-password"] {
+    outline: none;
+    background: url("../img/pass-green.png") no-repeat;
+    background-color: #fff;
+    padding-left: 53px;
+    background-position: 15px;
+    color: #bfc1c3;
+    background-size: 5%;
+  }
+
+  /*//////////////////////business profile///////////////////////*/
+  .business-profile-container,
+  .user-profile-container {
+    background-color: rgba(127, 135, 138, 0.5);
+    width: 100%;
+    margin:0 auto;
+    border-radius: 7px;
+    h2 {
+      text-align: center;
+    }
+    .business-profile,
+    .user-profile {
+      width: 90%;
+      margin: 0 auto;
+      padding-bottom: 45px;
+      .form-group {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        input {
+          width: 47%;
+          padding-left: 80px;
+          outline: none;
+          background-color: #fff;
+          background-position: 15px;
+        }
+        .business-load-file {
+          input {
+            width: 100%;
+          }
+        }
+      }
+      textarea {
+        width: 100%;
+        border-radius: 25px;
+        padding-left: 80px;
+        resize: none;
+        outline: none;
+        height: 25rem;
+        margin-bottom: 15px;
+        background-color: #fff;
+        background-position: 18px 6px;
+      }
+      input[type="email"] {
+        background: url("../img/mail.svg") no-repeat;
+        background-color: #fff;
+        background-size: 7%;
+        background-position: 15px;
       }
 
     }
-    textarea {
-      width: 100%;
-      border-radius: 25px;
-      padding-left: 80px;
-      resize: none;
-      outline: none;
-      height: 25rem;
-      margin-bottom: 15px;
-      background-color: #fff;
-      background-position: 18px 6px;
-    }
-    //.upload-file {
-    //  background-color: #fff;
-    //  border-radius: 25px;
-    //  height: 45px;
-    //  input[type="file"] {
-    //    outline: none;
-    //    opacity: 0;
-    //    //filter:alpha(opacity:0);
-    //
-    //  }
-
-
   }
 
-}
-  input[name="business-name"],input[name="uname"]{
+  input[name="business-name"],
+  input[name="uname"] {
     background: url("../img/icons/user.svg") no-repeat;
     background-size: 8%;
+  }
 
-}
-  input[name = "street"],input[name="adress"] {
+  input[name="street"],
+  input[name="adress"] {
     background: url("../img/icons/street.svg") no-repeat;
     background-size: 9%;
-
+    height: 54px;
   }
+
   input[name="city"] {
     background: url("../img/icons/city.svg") no-repeat;
     background-size: 9%;
   }
+
   input[name="zip"] {
     background: url("../img/icons/zip-code.svg") no-repeat;
     background-size: 11%;
   }
+
   input[name="phone"] {
     background: url("../img/icons/phone.svg") no-repeat;
     background-size: 9%;
@@ -227,74 +233,83 @@ input[name="login-password"]{
     background: url("../img/icons/phone.svg") no-repeat;
     background-size: 9%;
   }
+
   input[name="website"] {
     background: url("../img/icons/website.svg") no-repeat;
     background-size: 12%;
-
   }
-input[name="category"] {
-  background: url("../img/icons/business-category.svg") no-repeat;
-  background-size: 9%;
-}
-textarea[name="bdescription"] {
-  background: url("../img/icons/business-description.svg") no-repeat;
-  background-size: 4%;
-}
-input[name="business-photo"], input[name="user-photo"] {
-  background: url("../img/icons/business-photo.svg") no-repeat;
-  background-size: 9%;
-  z-index: 2;
-}
-input[name="business-logo"] {
-  background: url("../img/icons/business-logo.svg") no-repeat;
-  background-size: 9%;
-  z-index: 2;
-}
 
+  input[name="category"] {
+    background: url("../img/icons/business-category.svg") no-repeat;
+    background-size: 9%;
+  }
 
+  textarea[name="bdescription"] {
+    background: url("../img/icons/business-description.svg") no-repeat;
+    background-size: 4%;
+  }
+
+  input[name="business-photo"],
+  input[name="user-photo"] {
+    background: url("../img/icons/business-photo.svg") no-repeat;
+    background-size: 9%;
+    z-index: 2;
+  }
+
+  input[name="user-photo"] {
+    width: 100% !important;
+  }
+
+  input[name="business-logo"] {
+    background: url("../img/icons/business-logo.svg") no-repeat;
+    background-size: 9%;
+    z-index: 2;
+  }
 
   .form-btn {
     width: 30%;
     margin: 0 auto;
-
   }
 
-////////////////////////user profile///////////////////////
-h4 {
-  font-family: "Lato", sans-serif;
-  color:#fff;
-  font-weight: 300;
-  line-height: 3;
-  text-align: center;
-}
-
-.user-profile {
-  .form-link {
-    font-size:12px;
-    //line-height: 8;
-    text-transform: none;
+  /*//////////////////////user profile///////////////////////*/
+  h4 {
+    font-family: "Lato", sans-serif;
+    color: #fff;
+    font-weight: 300;
+    line-height: 3;
+    text-align: center;
   }
-  input[type="date"],
-  select {
-    width:47%;
-    padding-left: 80px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
 
+  .user-profile {
+    .form-link {
+      font-size: 12px;
+      /*line-height: 8;*/
+      text-transform: none;
+    }
+    input[type="date"],
+    select {
+      height: 54px;
+      width: 47%;
+      padding-left: 80px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
   }
-}
-textarea[name="bio"] {
-  background: url("../img/icons/bio.svg") no-repeat;
-  background-size: 4%;
-  background-position: 18px 0px;
-}
-select[name="gender"]{
-  background: url("../img/icons/gender.svg") no-repeat;
-  background-size: 12%;
-  background-color: #fff;
-  background-position: 15px;
-}
-input[name="birthday"] {
-  background: url("../img/icons/birthday.svg") no-repeat;
-  background-size: 9%;
-}
+
+  textarea[name="bio"] {
+    background: url("../img/icons/bio.svg") no-repeat;
+    background-size: 4%;
+    background-position: 18px 0px;
+  }
+
+  select[name="gender"] {
+    background: url("../img/icons/gender.svg") no-repeat;
+    background-size: 12%;
+    background-color: #fff;
+    background-position: 15px;
+  }
+
+  input[name="birthday"] {
+    background: url("../img/icons/birthday.svg") no-repeat;
+    background-size: 9%;
+  }

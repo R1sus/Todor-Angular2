@@ -1,56 +1,321 @@
-@media only screen and (max-width:1024px) {
+@media only screen and (max-width: 1024px) {
   body {
-     background-size: initial;
+    width: 100%;
+    margin: 0 auto;
+    overflow-x: hidden;
+    position: relative;
   }
   .wrapper {
-    width:90%;
+    width: 90%;
+    position: relative;
   }
   h2 {
     line-height: 2;
   }
   .container {
-    width:60%;
+    width: 60%;
+    background-color: transparent;
   }
-  input[name="username"], input[name="login-name"], input[type="password"] {
+  input[name="username"],
+  input[name="login-name"],
+  input[type="password"] {
     background-size: 5%;
   }
   input[type="email"] {
     background-size: 8%;
   }
   .search-page {
-    width:70%;
+    width: 70%;
+  }
+  nav {
+    ul {
+      padding-left: 0;
+      li:first-child {
+        padding-left: 0;
+      }
+    }
   }
 }
-@media only screen and (max-width:768px) {
+
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 0;
+    background: #80888b;
+    background-image: none;
+    background-position: center;
+    position: relative;
+  }
+  .wrapper {
+    max-width: 100%;
+    width: 100%;
+    padding-top: 0;
+  }
+  header {
+    background: #737b7e;
+    /*padding-top:30px;*/
+    /*padding: 2%;*/
+    display: block;
+    padding-bottom: 0;
+    /*align-items: flex-start;*/
+  }
+  .close {
+    display: none;
+  }
   .container {
     width: 80%;
   }
-
-}
-@media only screen and (max-width:480px) {
+  .logo {
+    display: inline-block;
+    padding: 2%;
+  }
   nav {
-    display: none;
+    width: 100%;
+    height: 0;
+    ul {
+      display: none;
+      padding-top: 50px;
+      margin: 0 auto;
+      list-style-type: none;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      background: #80888b none repeat scroll 0 0;
+      z-index: 10;
+      //height:100vh;
+      transition: all 1s ease-in;
+      li {
+        margin: 0 auto;
+        display: block;
+        padding: 2em 0;
+        &:last-child {
+          padding-bottom: 2em;
+        }
+        a {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+  //}
+  .label-toggle {
+    cursor: pointer;
+    margin-right: 10px;
+    background: url("../../img/hamburger_menu.png");
+    background-size: 30px;
+    cursor: pointer;
+    display: block;
+    float: right;
+    height: 20px;
+    width: 37px;
+    position: relative;
+    top: -5rem;
+    margin-bottom: 0;
+  }
+  .label-toggle-click {
+    background: url("../../img/humb_close.png");
+    background-size: cover;
+    height: 25px;
+  }
+
+  /*///////////Search media////////////////*/
+  .search-page h1 {
+    font-size: 40px;
+  }
+  .categories {
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+  }
+  .item {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+  #searchForm {
+    p,
+    .styled-select,
+    .search-btn {
+      width: 100%;
+      border-radius: 30px;
+      margin-bottom: 30px;
+    }
+  }
+  /*////////////////////profiles media//////////////*/
+  .user-profile-container {
+    background-color: transparent;
+    .user-profile {
+      .form-group {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+        input {
+          width: 100%;
+          margin-bottom: 25px;
+        }
+        input[name="email"] {
+          background-size: 5%;
+        }
+      }
+      select {
+        width: 100%;
+        margin-bottom: 25px;
+        background-size: 9%;
+      }
+      textarea {
+        margin-bottom: 25px;
+      }
+      uploader {
+        width: 100%;
+        margin-top: -78px;
+      }
+      .load-file {
+        width: 100%;
+      }
+      .form-btn {
+        width: 100%;
+      }
+    }
+  }
+  input[name="business-name"],
+  input[name="fax"],
+  input[name="city"],
+  input[name="street"],
+  input[name="business-photo"],
+  input[name="user-photo"],
+  input[name="adress"],
+  input[name="uname"],
+  input[name="birthday"],
+  input[name="phone"],
+  textarea[name="bio"],
+  input[name="category"],
+  textarea[name="bdescription"],
+  input[name="business-logo"] {
+    background-size: 6%;
+  }
+  input[name="zip"] {
+    background-size: 7%;
+  }
+  input[name="birthday"] {
+    line-height: 20;
+  }
+  input[name="website"] {
+    background-size: 8%;
+    background-position: 6px;
+  }
+  .business-profile-container {
+    background-color: transparent;
+    .business-profile {
+      .form-group {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+        input {
+          width: 100%;
+          margin-bottom: 25px;
+        }
+      }
+      textarea {
+        margin-bottom: 25px;
+      }
+      .business-load-file {
+        width: 100%;
+        uploader {
+          margin-top: -78px;
+          margin-bottom: 2em;
+          input {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+    .form-btn {
+      width: 100%;
+    }
   }
 }
-@media only screen and (max-width:425px) {
+
+@media only screen and (max-width: 480px) {
+  .search-page {
+    width: 85%;
+    position: relative;
+  }
+  .container {
+    width: 90%;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+    position: relative;
+  }
+  .business-load-file {
+    width: 100%;
+    uploader {
+      margin-top: -15px;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
   .container {
     width: 95%;
     margin: 0 auto;
   }
-
   .search-page {
-    width:100%;
+    width: 94%;
+    margin: 0 auto;
   }
 }
-@media only screen and (max-width:375px) {
-  .container {
-    width: 90%;
-  }
 
+@media only screen and (max-width: 375px) {
+  body {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .container {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .user-profile-container {
+    .user-profile {
+      width: 95%;
+    }
+  }
 }
-@media only screen and (max-width:320px) {
+
+@media only screen and (max-width: 320px) {
+  body {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
   .container {
-    width: 90%;
+    width: 98%;
+    margin: 0 auto;
+  }
+  .business-profile-container {
+    .business-profile {
+      .business-load-file {
+        uploader {
+          input[type="file"] {
+            padding: 0;
+            width: 70%;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
   }
 
+  .user-profile-container {
+    .user-profile {
+      width: 95%;
+      uploader {
+        margin-bottom: 25px;
+        input[type= "file"] {
+          padding: 0;
+          width: 70%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
 }

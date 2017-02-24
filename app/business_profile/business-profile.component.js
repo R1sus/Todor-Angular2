@@ -21,17 +21,6 @@ System.register(['@angular/core'], function(exports_1, context_1) {
             BusinessProfileComponent = (function () {
                 function BusinessProfileComponent() {
                 }
-                BusinessProfileComponent.prototype.readUrl = function (event) {
-                    var _this = this;
-                    imageSrc: string = '';
-                    if (event.target.files && event.target.files[0]) {
-                        var reader = new FileReader();
-                        reader.onload = function (event) {
-                            _this.url = event.target.result;
-                        };
-                        reader.readAsDataURL(event.target.files[0]);
-                    }
-                };
                 BusinessProfileComponent = __decorate([
                     core_1.Component({
                         moduleId: module.id,

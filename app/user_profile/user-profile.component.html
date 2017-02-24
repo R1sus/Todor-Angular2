@@ -9,17 +9,17 @@
         </div>
         <div class="form-group">
             <input type="email" class="form-control"
-                   name="email"  placeholder = "Email" maxlength="25" ngModel #email="ngModel" required >
+                   name="email"  placeholder = "Email" maxlength="25" ngModel #email="ngModel"
+                   pattern="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+" required >
+            <!--<small [hidden]="email.valid || (email.pristine && !f.submitted)" class="text-danger">-->
+                <!--Email is required and format should be <i>john@doe.com</i>.-->
+            <!--</small>-->
             <input type="text" class="form-control"
                    name="phone"  placeholder = "Phone Numder" maxlength="25" ngModel #phone="ngModel"  pattern="[0-9]{10}" required >
         </div>
         <h4>Optional</h4>
-        <!--<fieldset>-->
         <textarea name="bio" class="form-control" placeholder="Bio"></textarea>
         <div class="form-group">
-
-            <!--<input type="" class="form-control"-->
-                   <!--name="gender"  placeholder = "Gender" maxlength="25" ngModel #gender="ngModel" required >-->
             <select title="fsf" class="form-control" name="gender">
                 <option selected hidden disabled>Gender</option>
                 <option >Male</option>
@@ -31,35 +31,13 @@
         <div class="form-group">
             <input type="text" class="form-control"
                    name="adress"  placeholder = "Address" maxlength="25" ngModel #adress="ngModel" required >
-
+            <div class="load-file">
             <input type="text" class="form-control" name="user-photo"  placeholder = "User Photo"
                    maxlength="25" ngModel #bphoto="ngModel" disabled >
+                <uploader></uploader>
+            </div>
 
         </div>
-        <div class="load-file">
-        <label class="uploader" ondragover="return false;"
-               [class.loaded]="loaded"
-               [style.outlineColor]="dragging ? activeColor : baseColor"
-               (dragenter)="handleDragEnter()"
-               (dragleave)="handleDragLeave()"
-               (drop)="handleDrop($event)">
-
-            <i class="icon"
-               [style.color]="dragging
-            ? ((imageSrc.length > 0) ? overlayColor : activeColor)
-            : ((imageSrc.length > 0) ? overlayColor : baseColor)"></i>
-
-            <img
-                    [src]="imageSrc"
-                    (load)="handleImageLoad()"
-                    [class.loaded]="imageLoaded"/>
-            <input type="file" name="file" accept="image/*"
-                   (change)="handleInputChange($event)">
-
-            <!--<input ngModel #bphoto="ngModel" accept="image/*" (change)="handleInputChange($event)">-->
-        </label>
-        </div>
-        <!--</fieldset>-->
         <div class ="form-link">
         <a href="#" class="form-link">By signing up, you agree to Locify's Terms of Service and Privacy Policy</a></div>
         <div class="form-btn">
