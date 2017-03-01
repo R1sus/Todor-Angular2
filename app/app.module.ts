@@ -15,6 +15,8 @@ import {SearchPageComponent} from './search_page/search-page.component';
 import {NotFoundComponent} from './not_found/not-found.component';
 import {UserProfileComponent} from './user_profile/user-profile.component';
 import {BusinessProfileComponent} from './business_profile/business-profile.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+//import { CollapseDirective } from 'ng2-bootstrap/ng2-bootstrap';
 
 
 @NgModule({
@@ -26,6 +28,7 @@ import {BusinessProfileComponent} from './business_profile/business-profile.comp
 
     ],
     declarations: [
+        //CollapseDirective,
         EqualValidator,
         AppComponent,
         LoginFormComponent,
@@ -38,7 +41,8 @@ import {BusinessProfileComponent} from './business_profile/business-profile.comp
 
     ],
     providers: [
-        AuthGuard
+        AuthGuard,
+        {provide: LocationStrategy, useClass: HashLocationStrategy}
     ],
 
     bootstrap: [AppComponent]

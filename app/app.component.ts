@@ -4,7 +4,9 @@ import {Router} from '@angular/router';
 import {HttpService} from './_services/http.service';
 import {HttpAddUserService} from './_services/http-add-user.service';
 import {Location} from '@angular/common';
+
 //declare var $: any;
+
 
 @Component({
     moduleId: module.id,
@@ -19,11 +21,11 @@ import {Location} from '@angular/common';
 
 })
 export class AppComponent {
+    //public isCollapsed: boolean = true;
 
     constructor(private location: Location) {
         let logged: boolean;
         let path = location.path();
-
         console.log(path);
         if (path === "/uprofile") {
             this.logged = true;
@@ -39,9 +41,10 @@ export class AppComponent {
 
     }
 
-    closeMenu() {
-        console.log('close menu');
-    }
+    //closeMenu() {
+    //
+    //    console.log('close menu');
+    //}
 
         //var clientHeight = document.documentElement.clientHeight;
         //const navMenu = $('#navigation-menu');
@@ -93,9 +96,6 @@ export class AppComponent {
         //        });
         //
         //    }
-
-
-
 
 
 }

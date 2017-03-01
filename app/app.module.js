@@ -1,4 +1,4 @@
-System.register(['@angular/core', '@angular/platform-browser', '@angular/forms', '@angular/http', './app.routing', './uploader/uploader.component', './_guards/guards', './app.component', './_directives/equal-validator.directive', './register/authorization-form.component', './login/login-form.component', './search_page/search-page.component', './not_found/not-found.component', './user_profile/user-profile.component', './business_profile/business-profile.component'], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/platform-browser', '@angular/forms', '@angular/http', './app.routing', './uploader/uploader.component', './_guards/guards', './app.component', './_directives/equal-validator.directive', './register/authorization-form.component', './login/login-form.component', './search_page/search-page.component', './not_found/not-found.component', './user_profile/user-profile.component', './business_profile/business-profile.component', '@angular/common'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['@angular/core', '@angular/platform-browser', '@angular/forms',
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, platform_browser_1, forms_1, http_1, app_routing_1, uploader_component_1, guards_1, app_component_1, equal_validator_directive_1, authorization_form_component_1, login_form_component_1, search_page_component_1, not_found_component_1, user_profile_component_1, business_profile_component_1;
+    var core_1, platform_browser_1, forms_1, http_1, app_routing_1, uploader_component_1, guards_1, app_component_1, equal_validator_directive_1, authorization_form_component_1, login_form_component_1, search_page_component_1, not_found_component_1, user_profile_component_1, business_profile_component_1, common_1;
     var AppModule;
     return {
         setters:[
@@ -58,8 +58,12 @@ System.register(['@angular/core', '@angular/platform-browser', '@angular/forms',
             },
             function (business_profile_component_1_1) {
                 business_profile_component_1 = business_profile_component_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
             }],
         execute: function() {
+            //import { CollapseDirective } from 'ng2-bootstrap/ng2-bootstrap';
             AppModule = (function () {
                 function AppModule() {
                 }
@@ -72,6 +76,7 @@ System.register(['@angular/core', '@angular/platform-browser', '@angular/forms',
                             app_routing_1.routing
                         ],
                         declarations: [
+                            //CollapseDirective,
                             equal_validator_directive_1.EqualValidator,
                             app_component_1.AppComponent,
                             login_form_component_1.LoginFormComponent,
@@ -83,7 +88,8 @@ System.register(['@angular/core', '@angular/platform-browser', '@angular/forms',
                             uploader_component_1.UploaderFileComponent
                         ],
                         providers: [
-                            guards_1.AuthGuard
+                            guards_1.AuthGuard,
+                            { provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }
                         ],
                         bootstrap: [app_component_1.AppComponent]
                     }), 
